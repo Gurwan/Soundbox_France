@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /********************************************************
+  ~ Copyright (c) 2020. Okaria Studio
+  ~ ********************************************************/
+  -->
+
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="backgroundColor">#191919</color>
+    <color name="colorOne">#848cb7</color>
+    <color name="colorGreenLight">#abffc0</color>
+    <color name="memeColor">#F5AB09</color>
+    <color name="musiqueColor">#ff8635</color>
+    <color name="logoColor">#d22a35</color>
+    <color name="greyColor">#474040</color>
+
+</resources>

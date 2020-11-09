@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /********************************************************
+  ~ Copyright (c) 2020. Okaria Studio
+  ~ ********************************************************/
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/logoColor"
+        android:elevation="0dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- Button to access RechercheTout -->
+
+            <Button
+                android:id="@+id/button_fav"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_favorite_24"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_search_black_24dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_note"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_star_black_24dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_twitter"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/twitter_img"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_mail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_email_black_24dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_propose"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_publish_black_24dp"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayoutmusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/browser_actions_divider_color"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/musiqueColor"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/white" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpagermusic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreenLight">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+
+</LinearLayout>

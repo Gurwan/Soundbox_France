@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /********************************************************
+  ~ Copyright (c) 2020. Okaria Studio
+  ~ ********************************************************/
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/activity_main"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundColor">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:background="@drawable/internetytb"
+                android:id="@+id/internetytbButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/internetytbButton"
+                android:background="@drawable/sporthumourpolitique"
+                android:id="@+id/sporthumourpolitiqueButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/sporthumourpolitiqueButton"
+                android:layout_margin="20dp"
+                android:background="@drawable/films"
+                android:id="@+id/filmsButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/filmsButton"
+                android:background="@drawable/television"
+                android:id="@+id/tvButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tvButton"
+                android:layout_margin="20dp"
+                android:background="@drawable/jeuxvideos"
+                android:id="@+id/jvButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/jvButton"
+                android:background="@drawable/musiquetrentedeuxmille"
+                android:id="@+id/musictrenteButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/musictrenteButton"
+                android:layout_margin="20dp"
+                android:background="@drawable/musiqueautres"
+                android:id="@+id/musicRapButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/musicRapButton"
+                android:background="@drawable/generiques"
+                android:id="@+id/generiqueButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/generiqueButton"
+                android:layout_margin="20dp"
+                android:background="@drawable/theme"
+                android:id="@+id/themeButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/themeButton"
+                android:background="@drawable/nouveautes"
+                android:id="@+id/nouveautesButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/nouveautesButton"
+                android:layout_margin="20dp"
+                android:background="@drawable/rechercheunson"
+                android:id="@+id/rechercheButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rechercheButton"
+                android:background="@drawable/coupdecoeur"
+                android:id="@+id/coupdecoeurButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/coupdecoeurButton"
+                android:layout_margin="20dp"
+                android:background="@drawable/proposeunson"
+                android:id="@+id/proposeButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/proposeButton"
+                android:background="@drawable/noteappli"
+                android:id="@+id/noteButton">
+
+            </Button>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
