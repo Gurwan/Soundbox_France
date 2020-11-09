@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Gurwan/SoundboxFrance/blob/main/Soundbox_France%20(1).png" width="240" style="max-width:100%;">
+  <img src="https://github.com/Gurwan/SoundboxFrance/blob/main/app/src/main/ic_launcher-playstore.png" width="240" style="max-width:100%;">
 </p>
 <p align="center">
   <strong>A complete and regularly powered android soundbox</strong>
