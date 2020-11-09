@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=automation.test.soundboxfrance" alt="Download the app"></a>
+  <a href="https://play.google.com/store/apps/details?id=automation.test.soundboxfrance" alt="Download the app"><img src="https://lh3.googleusercontent.com/cjsqrWQKJQp9RFO7-hJ9AfpKzbUb_Y84vXfjlP0iRHBvladwAfXih984olktDhPnFqyZ0nu9A5jvFwOEQPXzv7hr3ce3QVsLN8kQ2Ao=s0"></a>
 </p>
 
 <hr> </hr>
