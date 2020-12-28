@@ -22,6 +22,8 @@ public class Music2000Fragment extends SuperFragment {
         super(mainActivity);
     }
 
+    public Music2000Fragment(){}
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         super.before(inflater,container);

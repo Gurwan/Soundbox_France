@@ -22,6 +22,8 @@ public class DisneyFragment extends SuperFragment {
         super(mainActivity);
     }
 
+    public DisneyFragment(){}
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         super.before(inflater,container);

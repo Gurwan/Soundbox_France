@@ -15,6 +15,9 @@ import automation.test.soundboxfrance.R;
 
 public class GeneriquesActivity extends SuperActivity {
 
+    public GeneriquesActivity(){}
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_univers);

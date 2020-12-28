@@ -15,6 +15,8 @@ import automation.test.soundboxfrance.R;
 
 public class MemeActivity extends SuperActivity {
 
+    public MemeActivity(){}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

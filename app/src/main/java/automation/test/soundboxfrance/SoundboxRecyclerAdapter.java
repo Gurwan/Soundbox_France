@@ -25,6 +25,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * Created by gurwa on 16/02/2018.
+ */
+
 public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecyclerAdapter.SoundboxViewHolder>{
 
     private ArrayList<SoundObject> soundObjects;
@@ -35,12 +39,12 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
     private boolean choixImg;
     private FragmentActivity activity;
 
-
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects){
         this.soundObjects = soundObjects;
         this.longClickFav = true;
         this.imgDispo = true;
     }
+
 
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects, AppCompatActivity mainActivity){
         this.soundObjects = soundObjects;
@@ -65,7 +69,6 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
 
     @Override
     public void onBindViewHolder(@NonNull SoundboxViewHolder holder, int position) {
-
         final SoundObject object = soundObjects.get(position);
         final Integer soundID = object.getItemID();
 
@@ -74,7 +77,7 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                  EventHandlerClass.startMediaPlayer(v, soundID);
+                EventHandlerClass.startMediaPlayer(v, soundID);
             }
         });
 
@@ -85,6 +88,7 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
                 if(longClickFav) {
                     EventHandlerClass.popupManager(v, object);
                 }else{
+                    System.out.println("long click false");
                     EventHandlerClass.popupManager(v, object,activity);
                 }
                 return true;
@@ -119,13 +123,4 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
         soundObjects.addAll(newList);
         notifyDataSetChanged();
     }
-
-
-
-
-
-
-
-
-
 }

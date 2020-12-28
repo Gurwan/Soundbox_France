@@ -13,7 +13,11 @@ import java.util.ArrayList;
 
 import automation.test.soundboxfrance.R;
 
+
+
 public class MusicFragment extends SuperActivity {
+
+    public MusicFragment(){}
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

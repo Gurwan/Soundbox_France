@@ -15,6 +15,8 @@ import automation.test.soundboxfrance.R;
 
 public class MusiqueRapAutres extends SuperActivity {
 
+    public MusiqueRapAutres(){}
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_univers);

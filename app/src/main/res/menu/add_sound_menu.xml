@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /********************************************************
+  ~ Copyright (c) 2020. Okaria Studio
+  ~ ********************************************************/
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:title="Ajouter un nouveau son"
+        app:showAsAction="ifRoom|collapseActionView"
+        tools:ignore="HardcodedText" />
+
+
+    <item
+        android:id="@+id/action_clear"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="Vider les sons personnalisés"
+        app:showAsAction="ifRoom|collapseActionView"
+        tools:ignore="HardcodedText" />
+
+</menu>

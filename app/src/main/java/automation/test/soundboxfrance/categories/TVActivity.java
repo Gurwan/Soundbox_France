@@ -15,6 +15,8 @@ import automation.test.soundboxfrance.R;
 
 public class TVActivity extends SuperActivity {
 
+    public TVActivity(){}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

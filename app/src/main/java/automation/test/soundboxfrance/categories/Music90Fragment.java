@@ -22,12 +22,14 @@ public class Music90Fragment extends SuperFragment {
         super(mainActivity);
     }
 
+    public Music90Fragment(){}
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         super.before(inflater,container);
         super.nameList = Arrays.asList(getResources().getStringArray(R.array.soundNamesMusique90));
-        super.soundID = new Integer[]{R.raw.ameno,R.raw.dametucosita,R.raw.runninginthe90s,R.raw.ibelieveicanfly,R.raw.bluedabedee,R.raw.allstarsmashmouth,R.raw.latribudedana,R.raw.badboys,R.raw.canttouchthis,R.raw.babygotback,R.raw.lamacarena,R.raw.jedanselemia};
-        super.soundImage = new Integer[]{R.drawable.ameno,R.drawable.dametucosita,R.drawable.runningintheneufzero,R.drawable.ibelieveicanfly,R.drawable.imblue,R.drawable.allstar,R.drawable.tribudedana,R.drawable.badboyz,R.drawable.canttouchthis,R.drawable.babygotback,R.drawable.macarena,R.drawable.jedanselemia};
+        super.soundID = new Integer[]{R.raw.ameno,R.raw.dametucosita,R.raw.runninginthe90s,R.raw.ibelieveicanfly,R.raw.bluedabedee,R.raw.allstarsmashmouth,R.raw.latribudedana,R.raw.badboys,R.raw.canttouchthis,R.raw.babygotback,R.raw.lamacarena,R.raw.jedanselemia,R.raw.fruitdelapassion};
+        super.soundImage = new Integer[]{R.drawable.ameno,R.drawable.dametucosita,R.drawable.runningintheneufzero,R.drawable.ibelieveicanfly,R.drawable.imblue,R.drawable.allstar,R.drawable.tribudedana,R.drawable.badboyz,R.drawable.canttouchthis,R.drawable.babygotback,R.drawable.macarena,R.drawable.jedanselemia,R.drawable.fruitdelapassion};
         super.after();
         return view;
     }

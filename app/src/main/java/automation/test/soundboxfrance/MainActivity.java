@@ -8,7 +8,6 @@ package automation.test.soundboxfrance;
 
 import android.Manifest;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -19,18 +18,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.Locale;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
@@ -177,10 +172,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button YourSoundboxButton = findViewById(R.id.yoursoundboxButton);
+        YourSoundboxButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openYourSoundbox();
+            }
+        });
 
         requestPermissions();
-        new GetLatestVersion(this).execute();
     }
+
+
 
 
     @Override
@@ -192,13 +195,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFav() {
-        pubfav.loadAd(new AdRequest.Builder().build());
         Intent intent = new Intent(this, FavoriteActivity.class);
         startActivity(intent);
     }
 
+    private void openYourSoundbox() {
+        Intent intent = new Intent(this, YourSoundboxActivity.class);
+        startActivity(intent);
+    }
+
     public void openRecherche() {
-        pubrecherche.loadAd(new AdRequest.Builder().build());
         Intent intent = new Intent(this, ActivityToutRecherche.class);
         startActivity(intent);
     }
@@ -209,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSportPolitiqueHumour() {
-        Intent intent = new Intent(this, SportPoliHumActivity.class);
         startActivity(intent);
     }
 
@@ -245,13 +250,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void openGeneriques() {
         Intent intent = new Intent(this, GeneriquesActivity.class);
-	startActivity(intent);
+        startActivity(intent);
     }
 
     public void openNouveautes() {
         Intent intent = new Intent(this, NewsFragment.class);
         startActivity(intent);
-   }
+    }
 
     public void openNoteLappli() {
         Intent prop = new Intent(Intent.ACTION_VIEW);
@@ -268,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void requestPermissions() {
 
-        final ConstraintLayout constraintLayout = findViewById(R.id.activity_main);
+        final ConstraintLayout relativeLayout = findViewById(R.id.activity_main);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
@@ -280,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (!(Settings.System.canWrite(this))) {
 
-            Snackbar.make(constraintLayout, "L'application a besoin d'avoir accès à vos paramètres pour que vous puissiez changer de sonnerie", Snackbar.LENGTH_INDEFINITE).setAction("OK",
+            Snackbar.make(relativeLayout, "L'application a besoin d'avoir accès à vos paramètres pour que vous puissiez changer de sonnerie", Snackbar.LENGTH_INDEFINITE).setAction("OK",
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -305,9 +310,9 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             doubleBackPressed = true;
-            final ConstraintLayout constraintLayout = findViewById(R.id.activity_main);
+            final ConstraintLayout relativeLayout = findViewById(R.id.activity_main);
 
-            Snackbar.make(constraintLayout, getString(R.string.back), Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(relativeLayout, getString(R.string.back), Snackbar.LENGTH_SHORT).show();
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {

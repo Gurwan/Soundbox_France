@@ -43,6 +43,8 @@ class SuperActivity extends AppCompatActivity {
     protected ViewPagerAdapter adapter;
     protected ArrayList<String> nameTab;
 
+    public SuperActivity(){}
+
     protected void first(FragmentManager supportFragmentManager, Lifecycle lifecycle) {
         appBarLayout = findViewById(R.id.appbar);
         tabLayout = findViewById(R.id.tablayoutmusic);

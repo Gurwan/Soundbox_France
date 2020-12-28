@@ -22,12 +22,14 @@ public class Music80Fragment extends SuperFragment {
         super(mainActivity);
     }
 
+    public Music80Fragment(){}
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         super.before(inflater,container);
         super.nameList = Arrays.asList(getResources().getStringArray(R.array.soundNamesMusique80));
-        super.soundID = new Integer[]{R.raw.hellolionelrichie,R.raw.takeonme,R.raw.lesdemonsdeminuit,R.raw.nuitdefolie,R.raw.partenaireparticulier,R.raw.souslesoleildestropiques,R.raw.humannatur,R.raw.laventurierindochine,R.raw.monfilsmabataille,R.raw.justcantgetenough,R.raw.sweetdreams,R.raw.totaleclipseoftheheart,R.raw.babybemine,R.raw.billiejean};
-        super.soundImage = new Integer[]{R.drawable.hellolionelrichie,R.drawable.takeonme,R.drawable.demondeminuit,R.drawable.nuitdefolie,R.drawable.partenaireparticulier,R.drawable.souslesoleildestropiques,R.drawable.humannature,R.drawable.laventurier,R.drawable.monfilsmabataille,R.drawable.justcantgetenough,R.drawable.sweetdreams,R.drawable.totaleclipse,R.drawable.babybemine,R.drawable.billiejean};
+        super.soundID = new Integer[]{R.raw.hellolionelrichie,R.raw.takeonme,R.raw.lesdemonsdeminuit,R.raw.nuitdefolie,R.raw.partenaireparticulier,R.raw.souslesoleildestropiques,R.raw.humannatur,R.raw.laventurierindochine,R.raw.monfilsmabataille,R.raw.justcantgetenough,R.raw.sweetdreams,R.raw.totaleclipseoftheheart,R.raw.babybemine,R.raw.billiejean,R.raw.nevergonnagiveyouup};
+        super.soundImage = new Integer[]{R.drawable.hellolionelrichie,R.drawable.takeonme,R.drawable.demondeminuit,R.drawable.nuitdefolie,R.drawable.partenaireparticulier,R.drawable.souslesoleildestropiques,R.drawable.humannature,R.drawable.laventurier,R.drawable.monfilsmabataille,R.drawable.justcantgetenough,R.drawable.sweetdreams,R.drawable.totaleclipse,R.drawable.babybemine,R.drawable.billiejean,R.drawable.nevergonnagiveyouup};
         super.after();
         return view;
     }

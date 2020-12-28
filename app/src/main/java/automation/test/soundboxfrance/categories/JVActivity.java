@@ -15,6 +15,8 @@ import automation.test.soundboxfrance.R;
 
 public class JVActivity extends SuperActivity {
 
+    public JVActivity(){}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

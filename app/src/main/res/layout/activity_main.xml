@@ -27,6 +27,15 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="20dp"
+                android:id="@+id/yoursoundboxButton">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yoursoundboxButton"
+                android:layout_centerHorizontal="true"
                 android:background="@drawable/internetytb"
                 android:id="@+id/internetytbButton">
 
@@ -36,6 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
                 android:layout_below="@+id/internetytbButton"
                 android:background="@drawable/sporthumourpolitique"
                 android:id="@+id/sporthumourpolitiqueButton">
@@ -47,7 +57,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/sporthumourpolitiqueButton"
-                android:layout_margin="20dp"
                 android:background="@drawable/films"
                 android:id="@+id/filmsButton">
 
@@ -58,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/filmsButton"
+                android:layout_margin="20dp"
                 android:background="@drawable/television"
                 android:id="@+id/tvButton">
 
@@ -68,7 +78,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/tvButton"
-                android:layout_margin="20dp"
                 android:background="@drawable/jeuxvideos"
                 android:id="@+id/jvButton">
 
@@ -79,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/jvButton"
+                android:layout_margin="20dp"
                 android:background="@drawable/musiquetrentedeuxmille"
                 android:id="@+id/musictrenteButton">
 
@@ -89,7 +99,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/musictrenteButton"
-                android:layout_margin="20dp"
                 android:background="@drawable/musiqueautres"
                 android:id="@+id/musicRapButton">
 
@@ -101,6 +110,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/musicRapButton"
                 android:background="@drawable/generiques"
+                android:layout_margin="20dp"
                 android:id="@+id/generiqueButton">
 
             </Button>
@@ -110,7 +120,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/generiqueButton"
-                android:layout_margin="20dp"
                 android:background="@drawable/theme"
                 android:id="@+id/themeButton">
 
@@ -121,6 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/themeButton"
+                android:layout_margin="20dp"
                 android:background="@drawable/nouveautes"
                 android:id="@+id/nouveautesButton">
 
@@ -131,7 +141,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/nouveautesButton"
-                android:layout_margin="20dp"
                 android:background="@drawable/rechercheunson"
                 android:id="@+id/rechercheButton">
 
@@ -142,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/rechercheButton"
+                android:layout_margin="20dp"
                 android:background="@drawable/coupdecoeur"
                 android:id="@+id/coupdecoeurButton">
 
@@ -152,7 +162,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/coupdecoeurButton"
-                android:layout_margin="20dp"
                 android:background="@drawable/proposeunson"
                 android:id="@+id/proposeButton">
 
@@ -164,6 +173,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/proposeButton"
                 android:background="@drawable/noteappli"
+                android:layout_margin="20dp"
                 android:id="@+id/noteButton">
 
             </Button>

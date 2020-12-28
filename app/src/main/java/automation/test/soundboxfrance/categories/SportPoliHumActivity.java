@@ -15,6 +15,8 @@ import automation.test.soundboxfrance.R;
 
 public class SportPoliHumActivity extends SuperActivity {
 
+    public SportPoliHumActivity(){}
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_univers);

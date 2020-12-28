@@ -15,6 +15,8 @@ import automation.test.soundboxfrance.R;
 
 public class ThemeActivity extends SuperActivity {
 
+    public ThemeActivity(){}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

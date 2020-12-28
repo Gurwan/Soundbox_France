@@ -33,7 +33,7 @@ import androidx.fragment.app.FragmentActivity;
 public class EventHandlerClass {
 
 
-    private static final String LOG_TAG = "EventHandlerClass";
+    private static final String LOG_TAG = "EVENTHANDLER";
 
     private static MediaPlayer mp;
 
@@ -52,7 +52,7 @@ public class EventHandlerClass {
 
         } catch (Exception e) {
 
-            Log.e(LOG_TAG, "MediaPlayer ne s'est pas initialisé : " + e.getMessage());
+            Log.e(LOG_TAG, "Failed to initialize MediaPlayer: " + e.getMessage());
         }
     }
 
@@ -70,11 +70,10 @@ public class EventHandlerClass {
 
         PopupMenu popup = new PopupMenu(view.getContext(), view);
 
-        if (view.getContext() instanceof FavoriteActivity){
+        if (view.getContext() instanceof FavoriteActivity)
             popup.getMenuInflater().inflate(R.menu.favo_longclick, popup.getMenu());
-        } else {
+        else
             popup.getMenuInflater().inflate(R.menu.longclick, popup.getMenu());
-        }
 
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
@@ -98,7 +97,7 @@ public class EventHandlerClass {
                         in.close();
                         out.close();
                     } catch (IOException e) {
-                        Log.e(LOG_TAG, "Impossibe de sauvegarder le fichier: " + e.getMessage());
+                        Log.e(LOG_TAG, "Impossible de sauvegarder le fichier: " + e.getMessage());
                     }
 
                     if (menuItem.getItemId() == R.id.action_send) {
@@ -283,12 +282,15 @@ public class EventHandlerClass {
 
             switch (action) {
 
+                // Ringtone
                 case 1:
                     RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_RINGTONE, finalUri);
                     break;
+                // Notification
                 case 2:
                     RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_NOTIFICATION, finalUri);
                     break;
+                // Alarm
                 case 3:
                     RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_ALARM, finalUri);
                     break;

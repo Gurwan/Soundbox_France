@@ -6,15 +6,26 @@
 
 package automation.test.soundboxfrance;
 
+import android.net.Uri;
+
+/**
+ * Created by gurwa on 16/02/2018.
+ */
 
 public class SoundObject {
     private String itemName;
     private Integer itemID;
     private Integer itemImage;
+    private Uri itemUri;
 
     public SoundObject(String itemName, Integer itemID){
         this.itemName = itemName;
         this.itemID = itemID;
+    }
+
+    public SoundObject(String itemName, Uri itemUri){
+        this.itemName = itemName;
+        this.itemUri = itemUri;
     }
 
     public SoundObject(String itemName, Integer itemID, Integer itemImage){
@@ -49,6 +60,10 @@ public class SoundObject {
     }
     public void setImage(Integer image) {
         this.itemImage = image;
+    }
+
+    public Uri getItemUri() {
+        return itemUri;
     }
 }
 
