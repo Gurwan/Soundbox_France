@@ -174,10 +174,10 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         }
     }
 
-    public void removeCustom(Context context, SoundObject soundObject) {
+   public void removeCustom(Context context, SoundObject soundObject) {
         SQLiteDatabase database = this.getWritableDatabase();
         try {
-            database.delete(CUSTOM_TABLE, CUSTOM_ITEM_ID + " = " + soundObject.getItemUri().toString(), null);
+            database.delete(CUSTOM_TABLE, CUSTOM_NAME + " = " + "'" + soundObject.getItemName() + "'", null);
             Activity activity = (Activity) context;
             Intent intent = activity.getIntent();
             activity.overridePendingTransition(0,0);

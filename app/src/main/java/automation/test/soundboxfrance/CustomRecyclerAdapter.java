@@ -67,6 +67,14 @@ public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAd
             }
         });
 
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                EventHandlerClass.customManager(v, object);
+                return true;
+            }
+        });
+
         holder.imageViewitem.setImageResource(images[new Random().nextInt(images.length)]);
     }
 

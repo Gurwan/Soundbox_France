@@ -241,6 +241,27 @@ public class EventHandlerClass {
         popup.show();
     }
 
+     public static void customManager(final View view, final SoundObject soundObject) {
+
+        databaseHandler = new DatabaseHandler(view.getContext());
+
+        PopupMenu popup = new PopupMenu(view.getContext(), view);
+
+        popup.getMenuInflater().inflate(R.menu.delete_custom, popup.getMenu());
+
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+
+                if (menuItem.getItemId() == R.id.action_delete) {
+                    databaseHandler.removeCustom(view.getContext(),soundObject);
+                }
+                return true;
+            }
+        });
+        popup.show();
+    }
+
 
     private static void changeSystemAudio(View view, String fileName, File file, int action) {
 

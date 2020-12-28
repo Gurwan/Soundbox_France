@@ -29,6 +29,16 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,UnusedAttribute">
+
+         <activity android:name=".YourSoundboxActivity"
+            android:label="Ta Soundbox"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+            
+        <activity android:name=".AddNewSoundActivity"
+            android:label="Ajoute un son"
+            android:parentActivityName=".YourSoundboxActivity"
+            android:screenOrientation="portrait" />
         
         <activity android:name=".categories.MusiqueRapAutres"
             android:label="Musiques 2"
