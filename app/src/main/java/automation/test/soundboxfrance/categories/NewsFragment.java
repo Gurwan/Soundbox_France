@@ -7,7 +7,10 @@
 package automation.test.soundboxfrance.categories;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -158,5 +161,20 @@ public class NewsFragment extends AppCompatActivity {
         super.onDestroy();
 
         EventHandlerClass.releaseMediaPlayer();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.help_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+        if(menuItem.getItemId() == R.id.action_help){
+            Toast.makeText(this, "Tous les sons ajoutés lors d'une mise à jour se trouvent ici ! Aucune chance de rater les nouveautés.", Toast.LENGTH_LONG).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(menuItem);
     }
 }

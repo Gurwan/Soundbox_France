@@ -13,50 +13,31 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
-/**
- * Created by gurwa on 16/02/2018.
- */
 
 public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecyclerAdapter.SoundboxViewHolder>{
 
     private ArrayList<SoundObject> soundObjects;
-    private List<String> name;
-    private DatabaseHandler databaseHandler;
-    private boolean longClickFav;
-    private boolean imgDispo;
-    private boolean choixImg;
-    private FragmentActivity activity;
+    private final boolean longClickFav;
 
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects){
         this.soundObjects = soundObjects;
         this.longClickFav = true;
-        this.imgDispo = true;
     }
-
 
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects, AppCompatActivity mainActivity){
         this.soundObjects = soundObjects;
         this.longClickFav = true;
-        this.imgDispo = true;
     }
 
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects, FavoriteActivity activity){
         this.soundObjects = soundObjects;
         this.longClickFav = false;
-        this.imgDispo = true;
-        this.activity = activity;
     }
 
     @NonNull
@@ -64,32 +45,33 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
     public SoundboxViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         @SuppressLint("InflateParams") View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.sound_item, null);
         return new SoundboxViewHolder(itemView);
-
     }
 
     @Override
     public void onBindViewHolder(@NonNull SoundboxViewHolder holder, int position) {
+        if(pubmin != null) {
+            pubmin.loadAd(new AdRequest.Builder().build());
+        }
+
         final SoundObject object = soundObjects.get(position);
         final Integer soundID = object.getItemID();
-
 
         holder.itemTextView.setText(object.getItemName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EventHandlerClass.startMediaPlayer(v, soundID);
+                
             }
         });
 
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-
                 if(longClickFav) {
                     EventHandlerClass.popupManager(v, object);
                 }else{
-                    System.out.println("long click false");
-                    EventHandlerClass.popupManager(v, object,activity);
+                    EventHandlerClass.popupManagerFav(v, object);
                 }
                 return true;
             }
@@ -108,13 +90,10 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
         TextView itemTextView;
         ImageView imageViewitem;
 
-
         public SoundboxViewHolder(View itemView) {
             super(itemView);
-
             itemTextView = itemView.findViewById(R.id.textViewItem);
             imageViewitem = itemView.findViewById(R.id.imageViewitem);
-
         }
     }
 

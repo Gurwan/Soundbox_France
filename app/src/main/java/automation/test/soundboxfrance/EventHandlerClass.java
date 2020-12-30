@@ -27,32 +27,25 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import androidx.core.content.FileProvider;
-import androidx.fragment.app.FragmentActivity;
 
 
 public class EventHandlerClass {
 
-
     private static final String LOG_TAG = "EVENTHANDLER";
-
     private static MediaPlayer mp;
-
     private static DatabaseHandler databaseHandler;
 
     public static void startMediaPlayer(View view, Integer soundID) {
-
         try {
-
             if (soundID != null) {
-                if (mp != null)
+                if (mp != null) {
                     mp.reset();
+                }
                 mp = MediaPlayer.create(view.getContext(), soundID);
                 mp.start();
             }
-
         } catch (Exception e) {
-
-            Log.e(LOG_TAG, "Failed to initialize MediaPlayer: " + e.getMessage());
+            Log.e(LOG_TAG, "Impossible d'initialiser MediaPlayer: " + e.getMessage());
         }
     }
 
@@ -65,24 +58,20 @@ public class EventHandlerClass {
     }
 
     public static void popupManager(final View view, final SoundObject soundObject) {
-
         databaseHandler = new DatabaseHandler(view.getContext());
-
         PopupMenu popup = new PopupMenu(view.getContext(), view);
 
-        if (view.getContext() instanceof FavoriteActivity)
+        if (view.getContext() instanceof FavoriteActivity){
             popup.getMenuInflater().inflate(R.menu.favo_longclick, popup.getMenu());
-        else
+        } else {
             popup.getMenuInflater().inflate(R.menu.longclick, popup.getMenu());
+        }
 
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-
                 if (menuItem.getItemId() == R.id.action_send || menuItem.getItemId() == R.id.action_ringtone) {
-
                     final String fileName = soundObject.getItemName().replaceAll("\\s","_") + ".mp3";
-
                     File storageDir = new File(Environment.getExternalStorageDirectory().toString(),"/soundbox_france/");
                     storageDir.mkdirs();
                     final File file = new File(storageDir, fileName);
@@ -146,14 +135,11 @@ public class EventHandlerClass {
         popup.show();
     }
 
-    public static void popupManager(final View view, final SoundObject soundObject,final FragmentActivity activity) {
-
+    public static void popupManagerFav(final View view, final SoundObject soundObject) {
         databaseHandler = new DatabaseHandler(view.getContext());
-
         PopupMenu popup = new PopupMenu(view.getContext(), view);
 
         popup.getMenuInflater().inflate(R.menu.favo_longclick, popup.getMenu());
-
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
@@ -161,7 +147,6 @@ public class EventHandlerClass {
                 if (menuItem.getItemId() == R.id.action_send || menuItem.getItemId() == R.id.action_ringtone) {
 
                     final String fileName = soundObject.getItemName().replaceAll("\\s","_") + ".mp3";
-
                     File storageDir = new File(Environment.getExternalStorageDirectory().toString(),"/soundbox_france/");
                     storageDir.mkdirs();
                     final File file = new File(storageDir, fileName);
@@ -169,7 +154,6 @@ public class EventHandlerClass {
                     InputStream in = view.getContext().getResources().openRawResource(soundObject.getItemID());
 
                     try {
-
                         OutputStream out = new FileOutputStream(file);
                         byte[] buffer = new byte[1024];
 
@@ -180,18 +164,13 @@ public class EventHandlerClass {
 
                         in.close();
                         out.close();
-
                     } catch (IOException e) {
-
-                        Log.e(LOG_TAG, "Impossibe de sauvegarder le fichier: " + e.getMessage());
-
+                        Log.e(LOG_TAG, "Impossible de sauvegarder le fichier: " + e.getMessage());
                     }
 
                     if (menuItem.getItemId() == R.id.action_send) {
                             final String AUTHORITY = view.getContext().getPackageName() + ".fileprovider";
-
                             Uri contentUri = FileProvider.getUriForFile(view.getContext(), AUTHORITY, file);
-
                             final Intent shareIntent = new Intent(Intent.ACTION_SEND);
                             shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
                             shareIntent.setType("audio/mp3");
@@ -199,15 +178,12 @@ public class EventHandlerClass {
                     }
 
                     if (menuItem.getItemId() == R.id.action_ringtone) {
-
                         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext(), R.style.Theme_MaterialComponents_Light_Dialog_Alert);
                         builder.setTitle("Sauvegarder comme...");
                         builder.setItems(new CharSequence[]{"Sonnerie", "Notification", "Alarme"}, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int which) {
-
                                 switch (which) {
-
                                     case 0:
                                         changeSystemAudio(view, fileName, file, 1);
                                         break;
@@ -218,41 +194,30 @@ public class EventHandlerClass {
                                         changeSystemAudio(view, fileName, file, 3);
                                         break;
                                 }
-
                             }
                         });
-
                         builder.create();
                         builder.show();
                     }
                 }
 
                 if (menuItem.getItemId() == R.id.action_favorite) {
-
                     databaseHandler.removeFavorite(view.getContext(), soundObject);
-
-
                 }
-
                 return true;
             }
         });
-
         popup.show();
     }
 
-     public static void customManager(final View view, final SoundObject soundObject) {
+    public static void customManager(final View view, final SoundObject soundObject) {
 
         databaseHandler = new DatabaseHandler(view.getContext());
-
         PopupMenu popup = new PopupMenu(view.getContext(), view);
-
         popup.getMenuInflater().inflate(R.menu.delete_custom, popup.getMenu());
-
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-
                 if (menuItem.getItemId() == R.id.action_delete) {
                     databaseHandler.removeCustom(view.getContext(),soundObject);
                 }
@@ -264,29 +229,23 @@ public class EventHandlerClass {
 
 
     private static void changeSystemAudio(View view, String fileName, File file, int action) {
-
         try {
             ContentValues values = new ContentValues();
-
             values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
             values.put(MediaStore.MediaColumns.TITLE, fileName);
             values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/*");
 
             switch (action) {
-
-
                 case 1:
                     values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
                     values.put(MediaStore.Audio.Media.IS_NOTIFICATION, false);
                     values.put(MediaStore.Audio.Media.IS_ALARM, false);
                     break;
-
                 case 2:
                     values.put(MediaStore.Audio.Media.IS_RINGTONE, false);
                     values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
                     values.put(MediaStore.Audio.Media.IS_ALARM, false);
                     break;
-
                 case 3:
                     values.put(MediaStore.Audio.Media.IS_RINGTONE, false);
                     values.put(MediaStore.Audio.Media.IS_NOTIFICATION, false);
@@ -295,35 +254,24 @@ public class EventHandlerClass {
             }
 
             values.put(MediaStore.Audio.Media.IS_MUSIC, false);
-
             Uri uri = MediaStore.Audio.Media.getContentUriForPath(file.getAbsolutePath());
             assert uri != null;
             view.getContext().getContentResolver().delete(uri, MediaStore.MediaColumns.DATA + "=\"" + file.getAbsolutePath() + "\"", null);
             Uri finalUri = view.getContext().getContentResolver().insert(uri, values);
 
             switch (action) {
-
-                // Ringtone
                 case 1:
                     RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_RINGTONE, finalUri);
                     break;
-                // Notification
                 case 2:
                     RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_NOTIFICATION, finalUri);
                     break;
-                // Alarm
                 case 3:
                     RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_ALARM, finalUri);
                     break;
-
             }
-
         } catch (Exception e) {
-
             Log.e(LOG_TAG, "Impossible de sauvegarder ce son comme:" + e.getMessage());
         }
     }
-
-
-
 }

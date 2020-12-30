@@ -19,7 +19,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
 
     private static final String LOG_TAG = "DATABASEHANDLER";
 
-    private static final String DATABASE_NAME = "soundbox.france.v3";
+    private static final String DATABASE_NAME = "soundbox.france.v2";
     private static final int DATABASE_VERSION = 6;
 
     private static final String MAIN_TABLE = "main_table";
@@ -62,12 +62,11 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-
-    private boolean verification(SQLiteDatabase database, String tableName, String idRow, Integer soundId){
+    private boolean verification(SQLiteDatabase database, Integer soundId){
         int count = -1;
         Cursor cursor = null;
         try {
-            String query = "SELECT * FROM " + tableName + " WHERE " + idRow + " = " +  +soundId ;
+            String query = "SELECT * FROM " + DatabaseHandler.FAVORITES_TABLE + " WHERE " + DatabaseHandler.FAVORITES_ITEM_ID + " = " +  +soundId ;
             cursor = database.rawQuery(query, null);
             if (cursor.moveToFirst()){
                 count = cursor.getInt(0);
@@ -79,28 +78,10 @@ public class DatabaseHandler extends SQLiteOpenHelper{
             }
         }
     }
-
-    private boolean verification(SQLiteDatabase database, String tableName, String idRow, String name){
-        int count = -1;
-        Cursor cursor = null;
-        try {
-            String query = "SELECT * FROM " + tableName + " WHERE " + idRow + " = " + '"' +name + '"';
-            cursor = database.rawQuery(query, null);
-            if (cursor.moveToFirst()){
-                count = cursor.getInt(0);
-            }
-            return (count > 0);
-        } finally {
-            if (cursor != null){
-                cursor.close();
-            }
-        }
-    }
-
 
     public void addFavorite(SoundObject soundObject) {
         SQLiteDatabase database = this.getWritableDatabase();
-        if (!verification(database, FAVORITES_TABLE, FAVORITES_ITEM_ID, soundObject.getItemID()) ) {
+        if (!verification(database, soundObject.getItemID()) ) {
             try{
                 ContentValues contentValues = new ContentValues();
                 contentValues.put(FAVORITES_NAME, soundObject.getItemName());
@@ -119,7 +100,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
 
     public void removeFavorite(Context context, SoundObject soundObject) {
         SQLiteDatabase database = this.getWritableDatabase();
-        if (verification(database, FAVORITES_TABLE, FAVORITES_ITEM_ID, soundObject.getItemID()) ) {
+        if (verification(database, soundObject.getItemID()) ) {
             try {
                 database.delete(FAVORITES_TABLE, FAVORITES_ITEM_ID + " = " + soundObject.getItemID(), null);
                 Activity activity = (Activity) context;
@@ -130,7 +111,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
                 activity.overridePendingTransition(0,0);
                 context.startActivity(intent);
             } catch (Exception e){
-                Log.e(LOG_TAG, "(FAVORITES) Failed to remove sound: " + e.getMessage());
+                Log.e(LOG_TAG, "(FAVORITES) Erreur lors de la suppression du son: " + e.getMessage());
             } finally {
                 database.close();
             }
@@ -138,7 +119,6 @@ public class DatabaseHandler extends SQLiteOpenHelper{
             Log.e(LOG_TAG, "(FAVORIS) Erreur lors de la vérification des sons: ");
         }
     }
-
 
     public Cursor getFavorites(){
         SQLiteDatabase database = this.getReadableDatabase();
@@ -156,42 +136,35 @@ public class DatabaseHandler extends SQLiteOpenHelper{
             activity.overridePendingTransition(0, 0);
             context.startActivity(intent);
         } catch (Exception e) {
-            Log.e(LOG_TAG, "(FAVORITES) Failed to remove sound: " + e.getMessage());
+            Log.e(LOG_TAG, "(FAVORITES) Erreur lors de la suppression du son: " + e.getMessage());
         }
     }
 
     public void addCustom(SoundObject soundObject) {
-        SQLiteDatabase database = this.getWritableDatabase();
-        try{
+        try (SQLiteDatabase database = this.getWritableDatabase()) {
             ContentValues contentValues = new ContentValues();
             contentValues.put(CUSTOM_NAME, soundObject.getItemName());
             contentValues.put(CUSTOM_ITEM_ID, soundObject.getItemUri().toString());
             database.insert(CUSTOM_TABLE, null, contentValues);
-        } catch (Exception e){
+        } catch (Exception e) {
             Log.e(LOG_TAG, "(CUSTOM) Erreur lors de l'insertion des sons: " + e.getMessage());
-        } finally {
-            database.close();
         }
     }
 
-   public void removeCustom(Context context, SoundObject soundObject) {
-        SQLiteDatabase database = this.getWritableDatabase();
-        try {
+    public void removeCustom(Context context, SoundObject soundObject) {
+        try (SQLiteDatabase database = this.getWritableDatabase()) {
             database.delete(CUSTOM_TABLE, CUSTOM_NAME + " = " + "'" + soundObject.getItemName() + "'", null);
             Activity activity = (Activity) context;
             Intent intent = activity.getIntent();
-            activity.overridePendingTransition(0,0);
+            activity.overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             activity.finish();
-            activity.overridePendingTransition(0,0);
+            activity.overridePendingTransition(0, 0);
             context.startActivity(intent);
-        } catch (Exception e){
-            Log.e(LOG_TAG, "(CUSTOM) Failed to remove sound: " + e.getMessage());
-        } finally {
-            database.close();
+        } catch (Exception e) {
+            Log.e(LOG_TAG, "(CUSTOM) Erreur lors de la suppression du son: " + e.getMessage());
         }
     }
-
 
     public Cursor getCustom(){
         SQLiteDatabase database = this.getReadableDatabase();
@@ -209,7 +182,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
             activity.overridePendingTransition(0, 0);
             context.startActivity(intent);
         } catch (Exception e) {
-            Log.e(LOG_TAG, "(CUSTOM) Failed to remove sound: " + e.getMessage());
+            Log.e(LOG_TAG, "(CUSTOM) Erreur lors de la suppression du son: " + e.getMessage());
         }
     }
 }

@@ -6,36 +6,28 @@
 
 package automation.test.soundboxfrance;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ActivityToutRecherche extends AppCompatActivity implements SearchView.OnQueryTextListener {
-    private DrawerLayout mDrawerLayout;
-    private ActionBarDrawerToggle mToggle;
 
     ArrayList<SoundObject> soundListToutRecherche = new ArrayList<>();
-    Intent i = new Intent(Intent.ACTION_VIEW);
-    String urlprop = "http://play.google.com/store/apps/details?id=automation.test.soundboxfrance";
-    String urltw = "https://twitter.com/OkariaStudio";
-    String urlmail = "mailto:okariastudio@gmail.com";
 
-    RecyclerView SoundView;
-    SoundboxRecyclerAdapter SoundAdapter = new SoundboxRecyclerAdapter(soundListToutRecherche);
-    RecyclerView.LayoutManager SoundLayoutManager;
+    RecyclerView soundView;
+    SoundboxRecyclerAdapter soundAdapter = new SoundboxRecyclerAdapter(soundListToutRecherche);
+    RecyclerView.LayoutManager soundLayoutManager;
     private List<String> nameList = new ArrayList<>();
 
     @Override
@@ -55,27 +47,24 @@ public class ActivityToutRecherche extends AppCompatActivity implements SearchVi
             soundItems[i].setImage(soundImage[i]);
         }
 
-        SoundView = findViewById(R.id.soundboxRecyclerView);
+        soundView = findViewById(R.id.soundboxRecyclerView);
 
-        SoundLayoutManager = new GridLayoutManager(this, 3);
+        soundLayoutManager = new GridLayoutManager(this, 3);
 
-        SoundView.setLayoutManager(SoundLayoutManager);
+        soundView.setLayoutManager(soundLayoutManager);
 
-        SoundView.setAdapter(SoundAdapter);
-
+        soundView.setAdapter(soundAdapter);
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
-
         EventHandlerClass.releaseMediaPlayer();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.toolbar_menu,menu);
-
         return true;
     }
 
@@ -84,12 +73,12 @@ public class ActivityToutRecherche extends AppCompatActivity implements SearchVi
             SearchView searchView = (SearchView) menuItem.getActionView();
             searchView.setOnQueryTextListener(this);
             return true;
+        } else if(menuItem.getItemId() == R.id.action_help){
+            Toast.makeText(this, "Tous les sons sont ici ! Vous pouvez vous balader librement ou rechercher un son en appuyant sur la loupe en haut à droite.", Toast.LENGTH_LONG).show();
+            return true;
         }
-
         return super.onOptionsItemSelected(menuItem);
     }
-
-
 
     @Override
     public boolean onQueryTextSubmit(String s) {
@@ -101,15 +90,13 @@ public class ActivityToutRecherche extends AppCompatActivity implements SearchVi
         int ind = 0;
         String userInput = s.toLowerCase();
         ArrayList<SoundObject> newList = new ArrayList<>();
-
         for(String name : nameList){
             if(name.toLowerCase().contains(userInput)){
                 newList.add(soundListToutRecherche.get(ind));
             }
             ind++;
         }
-
-        SoundAdapter.updateList(newList);
+        soundAdapter.updateList(newList);
         return true;
     }
 

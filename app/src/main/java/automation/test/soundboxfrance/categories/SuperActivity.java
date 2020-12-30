@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -26,6 +27,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.widget.ViewPager2;
 import automation.test.soundboxfrance.ActivityToutRecherche;
 import automation.test.soundboxfrance.FavoriteActivity;
+import automation.test.soundboxfrance.MainActivity;
 import automation.test.soundboxfrance.R;
 import automation.test.soundboxfrance.adapters.ViewPagerAdapter;
 
@@ -119,6 +121,22 @@ class SuperActivity extends AppCompatActivity {
                 openPropose();
             }
         });
+
+        Button ButtonHome = findViewById(R.id.button_home);
+        ButtonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHome();
+            }
+        });
+
+        Button ButtonHelp = findViewById(R.id.button_help);
+        ButtonHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHelp();
+            }
+        });
     }
 
     public void openFav() {
@@ -164,5 +182,19 @@ class SuperActivity extends AppCompatActivity {
         Intent gm = new Intent(Intent.ACTION_VIEW);
         gm.setData(Uri.parse(URLPROPOSE));
         startActivity(gm);
+    }
+
+    public void openHelp() {
+        Toast.makeText(this, "Plusieurs catégories ayant le même thême sont regroupées ici.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "En cliquant longtemps sur un son vous pouvez :", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "- Mettre un son en 'Coup de coeur'", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "- Partager un son avec vos amis", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "- Définir un son en sonnerie,réveil,alarme..", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Vous devez accepter l'accès aux paramètres pour pouvoir définir un son et le partager (la demande d'accès se fait après l'installation).", Toast.LENGTH_LONG).show();
+    }
+
+    public void openHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

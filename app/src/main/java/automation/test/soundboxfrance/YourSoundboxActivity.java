@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,9 +27,9 @@ public class YourSoundboxActivity extends AppCompatActivity {
     private static final String LOG_TAG = "YOURSOUNDBOXACTIVITY";
     ArrayList<SoundObject> customList = new ArrayList<>();
 
-    RecyclerView CustomView;
-    CustomRecyclerAdapter CustomAdapter = new CustomRecyclerAdapter(customList,this);
-    RecyclerView.LayoutManager CustomLayoutManager;
+    RecyclerView customView;
+    CustomRecyclerAdapter customAdapter = new CustomRecyclerAdapter(customList,this);
+    RecyclerView.LayoutManager customLayoutManager;
     DatabaseHandler databaseHandler = new DatabaseHandler(this);
 
     @Override
@@ -38,14 +39,10 @@ public class YourSoundboxActivity extends AppCompatActivity {
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN ; getWindow().setFlags(pleinEcran,pleinEcran);
 
         addDataToArrayList();
-
-        CustomView = findViewById(R.id.customRecyclerView);
-
-        CustomLayoutManager = new GridLayoutManager(this, 3);
-
-        CustomView.setLayoutManager(CustomLayoutManager);
-
-        CustomView.setAdapter(CustomAdapter);
+        customView = findViewById(R.id.customRecyclerView);
+        customLayoutManager = new GridLayoutManager(this, 3);
+        customView.setLayoutManager(customLayoutManager);
+        customView.setAdapter(customAdapter);
     }
 
     @Override
@@ -59,20 +56,21 @@ public class YourSoundboxActivity extends AppCompatActivity {
             Intent intent = new Intent(this, AddNewSoundActivity.class);
             startActivity(intent);
             return true;
-        }
-
-        if (menuItem.getItemId() == R.id.action_clear) {
+        } else if (menuItem.getItemId() == R.id.action_clear) {
             databaseHandler.clearAllCustom(this);
             return true;
+        } else if(menuItem.getItemId() == R.id.action_help){
+            Toast.makeText(this, "Tu peux maintenant créer ta propre Soundbox ! ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Pour ajouter un son il faut appuyer sur le +", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Pour supprimer un son il faut appuyer longtemps sur un son et pour supprimer tous les sons il faut appuyer sur la corbeille.", Toast.LENGTH_LONG).show();
+            return true;
         }
-
         return super.onOptionsItemSelected(menuItem);
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
-
         EventHandlerClass.releaseMediaPlayer();
     }
 
@@ -87,10 +85,8 @@ public class YourSoundboxActivity extends AppCompatActivity {
                 String name = cursor.getString(cursor.getColumnIndex("customName"));
                 Uri uriSound = Uri.parse(cursor.getString(cursor.getColumnIndex("customId")));
                 customList.add(new SoundObject(name,uriSound));
-                CustomAdapter.notifyDataSetChanged();
+                customAdapter.notifyDataSetChanged();
         }
         cursor.close();
-
     }
-
 }

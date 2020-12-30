@@ -1,8 +1,3 @@
-/*
- * *******************************************************
- * Copyright (c) 2020. Okaria Studio
- * ******************************************************
- */
 
 package automation.test.soundboxfrance;
 
@@ -25,8 +20,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAdapter.SoundboxViewHolder>{
 
-    private ArrayList<SoundObject> soundObjects;
-    private Integer[] images = {R.drawable.tempoimage,R.drawable.tempoimagebleu,R.drawable.tempoimagejaune,R.drawable.tempoimagerose,R.drawable.tempoimagevert,R.drawable.tempoimageviolet};
+    private final ArrayList<SoundObject> soundObjects;
+    private final Integer[] images = {R.drawable.tempoimage,R.drawable.tempoimagebleu,R.drawable.tempoimagejaune,R.drawable.tempoimagerose,R.drawable.tempoimagevert,R.drawable.tempoimageviolet};
 
     public CustomRecyclerAdapter(ArrayList<SoundObject> soundObjects, YourSoundboxActivity yourSoundboxActivity){
         this.soundObjects = soundObjects;
@@ -83,24 +78,13 @@ public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAd
         return soundObjects.size();
     }
 
-    public void updateList(ArrayList<SoundObject> newList){
-        soundObjects = new ArrayList<>();
-        soundObjects.addAll(newList);
-        notifyDataSetChanged();
-    }
-
     public static class SoundboxViewHolder extends RecyclerView.ViewHolder {
-
         TextView itemTextView;
         ImageView imageViewitem;
-
-
         public SoundboxViewHolder(View itemView) {
             super(itemView);
-
             itemTextView = itemView.findViewById(R.id.textViewItem);
             imageViewitem = itemView.findViewById(R.id.imageViewitem);
-
         }
     }
 }

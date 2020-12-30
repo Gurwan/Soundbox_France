@@ -18,14 +18,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
@@ -42,14 +39,15 @@ import automation.test.soundboxfrance.categories.TVActivity;
 import automation.test.soundboxfrance.categories.ThemeActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private ActionBarDrawerToggle mToggle;
-
     String urlprop = "http://play.google.com/store/apps/details?id=automation.test.soundboxfrance";
-    String urltw = "https://twitter.com/OkariaStudio";
-    String urlmail = "mailto:okariastudio@gmail.com";
     String urlpropose = "https://docs.google.com/forms/d/e/1FAIpQLScSp4fVFHqFRI9zNGWaD_Lcn2PJACyLlVHeGr2ASq4rhg1kfg/viewform";
-    private InterstitialAd pubfav;
-    private InterstitialAd pubrecherche;
+
+    boolean doubleBackPressed = false;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,223 +55,206 @@ public class MainActivity extends AppCompatActivity {
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setFlags(pleinEcran, pleinEcran);
 
-        Button ButtonFav = findViewById(R.id.coupdecoeurButton);
-        ButtonFav.setOnClickListener(new View.OnClickListener() {
+        Button buttonFav = findViewById(R.id.coupdecoeurButton);
+        buttonFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openFav();
+                openA(14);
             }
         });
 
-
-        Button ButtonRecherche = findViewById(R.id.rechercheButton);
-        ButtonRecherche.setOnClickListener(new View.OnClickListener() {
+        Button buttonRecherche = findViewById(R.id.rechercheButton);
+        buttonRecherche.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openRecherche();
+                openA(13);
             }
         });
 
-        Button ButtonNoteLappli = findViewById(R.id.noteButton);
-        ButtonNoteLappli.setOnClickListener(new View.OnClickListener() {
+        Button buttonNoteLappli = findViewById(R.id.noteButton);
+        buttonNoteLappli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openNoteLappli();
+                openA(16);
             }
         });
 
-
-        Button ButtonPropose = findViewById(R.id.proposeButton);
-        ButtonPropose.setOnClickListener(new View.OnClickListener() {
+        Button buttonPropose = findViewById(R.id.proposeButton);
+        buttonPropose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPropose();
+                openA(15);
             }
         });
 
-
-        Button InternetYtbButton = findViewById(R.id.internetytbButton);
-        InternetYtbButton.setOnClickListener(new View.OnClickListener() {
+        Button internetYtbButton = findViewById(R.id.internetytbButton);
+        internetYtbButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMeme();
+                Toast.makeText(view.getContext(), "Les mêmes sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(3);
             }
         });
 
-        Button SportHumourPolitiqueButton = findViewById(R.id.sporthumourpolitiqueButton);
-        SportHumourPolitiqueButton.setOnClickListener(new View.OnClickListener() {
+        Button sportHumourPolitiqueButton = findViewById(R.id.sporthumourpolitiqueButton);
+        sportHumourPolitiqueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSportPolitiqueHumour();
+                Toast.makeText(view.getContext(), "Les sons sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(4);
             }
         });
 
-        Button MusicButton = findViewById(R.id.musictrenteButton);
-        MusicButton.setOnClickListener(new View.OnClickListener() {
+        Button musicButton = findViewById(R.id.musictrenteButton);
+        musicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMusic();
+                Toast.makeText(view.getContext(), "Les musiques sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(8);
             }
         });
 
-        Button MusicRapButton = findViewById(R.id.musicRapButton);
-        MusicRapButton.setOnClickListener(new View.OnClickListener() {
+        Button musicRapButton = findViewById(R.id.musicRapButton);
+        musicRapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMusicRap();
+                Toast.makeText(view.getContext(), "Les musiques sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(9);
             }
         });
 
-        Button FilmsButton = findViewById(R.id.filmsButton);
-        FilmsButton.setOnClickListener(new View.OnClickListener() {
+        Button filmsButton = findViewById(R.id.filmsButton);
+        filmsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openFilmsTV();
+                Toast.makeText(view.getContext(), "Les films sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(5);
             }
         });
 
-        Button TVButton = findViewById(R.id.tvButton);
-        TVButton.setOnClickListener(new View.OnClickListener() {
+        Button tvButton = findViewById(R.id.tvButton);
+        tvButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openTV();
+                Toast.makeText(view.getContext(), "Les sons sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(6);
             }
         });
 
-        Button JVButton = findViewById(R.id.jvButton);
-        JVButton.setOnClickListener(new View.OnClickListener() {
+        Button jvButton = findViewById(R.id.jvButton);
+        jvButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openJV();
+                Toast.makeText(view.getContext(), "Les sons sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(7);
             }
         });
 
-        Button ThemeButton = findViewById(R.id.themeButton);
-        ThemeButton.setOnClickListener(new View.OnClickListener() {
+        Button themeButton = findViewById(R.id.themeButton);
+        themeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openTheme();
+                Toast.makeText(view.getContext(), "Les sons sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(11);
             }
         });
 
-        Button GeneriquesButton = findViewById(R.id.generiqueButton);
-        GeneriquesButton.setOnClickListener(new View.OnClickListener() {
+        Button generiquesButton = findViewById(R.id.generiqueButton);
+        generiquesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openGeneriques();
+                Toast.makeText(view.getContext(), "Les génériques sont en train de charger. Patientez quelques secondes", Toast.LENGTH_SHORT).show();
+                openA(10);
             }
         });
 
-        Button NouveautesButton = findViewById(R.id.nouveautesButton);
-        NouveautesButton.setOnClickListener(new View.OnClickListener() {
+        Button nouveautesButton = findViewById(R.id.nouveautesButton);
+        nouveautesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openNouveautes();
+                openA(12);
             }
         });
 
-        Button YourSoundboxButton = findViewById(R.id.yoursoundboxButton);
-        YourSoundboxButton.setOnClickListener(new View.OnClickListener() {
+        Button yourSoundboxButton = findViewById(R.id.yoursoundboxButton);
+        yourSoundboxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openYourSoundbox();
+                openA(1);
             }
         });
 
+        Button dailySoundbox = findViewById(R.id.dailysoundbox);
+        dailySoundbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(2);
+            }
+        });
         requestPermissions();
     }
 
-
-
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (mToggle.onOptionsItemSelected(item)) {
-            return true;
+    public void openA(int a){
+        Intent intent = null;
+        switch(a){
+            case 1:
+                intent = new Intent(this, YourSoundboxActivity.class);
+                break;
+            case 2:
+                intent = new Intent(this, DailySoundboxActivity.class);
+                break;
+            case 3:
+                intent = new Intent(this, MemeActivity.class);
+                break;
+            case 4:
+                intent = new Intent(this, SportPoliHumActivity.class);
+                break;
+            case 5:
+                intent = new Intent(this, FilmsTVActivity.class);
+                break;
+            case 6:
+                intent = new Intent(this, TVActivity.class);
+                break;
+            case 7:
+                intent = new Intent(this, JVActivity.class);
+                break;
+            case 8:
+                intent = new Intent(this, MusicFragment.class);
+                break;
+            case 9:
+                intent = new Intent(this, MusiqueRapAutres.class);
+                break;
+            case 10:
+                intent = new Intent(this, GeneriquesActivity.class);
+                break;
+            case 11:
+                intent = new Intent(this, ThemeActivity.class);
+                break;
+            case 12:
+                intent = new Intent(this, NewsFragment.class);
+                break;
+            case 13:
+                intent = new Intent(this, ActivityToutRecherche.class);
+                break;
+            case 14:
+                intent = new Intent(this, FavoriteActivity.class);
+                break;
+            case 15:
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(urlpropose));
+                break;
+            case 16:
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(urlprop));
+                break;
+            }
+            startActivity(intent);
         }
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void openFav() {
-        Intent intent = new Intent(this, FavoriteActivity.class);
-        startActivity(intent);
-    }
-
-    private void openYourSoundbox() {
-        Intent intent = new Intent(this, YourSoundboxActivity.class);
-        startActivity(intent);
-    }
-
-    public void openRecherche() {
-        Intent intent = new Intent(this, ActivityToutRecherche.class);
-        startActivity(intent);
-    }
-
-    public void openMeme() {
-        Intent intent = new Intent(this, MemeActivity.class);
-        startActivity(intent);
-    }
-
-    public void openSportPolitiqueHumour() {
-        startActivity(intent);
-    }
-
-    public void openMusic() {
-        Intent intent = new Intent(this, MusicFragment.class);
-        startActivity(intent);
-    }
-
-    public void openMusicRap() {
-        Intent intent = new Intent(this, MusiqueRapAutres.class);
-        startActivity(intent);
-    }
-
-    public void openFilmsTV() {
-        Intent intent = new Intent(this, FilmsTVActivity.class);
-        startActivity(intent);
-    }
-
-    public void openTV() {
-        Intent intent = new Intent(this, TVActivity.class);
-        startActivity(intent);
-    }
-
-    public void openJV() {
-        Intent intent = new Intent(this, JVActivity.class);
-        startActivity(intent);
-    }
-
-    public void openTheme() {
-        Intent intent = new Intent(this, ThemeActivity.class);
-        startActivity(intent);
-    }
-
-    public void openGeneriques() {
-        Intent intent = new Intent(this, GeneriquesActivity.class);
-        startActivity(intent);
-    }
-
-    public void openNouveautes() {
-        Intent intent = new Intent(this, NewsFragment.class);
-        startActivity(intent);
-    }
-
-    public void openNoteLappli() {
-        Intent prop = new Intent(Intent.ACTION_VIEW);
-        prop.setData(Uri.parse(urlprop));
-        startActivity(prop);
-
-    }
-
-    public void openPropose() {
-        Intent gm = new Intent(Intent.ACTION_VIEW);
-        gm.setData(Uri.parse(urlpropose));
-        startActivity(gm);
     }
 
     private void requestPermissions() {
 
-        final ConstraintLayout relativeLayout = findViewById(R.id.activity_main);
+        final ConstraintLayout constraintLayout = findViewById(R.id.activity_main);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
@@ -285,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (!(Settings.System.canWrite(this))) {
 
-            Snackbar.make(relativeLayout, "L'application a besoin d'avoir accès à vos paramètres pour que vous puissiez changer de sonnerie", Snackbar.LENGTH_INDEFINITE).setAction("OK",
+            Snackbar.make(constraintLayout, "L'application a besoin d'avoir accès à vos paramètres pour que vous puissiez changer de sonnerie", Snackbar.LENGTH_INDEFINITE).setAction("OK",
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -298,21 +279,15 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }).show();
         }
-
-
     }
-
-    Boolean doubleBackPressed = false;
 
     public void onBackPressed() {
         if (doubleBackPressed) {
             super.onBackPressed();
-
         } else {
             doubleBackPressed = true;
-            final ConstraintLayout relativeLayout = findViewById(R.id.activity_main);
-
-            Snackbar.make(relativeLayout, getString(R.string.back), Snackbar.LENGTH_SHORT).show();
+            final ConstraintLayout constraintLayout = findViewById(R.id.activity_main);
+            Snackbar.make(constraintLayout, getString(R.string.back), Snackbar.LENGTH_SHORT).show();
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
