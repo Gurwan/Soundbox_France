@@ -25,7 +25,12 @@
             android:layout_height="wrap_content"
             >
 
-            <!-- Button to access RechercheTout -->
+            <Button
+                android:id="@+id/button_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_home_24"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/button_fav"
@@ -67,6 +72,13 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/ic_publish_black_24dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_help"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_help_24"
                 tools:ignore="ButtonStyle" />
         </LinearLayout>
 

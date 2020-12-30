@@ -16,18 +16,4 @@
         app:showAsAction="ifRoom|collapseActionView"
         tools:ignore="HardcodedText" />
 
-    <item
-        android:id="@+id/action_add"
-        android:icon="@drawable/ic_baseline_add_circle_24"
-        android:title="Ajouter un nouveau son"
-        app:showAsAction="ifRoom|collapseActionView"
-        tools:ignore="HardcodedText" />
-
-    <item
-        android:id="@+id/action_clear"
-        android:icon="@drawable/ic_baseline_delete_24"
-        android:title="Vider les sons personnalisés"
-        app:showAsAction="ifRoom|collapseActionView"
-        tools:ignore="HardcodedText" />
-
 </menu>

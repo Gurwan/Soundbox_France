@@ -17,16 +17,10 @@
         tools:ignore="HardcodedText" />
 
     <item
-        android:id="@+id/action_add"
-        android:icon="@drawable/ic_baseline_add_circle_24"
-        android:title="Ajouter un nouveau son"
-        app:showAsAction="ifRoom|collapseActionView"
-        tools:ignore="HardcodedText" />
-
-    <item
-        android:id="@+id/action_clear"
-        android:icon="@drawable/ic_baseline_delete_24"
-        android:title="Vider les sons personnalisés"
+        android:id="@+id/action_propose"
+        android:icon="@drawable/ic_publish_black_24dp"
+        android:orderInCategory="1"
+        android:title="@string/propose_un_son"
         app:showAsAction="ifRoom|collapseActionView"
         tools:ignore="HardcodedText" />
 
