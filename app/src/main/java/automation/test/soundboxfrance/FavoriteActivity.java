@@ -38,7 +38,6 @@ public class FavoriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_favorite);
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN ; getWindow().setFlags(pleinEcran,pleinEcran);
 
-        MobileAds.initialize(this,"ca-app-pub-3066536602388745~1856514605");
         addDataToArrayList();
         FavoriteView = findViewById(R.id.favoriteRecyclerView);
         FavoriteLayoutManager = new GridLayoutManager(this, 3);
