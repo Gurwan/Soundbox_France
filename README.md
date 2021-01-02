@@ -46,3 +46,45 @@
   
   <hr> </hr>
 </ul>
+
+<h3> Screenshots </h3>
+
+<p align="center">
+  <img src="https://github.com/Gurwan/SoundboxFrance/blob/main/doc/img4.jpg" width="550" style="max-width:100%;"><br>
+  Visual 1 - Home page
+</p>
+
+<br>
+
+
+<p align="center">
+  <img src="https://github.com/Gurwan/SoundboxFrance/blob/main/doc/img3.jpg" width="550" style="max-width:100%;"><br>
+  Visual 2 - Category page
+</p>
+
+<br>
+
+<p align="center">
+  <img src="https://github.com/Gurwan/SoundboxFrance/blob/main/doc/img.jpg" width="550" style="max-width:100%;"><br>
+  Visual 3 - Search page
+</p>
+
+<br>
+
+
+<p align="center">
+  <img src="https://github.com/Gurwan/SoundboxFrance/blob/main/doc/img2.jpg" width="550" style="max-width:100%;"><br>
+  Visual 4 - Favorites page
+</p>
+
+<br>
+
+
+<p align="center">
+  <img src="https://github.com/Gurwan/SoundboxFrance/blob/main/doc/img1.jpg" width="550" style="max-width:100%;"><br>
+  Visual 5 - Custom page
+</p>
+
+<hr> </hr>
+
+This application is coded in Java with the Android Studio IDE.
