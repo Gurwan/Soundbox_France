@@ -1,6 +1,6 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
@@ -31,6 +31,7 @@ class SuperFragment extends Fragment {
     Integer[] soundID;
     Integer[] soundImage;
     List<String> nameList;
+    int az = -1;
 
     public SuperFragment(AppCompatActivity mainActivity){
         SoundAdapter = new SoundboxRecyclerAdapter(soundList,mainActivity);
@@ -55,5 +56,17 @@ class SuperFragment extends Fragment {
         SoundView.setAdapter(SoundAdapter);
 
         SoundView.setNestedScrollingEnabled(false);
+    }
+
+    public int getAz() {
+        int ret = -1;
+        if(az!=0){
+            ret = az;
+            az = 0;
+        } else {
+            ret = az;
+            az = 1;
+        }
+        return ret;
     }
 }

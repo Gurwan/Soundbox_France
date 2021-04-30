@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /********************************************************
-  ~ Copyright (c) 2020. Okaria Studio
+  ~ Copyright (c) 2021. Okaria Studio
   ~ ********************************************************/
   -->
 
@@ -14,7 +14,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/fondhalloween"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/dailyRecyclerView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </androidx.core.widget.NestedScrollView >
 

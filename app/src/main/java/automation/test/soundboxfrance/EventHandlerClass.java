@@ -6,6 +6,7 @@
 
 package automation.test.soundboxfrance;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -19,6 +20,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -228,6 +230,7 @@ public class EventHandlerClass {
     }
 
 
+    @SuppressLint("ShowToast")
     private static void changeSystemAudio(View view, String fileName, File file, int action) {
         try {
             ContentValues values = new ContentValues();
@@ -270,6 +273,8 @@ public class EventHandlerClass {
                     RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_ALARM, finalUri);
                     break;
             }
+
+
         } catch (Exception e) {
             Log.e(LOG_TAG, "Impossible de sauvegarder ce son comme:" + e.getMessage());
         }

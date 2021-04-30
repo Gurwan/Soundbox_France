@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /********************************************************
-  ~ Copyright (c) 2020. Okaria Studio
+  ~ Copyright (c) 2021. Okaria Studio
   ~ ********************************************************/
   -->
 
@@ -13,6 +13,13 @@
         android:id="@+id/action_help"
         android:icon="@drawable/ic_baseline_help_24"
         android:title="Comment ça marche ?"
+        app:showAsAction="ifRoom|collapseActionView"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/sort_alphabetique"
+        android:title="Trier par ordre alphabetique"
         app:showAsAction="ifRoom|collapseActionView"
         tools:ignore="HardcodedText" />
 

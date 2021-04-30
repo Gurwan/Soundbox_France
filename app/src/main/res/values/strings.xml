@@ -1,0 +1,3066 @@
+<!--
+  ~ /********************************************************
+  ~ Copyright (c) 2021. Okaria Studio
+  ~ ********************************************************/
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Soundbox France</string>
+    <string name="welcome_to">Bienvenue sur</string>
+    <string name="search">Search</string>
+    <string name="action_send">Partage</string>
+    <string name="action_ringtone">Définir comme … </string>
+    <string name="action_favorite">Coup de Coeur</string>
+    <string name="action_removeFavorite">Crève Coeur </string>
+    <string name="back">Êtes-vous sur de quitter Soundbox France ?</string>
+
+    <string name="un_bouton">Un très très très très looooooong titre de sonnnnnn</string>
+    <string name="todo">TODO</string>
+    <string name="invalid_name">Le son doit avoir un nom</string>
+    <string name="supprimer_le_son">Supprimer le son</string>
+    <string name="like_number">0</string>
+    <string name="dislike_number">0</string>
+    <string name="propose_un_son">Propose un son</string>
+
+    <string-array name="soundNamesJeuxVideos">
+        <item>Crash Bandicoot</item>
+        <item>Dovahkiin</item>
+        <item>And you dont worry about your soul</item>
+        <item>Trevor décuve</item>
+        <item>Follow the damn train CJ</item>
+        <item>It\'s me Mario</item>
+        <item>War never changes</item>
+        <item>Va sucer un troll</item>
+        <item>Musique du Bus (Fortnite)</item>
+        <item>Turk Dance sur Fortnite</item>
+        <item>Danse sur Fortnite</item>
+        <item>Leeroy Jenkins (WOW)</item>
+        <item>Illidan (WOW Légion)</item>
+        <item>Floss sur Fortnite</item>
+        <item>Electro Shuffle sur Fortnite</item>
+        <item>Oui (Starcraft 2)</item>
+        <item>Travail terminé</item>
+        <item>Coffre dans Zelda</item>
+        <item>Non</item>
+        <item>Squalala nous sommes partis</item>
+        <item>Fusrodah</item>
+        <item>Oof</item>
+        <item>Fièvre Disco sur Fortnite</item>
+        <item>Wasted</item>
+        <item>Mission failed MGS</item>
+        <item>Mort Vivant sur Fortnite</item>
+        <item>Bel Air sur Fortnite</item>
+        <item>Hey Niko it\'s Roman</item>
+        <item>I need healing</item>
+        <item>Thor is here</item>
+        <item>Hit - Minecraft</item>
+        <item>Bon sang qu\'est qu\'on peut s\'ennuyer</item>
+        <item>Meilleur Pote sur Fortnite</item>
+        <item>De l\'or merci</item>
+        <item>Big Smoke\'s order</item>
+        <item>Rire du Roi - Link Faces of Evil</item>
+        <item>Welcome to Brawlhalla</item>
+        <item>Your the last one complete the mission</item>
+        <item>EA Sports</item>
+        <item>Megalovania</item>
+        <item>A nu cheeky breeky..</item>
+        <item>Ragnar le Rouge</item>
+        <item>Hey Listen</item>
+        <item>Alerte de Metal Gear Solid</item>
+        <item>Perfect</item>
+        <item>Oh sh*t here we go again</item>
+        <item>Kikiki mamama</item>
+        <item>SCP 096</item>
+        <item>Operation Health</item>
+        <item>Boite mystère mode zombie</item>
+        <item>Demarrage Mario Kart</item>
+        <item>Clash Royale</item>
+        <item>Eating Minecraft</item>
+        <item>Gamecube</item>
+        <item>Game Over Yeah</item>
+        <item>Kill Fortnite</item>
+        <item>Murloc</item>
+        <item>Ping League of Legends</item>
+        <item>Sega</item>
+        <item>Yoshi</item>
+        <item>Emergency dans Among Us</item>
+        <item>Kill dans Among Us</item>
+        <item>Start dans Among Us</item>
+        <item>You picked the wrong house fool</item>
+        <item>Dead by Daylight - Doctor Laugh</item>
+        <item>Cri de Mario</item>
+        <item>Game over Pac Man</item>
+    </string-array>
+
+    <string-array name="soundNamesFilmsMusic">
+        <item>Avengers</item>
+        <item>Deadpool</item>
+        <item>Titanic (Flute)</item>
+        <item>La Septième Compagnie</item>
+        <item>Harry Potter</item>
+        <item>Retour vers le futur</item>
+        <item>Jurassic Park</item>
+        <item>Titanic</item>
+        <item>Star Wars</item>
+        <item>Ghostbuster</item>
+        <item>Les Gendarmes</item>
+        <item>Spiderman</item>
+        <item>Exorciste</item>
+        <item>Mission Impossible</item>
+        <item>Shining</item>
+        <item>Pulp Fiction</item>
+        <item>Full Metal Jacket</item>
+        <item>Rocky</item>
+        <item>Rocky 3</item>
+        <item>Halloween</item>
+        <item>La liste de Schindler</item>
+        <item>Pirates des Caraibes</item>
+        <item>Avengers Infinity Wars</item>
+        <item>Fantomas</item>
+        <item>Les Bronzés font du Ski</item>
+        <item>Taxi</item>
+        <item>Harry Potter</item>
+        <item>Ready Player One</item>
+    </string-array>
+
+    <string-array name="soundNamesMusiqueGaming">
+        <item>Mario</item>
+        <item>Minecraft</item>
+        <item>Fortnite</item>
+        <item>Rust</item>
+        <item>Dokkan Battle</item>
+        <item>GTA V</item>
+        <item>PUBG</item>
+        <item>Clash of Clans</item>
+        <item>Tetris</item>
+        <item>Wii Theme</item>
+        <item>Wii Sport Theme</item>
+        <item>Angry Birds</item>
+        <item>GTA IV</item>
+        <item>Overwatch</item>
+        <item>Zelda</item>
+        <item>GTA San Andreas</item>
+        <item>Guile Theme SF2</item>
+        <item>Theme Halo</item>
+        <item>The Last Second</item>
+        <item>GTA Vice City</item>
+        <item>From NowHere</item>
+        <item>Big Dreams</item>
+        <item>Dire Docks - Super Mario 64</item>
+        <item>The Witcher 3</item>
+        <item>Animal Crossing New Leaf</item>
+        <item>Animal Crossing New Horizons</item>
+        <item>Fall Guys</item>
+        <item>Brawl Stars</item>
+        <item>Five Nights at Freddys</item>
+        <item>Mario Kart Double Dash</item>
+        <item>Mode Zombie</item>
+        <item>Phoenix Wright</item>
+        <item>Street Fighter 2</item>
+        <item>Super Smash Bros Brawl</item>
+        <item>Tomb Raider Legend</item>
+        <item>Undertale</item>
+        <item>Luigi\'s Mansion Dark Moon</item>
+        <item>Playstation</item>
+        <item>Super Mario 64</item>
+        <item>Super Smash Bros Ultimate</item>
+        <item>The Last of Us</item>
+        <item>Yoshi Island</item>
+    </string-array>
+
+    <string-array name="soundNamesEvent">
+        <item>BMW</item>
+        <item>Carglass</item>
+        <item>CIC</item>
+        <item>Comme j\'aime</item>
+        <item>Decathlon</item>
+        <item>Générale Optique</item>
+        <item>Groupama</item>
+        <item>Journal TF1</item>
+        <item>Lapeyre</item>
+        <item>Maaf</item>
+        <item>Maif</item>
+        <item>Mcdo</item>
+        <item>Peugeot</item>
+        <item>Point S</item>
+        <item>PS3</item>
+        <item>RTL</item>
+        <item>SFR</item>
+        <item>SNCF</item>
+        <item>TF1</item>
+        <item>Météo TF1</item>
+        <item>Xbox One</item>
+        <item>La Carte Kiwi</item>
+        <item>Tu pousses le bouchon </item>
+        <item>Ce sont des micoses va*inales</item>
+        <item>Des fuites urinaires</item>
+        <item>Je suis Olivier de Carglass</item>
+        <item>Playmobil en avant les histoires</item>
+        <item>Je vais faire caca chez..</item>
+        <item>Trivago</item>
+        <item>J\'adore rire</item>
+        <item>Charal</item>
+        <item>Chez Tati</item>
+    </string-array>
+
+    <string-array name="soundNameBruitage">
+        <item>Prout</item>
+        <item>Brouillage</item>
+        <item>Bruit de Suspense</item>
+        <item>Sirene Pompier</item>
+        <item>Sirene Police</item>
+        <item>Sirene Nucléaire</item>
+        <item>Toc toc</item>
+        <item>Chien</item>
+        <item>Clic souris</item>
+        <item>Dauphin</item>
+        <item>Denied</item>
+        <item>La base virale VPS </item>
+        <item>Démarrage Windows XP</item>
+        <item>Quitter Windows XP </item>
+        <item>Menace détectée</item>
+        <item>Klaxon</item>
+        <item>ASMR</item>
+        <item tools:ignore="Typos">Ba Dum Tss</item>
+        <item>Law and Order</item>
+        <item>Cri de chèvre</item>
+        <item>Erreur Windows XP</item>
+        <item>Netflix</item>
+        <item>Canard</item>
+        <item>Chat</item>
+        <item>Cochon</item>
+        <item>Rat</item>
+        <item>Zombie</item>
+        <item>Porte qui grince</item>
+        <item>Rot</item>
+        <item>Otarie</item>
+        <item>Cheval</item>
+        <item>Alarme incendie</item>
+        <item>Hurlement loup</item>
+        <item>We\'ll be right back</item>
+    </string-array>
+
+    <string-array name="soundNamesHymnes">
+        <item>Algérie</item>
+        <item>Allemagne</item>
+        <item>Argentine</item>
+        <item>Arménie</item>
+        <item>Australie</item>
+        <item>Belgique</item>
+        <item>Brésil</item>
+        <item>Bretagne</item>
+        <item>Canada</item>
+        <item>Champions League</item>
+        <item>Colombie</item>
+        <item>Ecosse</item>
+        <item>Egypte</item>
+        <item>Espagne</item>
+        <item>Europa League</item>
+        <item>Finlande</item>
+        <item>France</item>
+        <item>Hongrie</item>
+        <item>Irlande</item>
+        <item>Italie</item>
+        <item>Japon</item>
+        <item>Maroc</item>
+        <item>Mexique</item>
+        <item>Norvège</item>
+        <item>Pays de Galle</item>
+        <item>Pologne</item>
+        <item>Portugal</item>
+        <item>RDC</item>
+        <item>Sénégal</item>
+        <item>Slovénie</item>
+        <item>Suède</item>
+        <item>Tunisie</item>
+        <item>Turquie</item>
+        <item>UK</item>
+        <item>URSS</item>
+        <item>USA</item>
+    </string-array>
+
+    <string-array name="soundNamesPolitique">
+        <item>Niq*e ta mère</item>
+        <item>Bing Bing Bang</item>
+        <item>Jeanne au secours</item>
+        <item>Poudre de Perlimpinpin</item>
+        <item>Mais qui elle est celle là</item>
+        <item>Pensez printemps</item>
+        <item>Je suis fils de berger</item>
+        <item>Mes chers compatriotes</item>
+        <item>Dans les campagnes</item>
+        <item>Oui oui</item>
+        <item>Je suis votre chef</item>
+        <item>Notre projet</item>
+        <item>Mis en examen</item>
+        <item>Cahuzac</item>
+        <item>Marine Le Pen a menti</item>
+        <item>Rouquin va</item>
+        <item>Il faut bien un débat au PS</item>
+        <item>Ta mère la p*te voila</item>
+        <item>Pensez Printemps (Macron)</item>
+        <item>Mais vous fumez monsieur</item>
+        <item>Casse toi pauvre c*n</item>
+        <item>Yes we can</item>
+        <item>Carglass Con*asse</item>
+        <item>Carabistouille</item>
+        <item>Ils vont vous ba*ser</item>
+        <item>Je vous ai compris</item>
+        <item>Bamboula</item>
+        <item>Ca va Manu ?</item>
+        <item>Je vais lui retirer son calecon</item>
+        <item>Si tu crois que cest en insultant</item>
+        <item>Ouais</item>
+        <item>La République c\'est moi</item>
+        <item>J\'ai des amis arabes</item>
+        <item>Nous sommes en guerre</item>
+        <item>Quelle indignite</item>
+        <item>Menteur pharisien</item>
+        <item>Non j\'ai pas d\'amis</item>
+        <item>Au revoir</item>
+        <item>D\'accord génial</item>
+        <item>Wankil Studio svp</item>
+    </string-array>
+
+    <string-array name="soundNamesGeneriquesDessinsAnimes">
+        <item>Tintin</item>
+        <item>Scooby Doo</item>
+        <item>Île aux enfants</item>
+        <item>Oui Oui</item>
+        <item>Âne Trotro</item>
+        <item>Tchoupi</item>
+        <item>Téletubbies</item>
+        <item>La Panthère Rose</item>
+        <item>Simpsons</item>
+        <item>Inspecteur Gadget</item>
+        <item>Les Mystérieuses Cités d\'Or</item>
+        <item>Denver le Dernier Dinosaure</item>
+        <item>Les Ratz</item>
+        <item>Rick et Morty</item>
+        <item>Yakari</item>
+        <item>South Park</item>
+        <item>Oggy et les Cafards</item>
+        <item>Code Lyoko</item>
+        <item>Bob lEponge</item>
+        <item>Il était une fois la vie</item>
+        <item>Foot 2 Rue</item>
+        <item>Adventure Time</item>
+        <item>Bienvenue chez les Loud</item>
+        <item>Corneil et Bernie</item>
+        <item>Miraculous</item>
+        <item>Bojack Horseman</item>
+        <item>La Bande à Picsou</item>
+        <item>Martin Matin</item>
+        <item>Petit Ours Brun</item>
+        <item>Il était une fois l\'homme</item>
+        <item>Thomas le Train</item>
+        <item>Barbapapa</item>
+        <item>Ben 10</item>
+        <item>Casper</item>
+        <item>Eckhart</item>
+        <item>Garfield</item>
+        <item>Hamtaro</item>
+        <item>Marsupilami</item>
+        <item>Père Castor</item>
+        <item>Sharky et Georges</item>
+        <item>Shuriken School</item>
+        <item>Gravity Falls</item>
+        <item>Monsters Inc Earrape</item>
+        <item>Dora l\'exploratrice</item>
+        <item>Galactik Football</item>
+        <item>Les Snorkies</item>
+        <item>Tom Sawyer</item>
+        <item>Les Schtroumpfs</item>
+    </string-array>
+
+    <string-array name="soundNamesGeneriquesSeriesTV">
+        <item>Game of Thrones</item>
+        <item>The Big Bang Theory</item>
+        <item>The Walking Dead</item>
+        <item>Vikings</item>
+        <item>Zorro</item>
+        <item>La petite maison dans la prairie</item>
+        <item>Narcos</item>
+        <item>XFiles</item>
+        <item>Docteur Who</item>
+        <item>Agence Tout Risques</item>
+        <item>Prison Break</item>
+        <item>Power Rangers</item>
+        <item>Les têtes brulées</item>
+        <item>Code Quantum</item>
+        <item>Le Chalet</item>
+        <item>Mac Gyver</item>
+        <item>Malcolm</item>
+        <item>Breaking Bad</item>
+        <item>Strangers Things</item>
+        <item>La Casa Del Papel</item>
+        <item>Dallas</item>
+        <item>Walker Texas Ranger</item>
+        <item>Mr Bean</item>
+        <item>The 100</item>
+        <item>Smallville</item>
+        <item>Brooklyn 99</item>
+        <item>Teen Wolf</item>
+        <item>Friends</item>
+        <item>L\'Arme Fatale</item>
+        <item>Camping Paradis</item>
+        <item>Josephine Ange Gardien</item>
+        <item>The Office</item>
+        <item>How I Met Your Mother</item>
+        <item>Lucifer</item>
+        <item>Peaky Blinders</item>
+        <item>New York Unité Spéciale</item>
+    </string-array>
+
+    <string-array name="soundNamesGeneriquesAnime">
+        <item>Pokemon</item>
+        <item>Inazuma Eleven</item>
+        <item>Dragon Ball Z</item>
+        <item>Dragon Ball Super</item>
+        <item>Attaque des Titans</item>
+        <item>Beyblade</item>
+        <item>Dragon Ball Super 2</item>
+        <item>Seven Deadly Sins</item>
+        <item>Share The World</item>
+        <item>Kuroko no Basket</item>
+        <item>Fairy Tail</item>
+        <item>One Punch Man</item>
+        <item>Dragon Ball</item>
+        <item>Tokyo Ghoul</item>
+        <item>My Hero Academia</item>
+        <item>Soul Eater</item>
+        <item>Hunter x Hunter</item>
+        <item>Assassination Classroom</item>
+        <item>Totoro</item>
+        <item>Olive et Tom</item>
+        <item>Saint Seiya</item>
+        <item>The Promised Neverland</item>
+        <item>Evangelion</item>
+        <item>Full Metal Alchemist</item>
+        <item>Blue Bird - Naruto</item>
+        <item>Demon Slayer</item>
+        <item>Food Wars</item>
+        <item>Sword Art Online</item>
+        <item>Sasageyo</item>
+        <item>Death Note</item>
+        <item>Jujutsu Kaisen Ending</item>
+    </string-array>
+
+    <string-array name="soundNamesGeneriquesAutres">
+        <item>Tout pour le Muscle</item>
+        <item>Koh Lanta</item>
+        <item>The Voice</item>
+        <item>C\'est pas Sorcier</item>
+        <item>Interville</item>
+        <item>Qui veut gagner des millions</item>
+        <item>Ford Boyard</item>
+    </string-array>
+
+    <string-array name="soundNamesHumour">
+        <item>Tout le monde en moule b*te</item>
+        <item>Fernand Fernandel</item>
+        <item>Remi Susceptible</item>
+        <item>FAUX</item>
+        <item>Tu te calmes Denis</item>
+        <item>Je suis Papa</item>
+        <item>Tu veux du pain</item>
+        <item>Itaitao Itaitao</item>
+        <item>Qui c\'est qui a touché à Dorian</item>
+        <item>Salut les loosers</item>
+        <item>Guillaume le Thug</item>
+        <item>Champagne</item>
+        <item>William coach en séduction</item>
+        <item>Francois l\'embrouille</item>
+        <item>Monsieur et Madame Karambeu</item>
+        <item>Ma B*te</item>
+        <item>Coucou JeanJean</item>
+        <item>Quentin le Filsdeup</item>
+        <item>Joris le C*n</item>
+        <item>Patrice</item>
+        <item>1,2,3,6</item>
+        <item>Eh n*m</item>
+        <item>Si ta pas d\'amis va sur Twitter</item>
+        <item>Pour fêter ca.. Pizza</item>
+        <item>Est que tu baises ?</item>
+        <item>Une b*te allez</item>
+        <item>Et si je colle mes ..</item>
+        <item>Il est dur comme un fessier..</item>
+        <item>Il a fait sa blague de m*rde</item>
+        <item>Wallah c\'est pas moi</item>
+        <item>Il est si bon le savane</item>
+        <item>Bon bah à Zidane</item>
+        <item>Jveux pas d\'un verre</item>
+        <item>Les produits laitiers remix</item>
+        <item>Oh bosetti</item>
+        <item>Ouarzazate</item>
+        <item>Wakanda</item>
+        <item tools:ignore="Typos">Et ca fait clic clic</item>
+        <item>Mais comment vous m\'avez trouvé</item>
+        <item>Encore ca fait beaucoup là non</item>
+        <item>Oui</item>
+        <item>Tu es qui ?</item>
+        <item>Tu veux pas mille balles</item>
+        <item>Un deca pour donat</item>
+        <item>En plein dans le sanglier</item>
+        <item>J\'vais le démarrer ct enc***</item>
+        <item>Ma play</item>
+        <item>Moi j\'aime le piment d\'espelette</item>
+        <item>Pendant les vacances je ne fais rien</item>
+    </string-array>
+
+    <string-array name="soundNamesMusiqueRap">
+        <item>Abonné</item>
+        <item>Les vainqueurs écrivent</item>
+        <item>Au revoir merci</item>
+        <item>Ish ish</item>
+        <item>Arrêter de faire ch*er Bernard</item>
+        <item>Wesh Alors</item>
+        <item>Whisky Coca</item>
+        <item>Arrêt du Coeur</item>
+        <item>J\'ai dis put*uh</item>
+        <item>Big Shaq</item>
+        <item>Ridin</item>
+        <item>Keke do you love me</item>
+        <item>Smoke weed everyday</item>
+        <item>Olala Damso</item>
+        <item>Olala PNL</item>
+        <item>Gucci Gang</item>
+        <item>Pouloulou</item>
+        <item>Se faire sucer c\'est pas tromper</item>
+        <item>Deviens Génial</item>
+        <item>OVNI</item>
+        <item>Inshallah Inshallah Inshallah</item>
+        <item>7 fois disque de diamant et toi ?</item>
+        <item>Wesh Morray</item>
+        <item>Tout est noir</item>
+        <item>Je plane comme l\'avion de Pablo</item>
+        <item>Esskeetit</item>
+        <item>Oh Lord</item>
+        <item>D.U.C je confirme..</item>
+        <item>Simple Basique</item>
+        <item>Je sens que ce matin va être une pure soirée</item>
+        <item>Mask Off</item>
+        <item>D.Rose</item>
+        <item>My Time</item>
+        <item>J\'suis qu\'un thug</item>
+        <item>Roule un boze</item>
+        <item>OKLM de Booba</item>
+        <item>Il a pas dit bonjour</item>
+        <item>Carton Rouge</item>
+        <item>Pupupu*e</item>
+        <item tools:ignore="Typos">Bum bum tam tam</item>
+        <item>Kings Dead Earrape</item>
+        <item>Bizarre</item>
+        <item>Loup Garou</item>
+        <item>Bandolero</item>
+        <item>Tchoin</item>
+        <item>Longue Vie</item>
+        <item>Salade Tomate et sans Oignon</item>
+        <item tools:ignore="Typos">Ah ouais ouais ouais</item>
+        <item>SAD</item>
+        <item>Mamie je t\'aime</item>
+        <item>Ultimate</item>
+        <item>Touche un membre de ma clique</item>
+        <item>Train de Vie</item>
+        <item>Aulos Reloaded</item>
+        <item>Ramenez la coupe à la maison</item>
+        <item>La p*tain d\'ta madre</item>
+        <item>Mais ferme ta gu*ule toi</item>
+        <item>Jolie</item>
+        <item>Gilet jauné</item>
+        <item>1000°C</item>
+        <item>Khapta</item>
+        <item>Au DD</item>
+        <item>Palalala</item>
+        <item>Ivana 2.0</item>
+        <item>Juillet</item>
+        <item>Old Town Road</item>
+        <item>Batiment</item>
+        <item>La grosse moula</item>
+        <item>Medicament</item>
+        <item>Un peu de haine</item>
+        <item>Blanche</item>
+        <item>JCVD</item>
+        <item>Marie</item>
+        <item>MD</item>
+        <item>Moulaga</item>
+        <item>Ne reviens pas</item>
+        <item>P*tain zebi</item>
+        <item>Ca mderange pas moi j\'aime bien</item>
+        <item>Regarde moi bien</item>
+        <item>PIMP</item>
+        <item>Djomb</item>
+        <item>Zumba Café</item>
+        <item>Comme Gotaga</item>
+    </string-array>
+
+    <string-array name="soundNamesMusique2010">
+        <item>Despacito</item>
+        <item>On écrit sur les murs</item>
+        <item>Color Gitano</item>
+        <item>Bazardée</item>
+        <item>Natacha</item>
+        <item>Andalouse</item>
+        <item>See You Again</item>
+        <item>Hello it\'s me</item>
+        <item>Quand il péte il ..</item>
+        <item>Blanc sans le n</item>
+        <item>Comment ne pas te louer</item>
+        <item>Cartouche</item>
+        <item>Aulos</item>
+        <item>Harlem Shake</item>
+        <item>Gangnam Style</item>
+        <item>Coups et Blessures</item>
+        <item>Celui</item>
+        <item>Mademoiselle Valérie</item>
+        <item>Magic in the Air</item>
+        <item>Waka Waka</item>
+        <item>Tu m\'as tant donné</item>
+        <item>Aux arbres citoyens</item>
+        <item>Pump up kicks</item>
+        <item>Baby I\'m Yours</item>
+        <item>Ride</item>
+        <item>Mes copines</item>
+        <item>Doucement</item>
+        <item>Crab rave</item>
+        <item>Dis moi oui Marina</item>
+        <item>Bye bye</item>
+        <item>Mirador</item>
+        <item>Here comes the hotstepper</item>
+        <item>J\'suis dans la boite</item>
+        <item>Allez les gros</item>
+        <item>Anissa</item>
+        <item>Astronomia (Coffin Dance)</item>
+        <item>Heatens</item>
+        <item>Souris Verte (Naza)</item>
+        <item>Deconnecte</item>
+        <item>Midnight City</item>
+        <item>On se connait</item>
+        <item>Wrong Neighborhood</item>
+        <item>Ayo</item>
+        <item>Coco</item>
+        <item>Galette Saucisse</item>
+        <item>Goodbye To A World</item>
+        <item>On sfait du mal</item>
+        <item>Wiggle</item>
+        <item>Buttercup</item>
+        <item>Chipolata</item>
+        <item>Mood</item>
+        <item>Salt</item>
+    </string-array>
+
+    <string-array name="soundNamesMusique2000">
+        <item>Tourner les serviettes</item>
+        <item>Who can say</item>
+        <item>Ding Dong Song</item>
+        <item>Ma Ya Hi</item>
+        <item>Alex F</item>
+        <item>Tu veux mon zizi</item>
+        <item>Chacaron Macaron</item>
+        <item>F*ck You F*ck You</item>
+        <item>Garcon</item>
+        <item>Benoit tourne toi</item>
+        <item>Hung Up</item>
+        <item>Rock This Party</item>
+        <item>Caramelldansen</item>
+        <item>Empire State of Mind</item>
+        <item>Oh no</item>
+    </string-array>
+
+    <string-array name="soundNamesMusique90">
+        <item>Ameno</item>
+        <item>Dame tu cosita</item>
+        <item>Running in the 90s</item>
+        <item>I believe i can fly</item>
+        <item>Im Blue</item>
+        <item>All Star</item>
+        <item>La tribu de Dana</item>
+        <item>Bad Boys</item>
+        <item>Can\'t touch this</item>
+        <item>Baby Got Back</item>
+        <item>La Macarena</item>
+        <item>Je danse le mia</item>
+        <item>Fruit de la passion</item>
+    </string-array>
+
+    <string-array name="soundNamesMusique80">
+        <item>Hello de Lionel Richie</item>
+        <item>Take on me</item>
+        <item>Les démons de Minuit</item>
+        <item>Nuit de folie</item>
+        <item>Partenaire particulier</item>
+        <item>Sous le soleil des tropiques</item>
+        <item>Human Nature</item>
+        <item>L\'aventurier</item>
+        <item>Mon fils ma bataille</item>
+        <item>Just can\'t get enough</item>
+        <item>Sweet Dreams</item>
+        <item>Total Eclipse of the Heart</item>
+        <item>Baby Be Mine</item>
+        <item>Billie Jean</item>
+        <item>Never gonna give you up</item>
+        <item>Envole moi</item>
+        <item>Les Corons</item>
+        <item>Self Control</item>
+    </string-array>
+
+    <string-array name="soundNamesMusique3070">
+        <item>Bella Ciao</item>
+        <item>Hello Darkness my old Friend</item>
+        <item>Trololo Song</item>
+        <item>Come and get you love</item>
+        <item>J\'me présente je m\'appelle Henri</item>
+        <item>Lalalalallaaala</item>
+        <item>We are the Champions</item>
+        <item>Aux champs élysées</item>
+        <item>Emmenez moi au bout de la terre</item>
+        <item>On ira tous au paradis</item>
+        <item>Poupée de cire poupée de son</item>
+        <item>Boogie Wonderland</item>
+        <item>La tactique du gendarme</item>
+    </string-array>
+
+    <string-array name="soundNamesMusiqueAmateurs">
+        <item>Nous vivons dans un monde de Pokémon</item>
+        <item>Les petites fleurs</item>
+        <item>Savez vous planter les choux (street)</item>
+        <item>I play Pokemon GO everyday</item>
+        <item>Tripalosky</item>
+        <item>C\'est beau la pétanque</item>
+        <item>Musique triste</item>
+        <item>Cuir moustache</item>
+        <item>Issou Night Club</item>
+        <item>Je suis en S</item>
+        <item>J\'arrive</item>
+        <item>Je voulais juste briller</item>
+        <item>OVNI Cover</item>
+        <item>On va la pécho</item>
+        <item>Jaime le monde de Disney</item>
+        <item>Cette petite abeille porte ..</item>
+        <item>Attrapez les tous - Farod</item>
+        <item>Attrapez les tous - Simon du 33</item>
+        <item>Pour tout ceux qui ont la crotte..</item>
+        <item>Soirée Raclette</item>
+        <item>On s\'en bat les co*illes</item>
+        <item>Je suis Passe Partout</item>
+        <item>Couscous Saucisse</item>
+        <item>J\'ai la quequette qui..</item>
+        <item>Chanson du Pyrobarbare</item>
+        <item>Chanson de la Joie</item>
+        <item>Marseillaise TK78</item>
+        <item>Placement de Produit</item>
+        <item>Freestyle de l\'autodérision</item>
+        <item>Bon anniversaire les ptits indiens</item>
+        <item>Luigi clash Mario</item>
+        <item>Wiggle remix</item>
+    </string-array>
+
+    <string-array name="soundNamesMusiqueAutres">
+        <item>Dominique nique</item>
+        <item>Vive les gros ni*hons</item>
+        <item>Jacky ta 4L</item>
+        <item>Epic sax guy</item>
+        <item>Evil Morty</item>
+        <item>Mamadou avait mal aux dents</item>
+        <item>Deja Vu</item>
+        <item>Hallelujah</item>
+        <item>Domino Dominette</item>
+        <item>Frolic</item>
+        <item>Howard the Alien</item>
+        <item>Keyboard cat</item>
+        <item>Chant de l\'Oignon</item>
+        <item>Refrain du chant de l\'Oignon</item>
+        <item>Brain Power</item>
+        <item>Soviet Dance Hard Bass</item>
+        <item>Let\'s go</item>
+        <item>Ode to Joy</item>
+        <item>Pedobear song</item>
+        <item>Nyan Cat</item>
+        <item>Musique satanique</item>
+        <item>Ascenseur</item>
+        <item>Musette</item>
+        <item>Musique de Clown</item>
+    </string-array>
+
+    <string-array name="soundNamesDisney">
+        <item>À la file indienne</item>
+        <item>Chanson de la pluie</item>
+        <item>Il en faut peu pour être heureux</item>
+        <item>Je m\'en vais</item>
+        <item>La vie d\'artiste</item>
+        <item>Libérée Délivrée</item>
+        <item>S.O.S Société</item>
+        <item>Sous l\'océan</item>
+        <item>Tout le monde veut devenir un cat</item>
+        <item>Supercalifragilisticexpialidocious</item>
+        <item>Trahison disgrace</item>
+    </string-array>
+
+    <string-array name="soundNamesNoel">
+        <item>All I want for christmas</item>
+        <item>Douce nuit</item>
+        <item>Jingle Bell Rock</item>
+        <item>Let It Snow</item>
+        <item>Noel c\'est comme un rythme de jazz</item>
+        <item>Noel Joyeux Noel</item>
+        <item>Petit Papa Noel</item>
+        <item>Vive le vent</item>
+        <item>We wish you a merry christmas</item>
+    </string-array>
+
+    <string-array name="soundNamesTV">
+        <item>AH</item>
+        <item>Le dessert</item>
+        <item>Taisez vous</item>
+        <item>Aie.. Coup dur pour Guillaume</item>
+        <item>C\'est la mer noire</item>
+        <item>Oui oui ah oui</item>
+        <item>Mais bor*el j\'ai le droit</item>
+        <item>Caaaafard</item>
+        <item>1+1=11</item>
+        <item>Jsuis pas venue ici pour souffrir</item>
+        <item>Les gens en ont plein le c*l des arabes</item>
+        <item>Les patrons de Leaderprice</item>
+        <item>C\'est contre nature</item>
+        <item>J\'lai entendu faire prout</item>
+        <item>Mais oui c\'est clair</item>
+        <item>Et là c\'est le drame</item>
+        <item>Un menu whopper pour commencer</item>
+        <item>Olala c\'est la décadence</item>
+        <item>Mais il est musulman</item>
+        <item>Jai rendu service</item>
+        <item>Votre livre s\'appelle tourne la page</item>
+        <item>Rire de Hanouna</item>
+        <item>La congolexicomatisation</item>
+        <item>Momomotus</item>
+        <item>Mon sac est fait</item>
+        <item>Commence par me parler poliment</item>
+        <item>Un malade Bernard</item>
+        <item>Mais moi je veux faire l\'amour</item>
+        <item>Boum boum malabar</item>
+        <item>Très très sale</item>
+        <item>Bonjour bonjour</item>
+        <item>C\'est honteux</item>
+        <item>Ma chérie</item>
+        <item>Hey Jamy</item>
+        <item>Je m\'en bats les co*illes frere</item>
+        <item>C\'était très intéressant</item>
+        <item>Freddy Freddo</item>
+        <item>La Boule Magique</item>
+        <item>Guillon jai ba*sé sa femme</item>
+        <item>Tu es grosse Mélissandre</item>
+        <item>Vous êtes vraiment dégu*ulasse</item>
+        <item>Je vais t\'étrangler</item>
+        <item>Il est super ton spermatozoide Jamy</item>
+        <item>Ils ont fait pipi dans votre tête</item>
+        <item>Ils ont un tout petit pénis</item>
+        <item>J\'ai jamais touché à mes filles</item>
+        <item>Merci Monsieur le Professeur</item>
+        <item>Voici la météo de Gulli</item>
+        <item>Identité de genre et expression du..</item>
+        <item>Je ne suis pas un homme</item>
+        <item>Mais c\'est de la m*rde</item>
+        <item>Arretez ca suffit</item>
+        <item>Nous nous reverrons</item>
+        <item>Salut mon pote</item>
+        <item>Ta mère elle suce des ours</item>
+        <item>Guignol</item>
+        <item>C\'est la pétée</item>
+        <item>Mimi Cracra</item>
+        <item>Oh une boule de neige</item>
+        <item>Boule Noire de Motus</item>
+        <item>Insultes de Rene Malleville</item>
+        <item>Y a le mec à Milla</item>
+        <item>Tu degages sinon je t\'en colle une</item>
+        <item>Avant je lavais à l\'eau</item>
+        <item>Il a pris une ligue 2</item>
+        <item>Anti moins de 10</item>
+        <item>Je suis Pamela</item>
+        <item>Oh m*rde oh c\'est c*n ca</item>
+        <item>C\'est bien Éléonore</item>
+        <item>C\'est non</item>
+        <item>C\'est qui le patron ?</item>
+        <item>Marina passe..</item>
+        <item>Quelle perte de temps quelle perte d\'énergie</item>
+        <item tools:ignore="Typos">Taille taille taille</item>
+        <item>Véronique fait un infarctus</item>
+        <item>Bigard TPMP</item>
+        <item>Je suis dans une colère noire</item>
+        <item>On s\'en bat les couilles</item>
+        <item>T\'es un délinquant</item>
+        <item>C\'est pas comme ca qu\'on imagine la vie</item>
+        <item>Elimination de Moundir</item>
+        <item>J\'en sais rien j\'ai pris n\'importe quoi</item>
+        <item>Mon cochon préféré</item>
+        <item>Oh mais c\'est carton rouge</item>
+    </string-array>
+
+    <string-array name="soundNamesSeries">
+        <item>Rire démoniaque(TPLM)</item>
+        <item>Say my Name</item>
+        <item>Tout le monde s\'en bra*le</item>
+        <item>Bazinga</item>
+        <item>Jouer Guerre Salsifi</item>
+        <item>Calmez vous</item>
+        <item>Fantastic</item>
+        <item>Allons y Alonso</item>
+        <item>Noooo please nooo</item>
+        <item>Exterminé</item>
+        <item>Ouais c\'est pas faux</item>
+        <item>Easy Peasy Lemon Squeezy</item>
+        <item>Surprise Mother F*cker</item>
+        <item>Ave Cesar</item>
+        <item>Oh no no no</item>
+        <item>On en a gros</item>
+        <item>La S*lope</item>
+        <item>Poupipoupi</item>
+        <item>Who wants to be King</item>
+        <item>Salut cest Hannah</item>
+        <item>Toi tu vis toi tu vis toi tu crèves</item>
+        <item>Insulte de Don Self</item>
+        <item>Sortez vous les doigts du c*l</item>
+        <item>Euh..non</item>
+        <item>Yu gonplei ste odon</item>
+        <item>Ma mère m\'a dit un jour</item>
+        <item>Enfin bref</item>
+        <item>Challenge accepted</item>
+        <item>Faut pas respirer la compote</item>
+        <item>Silence ou je fais éjac**er la salle</item>
+    </string-array>
+
+    <string-array name="soundNamesFilms">
+        <item>Pas de bras pas de chocolat</item>
+        <item>Alors on attend pas Patrick</item>
+        <item>Ca vous ai jamais arrivé de tomber sur..</item>
+        <item>On est en Tanzanie</item>
+        <item>Philippe je sais où tu te caches</item>
+        <item>Je suis ton père</item>
+        <item>Merci la gueuse</item>
+        <item>Coucou (Harry Potter)</item>
+        <item>Avada Kedavra</item>
+        <item>Lumos Maxima</item>
+        <item>Interdit de pénétrer ..</item>
+        <item>Monsieur Potter notre nouvelle..</item>
+        <item>Je jure solennellement que mes..</item>
+        <item>Wingardium Leviosa</item>
+        <item>Tu es un sorcier Harry</item>
+        <item>Je vais faire à ta gu*ule..</item>
+        <item>Hissons nos couleurs</item>
+        <item>Salut à tous (Star Wars)</item>
+        <item>Say hello to my little friend</item>
+        <item>Le camping car de BATARD</item>
+        <item>Parle à ma main (Terminator)</item>
+        <item>Tu étais l\'élu </item>
+        <item>Ce que tu dis n\'a aucun sens</item>
+        <item>Mon précieux</item>
+        <item>Im Batman</item>
+        <item>Cours Forest</item>
+        <item>T\'es là ou t\'es pas là</item>
+        <item>Va te faire en*uler (Scarface)</item>
+        <item>J\'aime me beurrer la biscotte</item>
+        <item>T\'aimes bien les omelettes</item>
+        <item>Vous ne passerez pas</item>
+        <item>HAGRIID</item>
+        <item>J\'aime me battre</item>
+        <item>Hymne des Tuches à Monaco</item>
+        <item>Biloute</item>
+        <item>Stupide Hobbit Joufflu</item>
+        <item>Liberté Égalité N*M</item>
+        <item>Il t\'arrive de saigner</item>
+        <item>My name is Jeff</item>
+        <item>Un jour elle sera mienne</item>
+        <item>HéHéHéHé</item>
+        <item>Des frites des frites</item>
+        <item>J\'aime le veau</item>
+        <item>Huit heures de cachou</item>
+        <item>Nein</item>
+        <item>Alien de la Soupe aux Choux</item>
+        <item>J\'ai glissé Chef</item>
+        <item>Il s\'appelle Just Leblanc</item>
+        <item>Que la force de Peter Mc Calloway..</item>
+        <item>Je tire une balle dans la tête</item>
+        <item>This is Sparta</item>
+        <item>The Prophety is true</item>
+        <item>Mais vous savez ..</item>
+        <item>Alerte Générale</item>
+        <item>Zegema Beach</item>
+        <item>Cours Asterixme</item>
+        <item>Une dictature c\'est..</item>
+        <item>Canapi Fatal</item>
+        <item>Ce soir branl*tte</item>
+        <item>Daamn</item>
+        <item>Geai Moqueur de Hunger Games</item>
+        <item>Splendide</item>
+        <item>Je s\'appelle Groot</item>
+        <item>Votre père était un sal*ud</item>
+        <item>Alarme de la Purge</item>
+        <item>Que Dieu bénisse les nouveaux..</item>
+        <item>They\'re taking the hobbit to Isengard</item>
+        <item>T\'as les boules t\'as les glandes</item>
+        <item>Wazaaaa</item>
+        <item>Jamais vu un tas de m*rde</item>
+        <item>Utini</item>
+        <item>Nom de Zeus</item>
+        <item>Bas les pattes tête de poulet</item>
+        <item>Et moi je suis.. Iron Man</item>
+        <item>Run I\'ts Godzilla</item>
+        <item>Pouah ca puire</item>
+        <item>Et si on faisait l\'amour tout nu</item>
+        <item>Quand j\'suis content je vomis</item>
+        <item>Bisou biscoto</item>
+        <item>Good Morning Vietnam</item>
+        <item>Spartiate quel est votre métier</item>
+        <item>Un grand pouvoir implique..</item>
+        <item>Je veux les chaussures</item>
+        <item tools:ignore="Typos">C\'est vous le doc doc</item>
+        <item>Un peu mon neveu</item>
+        <item>Combien ?</item>
+        <item>Cri de Wilhelm</item>
+        <item>Holy Jesus</item>
+        <item>Messire un sarrasin</item>
+    </string-array>
+
+    <string-array name="soundNamesYoutubeVieux">
+        <item>Fils de p*te ma lumière</item>
+        <item>Bonsoir je suis Bob Lennon</item>
+        <item>J\'en ai rien à fo*tre</item>
+        <item>Salut à tous les amis cest ..</item>
+        <item>Hé mais t\'es parano toi</item>
+        <item>Là t\'es en train de faire le ramadan</item>
+        <item>Salut à tous c\'est Lasalle </item>
+        <item>Coucou (Miss Jirachi)</item>
+        <item>Starfoulah</item>
+        <item>Biflette</item>
+        <item>Chavais chavais</item>
+        <item>Alors ils sont francais</item>
+        <item>Vos mères c\'est des dinosaures</item>
+        <item>C\'est normal en Russie</item>
+        <item>Vos grands mères les dragons..</item>
+        <item>As tu vu les quenouilles</item>
+        <item>Rhinoshield</item>
+        <item>Intro de Wankil Studio</item>
+        <item>Yo les trasheurs</item>
+        <item>Yo tout le monde c\'est Squezzie</item>
+        <item>Je détruis ton v*gin avec..</item>
+        <item>Ta gu*ule Maman</item>
+        <item>QI de 143</item>
+        <item>Jouons tous ensemble à un petit jeu</item>
+        <item>Non arreter de me faire ca</item>
+        <item>Arrete de critiquer </item>
+        <item>Mais pourquoi tu manges sous l\'eau</item>
+        <item>Et toc l\'abricot</item>
+        <item>Ta gu*ule pu*ain</item>
+        <item>Poce blo</item>
+        <item>Intro de Gotaga (street) </item>
+        <item>Laissez moi le Build Fight</item>
+        <item>Je suis partiellement foufou </item>
+        <item>Bien évidemment</item>
+        <item>Wesh Wesh les amis</item>
+        <item tools:ignore="Typos">Là là là</item>
+        <item>J\'aime mettre mon pén*s dans..</item>
+        <item>Comportement d\'arabes</item>
+        <item>Gros deg*eulasse</item>
+        <item>J\'aime les ours polaires</item>
+        <item>Paradis de Rubis</item>
+        <item>Oh mon fromage blanc</item>
+        <item>Vos grands mères les moustiques..</item>
+        <item>Oui</item>
+        <item>Damn les gens</item>
+        <item>J\'ai touché le cheque</item>
+        <item>Paulok et Kyu</item>
+        <item>On y va super</item>
+        <item>J\'ai le démon</item>
+        <item>Moi c\'est Bertrand</item>
+        <item>Xavier Pontte</item>
+        <item>Salut bonsoir c\'est Polo</item>
+        <item>Bonsoir</item>
+        <item>Ton père fabrique des guitares..</item>
+        <item>Cavale Kenny</item>
+        <item>J\'ai envie de me suicider car..</item>
+        <item>Do you know da way</item>
+        <item>Little Red Shit</item>
+        <item>Oh ce qu\'il a pris</item>
+        <item>Bonjour à toutes..</item>
+        <item>Papier Bulle</item>
+        <item>Et ca c\'est pas réglo</item>
+        <item>Ouvre ta gu*ule</item>
+        <item>Casse toi à qui tu veux..</item>
+        <item>WTC Psycopathes</item>
+        <item>T\'es nul</item>
+        <item>Une carte google play</item>
+        <item>Salut à tous c\'est Paulok</item>
+        <item>Mais voila mais c\'etait sur</item>
+        <item>La PuiPuissance</item>
+        <item>Le Club JDG</item>
+        <item>Woop Gang</item>
+        <item>Tous les kilos sont dans ..</item>
+        <item>Mashallah le génie</item>
+        <item>Fils de Pioute</item>
+        <item>Clap Bonjour</item>
+        <item>Je suce tous les zboubs de Paname</item>
+        <item>Le joueur francais</item>
+        <item>Ptdr t ki</item>
+        <item>Le Tobogland</item>
+        <item>Intro Gotaga</item>
+        <item>Ce n\'est plus une tuerie</item>
+        <item>Mozart le Charo</item>
+        <item tools:ignore="Typos">Pas très très gentil</item>
+        <item>Nous avons une demande d\'ami</item>
+        <item>Bah ouais logique héhé</item>
+        <item>Mais ces voitures sont nulles</item>
+        <item>Fermez vos p*tain de gu*ule</item>
+        <item>Cheh</item>
+        <item>Rire de Porto</item>
+        <item>Baba pourquoi tu fais ca</item>
+        <item>Ca c\'etait gratuit</item>
+        <item>Je peux pas</item>
+        <item>Japon - JDG</item>
+        <item>Intro de JDG</item>
+        <item>Yo le rap</item>
+        <item>Audhubillah min al shaytan</item>
+        <item>Alerte Psycopathe</item>
+        <item>Catapulte tes morts</item>
+        <item>Concombre</item>
+        <item>J\'taurai vi*lé</item>
+        <item>Mais oui putain bien sur</item>
+        <item>Allez Gigi Allez Rourou</item>
+        <item>Double Toz</item>
+        <item>Jamais je ne t\'oublierai</item>
+        <item>Roberto.. tu préfères .. ?</item>
+        <item>C\'est la hess total</item>
+        <item>Je ch*e à la gu*ule d\'Orelsan</item>
+        <item>Pompe moi le dard</item>
+        <item>Primo Kyogre</item>
+        <item>Ce mec c\'est un L</item>
+        <item>Intro Lolywood</item>
+        <item>Lisa la 2000</item>
+        <item>Mange mon pain Eren</item>
+        <item>C\'est l\'histoire du Papa Ours</item>
+        <item>Au secours</item>
+        <item>Bonsoir Paris</item>
+        <item>Hello à tous c\'est Guep</item>
+        <item>La PS4 dans la ch*tte à ta mere</item>
+        <item>Je m\'appelle Pierre</item>
+        <item>Jesuuus</item>
+        <item>C\'était la blague nulle du jour</item>
+        <item>Internet net</item>
+        <item>J\'adore le zboub</item>
+        <item>Je br*nle la lampe</item>
+        <item>La grosse roue</item>
+        <item>Mais sincerement quoi</item>
+        <item>Ma mère.. pardon</item>
+        <item>Ta gu*ule</item>
+        <item>Il veut mes diamants</item>
+        <item>J\'ai une de ces envies de..</item>
+        <item>Ouais mais c\'est pas toi..</item>
+        <item>Tu vas voir qui je suis</item>
+        <item>Vous le payerez pour ca</item>
+        <item>Dislike dislike</item>
+        <item>Palalalala des O\'Neil</item>
+        <item>Clac Clac</item>
+        <item>Je te bloque</item>
+        <item>Montagne est trop fort</item>
+        <item>Mais va y p*n</item>
+        <item>Champagne</item>
+        <item>Full Flemme</item>
+        <item>Pourquoi je parle avec eux</item>
+        <item>David goodenough</item>
+        <item>Jsuis un ptn de geek</item>
+        <item>Pepite de chocolat</item>
+        <item>C\'est de la vanne</item>
+        <item>J\'ai pas à me justifier</item>
+        <item>Mais qu\'est que tu me baragouines</item>
+        <item>Miaouw</item>
+        <item>Oh non mais c\'est criminel</item>
+        <item>Sur mon papier y\'a écrit que tu manges du couscous</item>
+        <item>Train de la hype</item>
+        <item>Bah oui connard</item>
+        <item>C\'est dégueulasse</item>
+        <item>Nword in coming</item>
+        <item>OK boomer</item>
+        <item>On appelle ca une douille</item>
+        <item>Rap de bourgeois</item>
+        <item>Rien de plus normal</item>
+        <item>Terrible désillusion</item>
+        <item>Tk mange un hamburger</item>
+    </string-array>
+
+    <string-array name="soundNamesInternetFrancais">
+        <item>Heureusement qui y\'a encore du turbin</item>
+        <item>Hé Marine</item>
+        <item>Je fais l\'amour avec les rivières</item>
+        <item>Ouais moi cest Serre-Fion</item>
+        <item>Je ne comprends pas</item>
+        <item>Lache moi Michel</item>
+        <item>Appeler les hendeks s\'il vous plait</item>
+        <item>Une hallucination collective</item>
+        <item>Qu\'est qui est jaune et qui attend ?</item>
+        <item>Draaaa</item>
+        <item>Zbeub Zbeub</item>
+        <item>Vos daronnes elles boivent du Sprite</item>
+        <item>Tequila Heineken</item>
+        <item>Corde à sauter héhé</item>
+        <item>Ah bah c\'est bien Nils</item>
+        <item>Tu te ch*es dans la culotte</item>
+        <item>Mais si j\'suis très net</item>
+        <item>Le sang de tes morts</item>
+        <item>Bravo vous etes sur Internet</item>
+        <item>Mon Pioupiou il est mort</item>
+        <item>Kalash Kalash</item>
+        <item>On va niq*er ce soir</item>
+        <item>Mon mollet il est blindé là</item>
+        <item>OK c\'est JeanMi du 13</item>
+        <item>Tu es moche</item>
+        <item>Mange le ton p*tain de pain</item>
+        <item>Ca pousse</item>
+        <item>Grigny la Grande Borne</item>
+        <item>Tous mes amis ont une queue</item>
+        <item>Oh puta*n</item>
+        <item>Nardine mouk</item>
+        <item>Avec mon Deznoseur </item>
+        <item>Nom de Dieu le canapé</item>
+        <item>Avec une queue de billard..</item>
+        <item>Oh ch*tte à poil</item>
+        <item>Bolosse va</item>
+        <item>C\'est facile de triquiter</item>
+        <item>Mdr Mdr</item>
+        <item>Rue des Potiers</item>
+        <item>Je vais te briser tes os</item>
+        <item>Coucou les musulmans</item>
+        <item>On s\'est castagne sur le palier</item>
+        <item>Jai ramassé un caillou..</item>
+        <item>M\'en bats les steaks que ..</item>
+        <item>J\'vais faire un dab</item>
+        <item>Tu vas bien ?</item>
+        <item>Arrête la drogue</item>
+        <item>T\'es un homme mort Karim</item>
+        <item>As tu déja vu mon c*l</item>
+        <item>Elle est où la carte ?</item>
+        <item>Ferme ta gu*ule</item>
+        <item>J\'aime les biscuits</item>
+        <item>Il me piquait la zezette</item>
+        <item>Oui c\'est moi</item>
+        <item>Rend pas fou</item>
+        <item>Demander pardon pourquoi.. </item>
+        <item>Isabelle communique</item>
+        <item>J\'aime bien les frites</item>
+        <item>C\'est rigolo hein</item>
+        <item>Je lui donne des coups de queue</item>
+        <item>Mais c*nnard</item>
+        <item>Je suis déchainé moi</item>
+        <item>Tu es bête ou quoi</item>
+        <item>Jus d\'orange</item>
+        <item>Oh j\'ai le droit de vivre</item>
+        <item>Menace d\'un Hackeur</item>
+        <item>J\'ai mis du miel</item>
+        <item>Nan c\'est pas vrai</item>
+        <item>Mon pain au raisin</item>
+        <item>Petit Poney</item>
+        <item>J\'ai des tas de fiancés</item>
+        <item>Un fou chante sous la douche</item>
+        <item>J\'ai ba*sé une chèvre</item>
+        <item>J\'ai un petit zizi</item>
+        <item>Télé-Réalité GOT</item>
+        <item>Zola avait dit j\'accuse</item>
+        <item>Dédicace à personne</item>
+        <item>MESSAGE.. TG</item>
+        <item>La photo f*p</item>
+        <item>J\'adore le nutella</item>
+        <item>Mais laisse moi dormir</item>
+        <item>J\'ai dis non</item>
+        <item>Coucou tu veux voir ma b*te</item>
+        <item>T\'es qu\'un petit p*d</item>
+        <item>Kalash du Congo</item>
+        <item>J\'suis Pape Geek</item>
+        <item>Tribunal Charleroi</item>
+        <item>T\'es ssssale</item>
+        <item>Wouah mais qu\'est que c\'est</item>
+        <item>Je connais des gros f*p</item>
+        <item>La chance</item>
+        <item>Bonsoir ca va bien ?</item>
+        <item>J\'gratte j\'gratte et la nuit..</item>
+        <item>Romaiiin</item>
+        <item>Bill Gates ou ton youtube</item>
+        <item>Jvais bouffer ta kilotte</item>
+        <item>Oh misere de misere</item>
+        <item>Salut je m\'appelle Ahmed</item>
+        <item>T\'étais encore dans les..</item>
+        <item>Cri de douleur</item>
+        <item>C\'est reparti comme en 46</item>
+        <item>On attend la date l\'heure</item>
+        <item>Tu m\'as bien khalass</item>
+        <item>Valère Germain, j\'attends l\'heure le jour</item>
+        <item tools:ignore="Typos">Tiens tiens tiens</item>
+        <item>Dans ma tete 42</item>
+        <item>Ils m\'ont dis t\'es ou</item>
+        <item>Tu mens</item>
+        <item>Ahki</item>
+        <item>Allez va te faire fo*tre</item>
+        <item>Moi j\'suis quelqu\'un j\'adore..</item>
+        <item>On dirait que c\'est des vrais frères</item>
+        <item>Qui voila je</item>
+        <item>T\'ecoute ca toi</item>
+        <item>T\'es un mec bizarre toi</item>
+        <item>Y a pas de panneaux</item>
+        <item>Eh bonjour</item>
+        <item>Im a fucking star</item>
+        <item>Jsuis fatigué ma gu*uleuh</item>
+        <item>T\'es pas drole tu fais meme pas rire</item>
+        <item>Voler n\'est pas bon</item>
+        <item>Est ce que le monde il est à l\'envers..</item>
+        <item>Toi c\'est quoi ton problème</item>
+        <item>Tu crois que c\'est du respect</item>
+        <item>Bannez moi ca</item>
+        <item>C\'est moi wesh</item>
+        <item>Frappe moi et je t\'empoisonne</item>
+        <item>Subhanallah la puissance</item>
+        <item>T\'es p*d ?</item>
+        <item>Tu preferes le chocolat ou..</item>
+        <item>Uho</item>
+        <item>C\'est les cites de France narvalo</item>
+        <item>Je suis Spider Man f*p</item>
+        <item>Lacoste TN</item>
+        <item>Oh purée de pomme de terre</item>
+        <item>On va aller lui casser les co*illes</item>
+        <item>Pump it up</item>
+        <item>Moi je pense la question est vite répondue</item>
+        <item>Si tu meurs c\'etait écrit</item>
+        <item>Ta grand mère elle mange des gnoccis</item>
+        <item>Attention grenade</item>
+        <item>Dehors</item>
+        <item>Huit morts 6 blessés</item>
+        <item>J\'aime bien</item>
+        <item>Je te demande pardon</item>
+        <item>Ne t\'inquietes pas</item>
+        <item>Prend pas trop la confiance redescend</item>
+        <item>Touche pas à ma bagnole</item>
+        <item>C\'est pas que j\'en ai marre mais je suis un peu fatigué</item>
+        <item>J\'ai une sacré bête</item>
+        <item>Je m\'appelle Valentin</item>
+        <item>Je suis dans les bois</item>
+        <item>Oh lala l\'enchainement</item>
+        <item>Oh les batards</item>
+        <item>Jean Castex</item>
+        <item>Je vais pranker Mamadou</item>
+        <item>Les filles je suis tombé</item>
+        <item>Olivier tu vas niq**r ..</item>
+        <item>Surispliff</item>
+        <item>Ta gue*le juste</item>
+        <item>Wsh bien ou quoi pain d\'épices</item>
+    </string-array>
+
+    <string-array name="soundNamesInternetEtrangers">
+        <item>Issou</item>
+        <item>Damn Daniel</item>
+        <item>Hamburger</item>
+        <item>Wow</item>
+        <item>Ouiiiiiii</item>
+        <item>Bit*h I love you</item>
+        <item>Tu touches à ma sensibilité</item>
+        <item>Tu n\'es pas du tout qualifiée pour..</item>
+        <item>Yeah</item>
+        <item>Oh Supa Hot Fire</item>
+        <item>NICE</item>
+        <item>Ouga Aga Pipi Caca</item>
+        <item>And it\'s at this moment</item>
+        <item>Fuck*ng Genius</item>
+        <item>Look at this dude</item>
+        <item>Hi Okay</item>
+        <item>Oh Yeah MrCrab</item>
+        <item>AA</item>
+        <item>Héhé boy</item>
+        <item>AHHHH</item>
+        <item>La Chancla</item>
+        <item>What ?</item>
+        <item>Yatangaki</item>
+        <item>Cool guy</item>
+        <item>Skadoo Skadae</item>
+        <item>Oh my god</item>
+        <item>On a gagné</item>
+        <item>Why are you running</item>
+        <item>And I.. Holy Sh*t</item>
+        <item>Oh f*ck I can\'t believe..</item>
+        <item>Bruh</item>
+        <item>Just do It</item>
+        <item>Run</item>
+        <item>You\'ve got mail</item>
+        <item>WTF Boom</item>
+        <item>Bitconnect</item>
+        <item>FBI open up</item>
+        <item>Stonks</item>
+        <item>Poutine Walking</item>
+        <item>That a lot of damage</item>
+        <item tools:ignore="Typos">Voila bon ok bye bye</item>
+        <item>Who is that Pokemon</item>
+        <item>Yeet</item>
+        <item>America F*ck Yeah</item>
+        <item>Ca va peter</item>
+        <item>Oh my god wow</item>
+        <item>It\'s Wednesday my dude</item>
+        <item>Oh thats good</item>
+        <item>Yamete Kudasai</item>
+        <item>I like your cut g</item>
+        <item>Mr Worldwide</item>
+        <item>No no square</item>
+        <item>Russia bongo</item>
+        <item>Yaaaaa</item>
+        <item>You take some chocolate..</item>
+    </string-array>
+
+    <string-array name="soundNamesAnimes">
+        <item>C\'est nul</item>
+        <item>To be continued ..</item>
+        <item>Omae wa mou shindeiru</item>
+        <item>Coucou</item>
+        <item>Alertes aux Gogoles</item>
+        <item>Oh punaise</item>
+        <item>Are you going to finish that croissant</item>
+        <item>It\'s over 9000</item>
+        <item>Lick my balls</item>
+        <item>La drogue c\'est mauvais m\'voyez</item>
+        <item>Acheve le</item>
+        <item>Ferme ta grande gue*le Flanders</item>
+        <item>I\'m Pickle Rick</item>
+        <item>Ca se prononce Nuquelaire</item>
+        <item>Kamehameha</item>
+        <item>Bonjour tout le monde</item>
+        <item>Oh mon dieu ils ont tués Kenny</item>
+        <item>Téléportation</item>
+        <item>Heyyeyaaeyaa</item>
+        <item>Metamorphose Goldorak</item>
+        <item>Musique DBS au piano</item>
+        <item>Je vous emm*rde et je rentre ..</item>
+        <item>Mille tonnerres de brest</item>
+        <item>Rasengan</item>
+        <item>Espece de ..</item>
+        <item>Wubba Lubba</item>
+        <item>Je suis Rickornichon</item>
+        <item>Theme L Death Note</item>
+        <item>Schezwan Sauce</item>
+        <item>Pikachuu</item>
+        <item>Mini Rick</item>
+        <item>Final Flash</item>
+        <item>C\'est l\'heure du duel</item>
+        <item>Sonnerie de Bojack Horseman</item>
+        <item>Salut c\'est moi Mr.Larbin</item>
+        <item>Nous sommes de retour pour vous..</item>
+        <item>Sonnerie de Mr.Peanut Butter</item>
+        <item>C\'est la danse de Rick</item>
+        <item>On va vous faire schwifter</item>
+        <item>Gomu Gomu No</item>
+        <item>La Team Rocket s\'envole vers d\'autres cieux</item>
+        <item>We are - One Piece AMV</item>
+        <item>Zawarudo</item>
+        <item>Nico Nico Ni</item>
+        <item>Spider Cochon</item>
+        <item>Ultimate Hanzo</item>
+        <item>On va casser du p*d</item>
+        <item>A few moment later</item>
+        <item>One eternity later</item>
+        <item>Den Den Mushi</item>
+        <item>Yare Yare Daze</item>
+        <item>Because I\'m Batman</item>
+        <item>Une fois j\'ai soulevé ta mère</item>
+        <item>Smash de Midoriya</item>
+        <item>Au revoir homme de la lune</item>
+        <item>Mangekyou Sharingan</item>
+        <item>Mine Mine Mine</item>
+        <item>Sulli Gemissement (Monsters Inc)</item>
+        <item>Get back in the kitchen</item>
+        <item>Tu veux qu\'on se la donne</item>
+        <item>Dab de Carlos</item>
+        <item>Giorno Theme</item>
+        <item>Amaterasu</item>
+        <item>Kage Bunshin no Jutsu</item>
+        <item>Naruto Sasuke</item>
+        <item>Rasen Shuriken</item>
+        <item>Ending One Punch Man</item>
+        <item>Oh mince</item>
+        <item tools:ignore="Typos">Sate sate sate</item>
+        <item>Sonnerie Totally Spies</item>
+        <item>Clonage - Naruto</item>
+        <item>Je reve où tu viens de poser ta peche sur mon bureau</item>
+        <item>Je suis spécial</item>
+        <item>Oh ca c\'est pas très gentil</item>
+        <item>Skinner</item>
+        <item>Elimination</item>
+        <item>Fraulein</item>
+        <item>Objection</item>
+        <item>Cadeau de moi à moi</item>
+        <item>Cri de Dingo</item>
+        <item>En fait non</item>
+        <item>Harder Daddy</item>
+        <item>Toi tu m\'appelles monsieur</item>
+    </string-array>
+
+    <string-array name="soundNamesSport">
+        <item>Ronaldo</item>
+        <item>Drogba</item>
+        <item>Makelele</item>
+        <item>Oh l\'assassin</item>
+        <item>Autant de fils de pu*e</item>
+        <item>Nan c\'est pas possible</item>
+        <item>Oh oui Greg</item>
+        <item>J\'ai pas touché</item>
+        <item>Pas ca Zinedine</item>
+        <item>Thauvin Fils de Pu*e</item>
+        <item>John Cena</item>
+        <item>Il va lui faire l\'amour sans..</item>
+        <item>Crucifié Crucifié</item>
+        <item>Champion mon frère</item>
+        <item>Je leur pisse au c*l</item>
+        <item>Polomat vs Tolisso</item>
+        <item>Jean Michel Aulas</item>
+        <item>J\'ai que ca à dire</item>
+        <item>J\'men bats les co*illes</item>
+        <item>Monsieur Blaise Matuidi</item>
+        <item>Samuel Umtiti</item>
+        <item>Benjamin Pavard</item>
+        <item>Ngolo Kante</item>
+        <item>Je dirais pas que l\'équipe en face..</item>
+        <item>Not in my house</item>
+        <item>Pour la Belgique</item>
+        <item>Giroud n*m</item>
+        <item>Oh Messi Ciao</item>
+        <item>Second poteau Pavard</item>
+        <item>Attention à la mousse</item>
+        <item>C\'est fait</item>
+        <item>Interview de Nabil Fekir</item>
+        <item>Rire de Kawhi Leonard</item>
+        <item>Ligue 1 Conforama</item>
+        <item>I love this game</item>
+        <item>Starfoulah</item>
+        <item>C\'est les emotions en fait</item>
+        <item>Nkunku c\'est au dessus</item>
+        <item>Tu vas où ? Reste là</item>
+        <item>Attention Philippe le parapet</item>
+        <item>Tour de France</item>
+        <item>Va y mon petit</item>
+        <item>Watch out watch out</item>
+        <item>Ah ouais ils sont bizarres eux</item>
+        <item>He attrapez le</item>
+        <item>It\'s time to go</item>
+        <item>They had us in the first half</item>
+        <item>Ca me fait bander</item>
+        <item>Gaucher Droitier Ousmane Dembele</item>
+        <item>La ch*tte qu\'il a</item>
+        <item>On a envie d\'aller pleurer</item>
+        <item>Multiplex Canal Plus</item>
+        <item>NBA</item>
+        <item>Accelere accelere</item>
+        <item tools:ignore="Typos">Messi messi messi</item>
+        <item>Allez les verts</item>
+        <item>Guingampais roi du tracteur</item>
+        <item>Moi tu mparles pas d\'age</item>
+        <item>Super Max</item>
+        <item>Tous ensemble on chantera</item>
+        <item>You\'ll never walk alone</item>
+        <item tools:ignore="Typos">Arrete arrete arrete</item>
+    </string-array>
+
+    <string-array name="soundNamesNouveautes">
+        <item>Bah oui connard</item>
+        <item>Cadeau de moi à moi</item>
+        <item>C\'est dégueulasse</item>
+        <item>C\'est pas comme ca qu\'on imagine la vie</item>
+        <item>Combien ?</item>
+        <item>Cri de Mario</item>
+        <item>Cri de Dingo</item>
+        <item>Cri de Wilhelm</item>
+        <item>Death Note</item>
+        <item>Elimination de Moundir</item>
+        <item>En fait non</item>
+        <item>En plein dans le sanglier</item>
+        <item>Game over Pac Man</item>
+        <item>Harder Daddy</item>
+        <item>Harry Potter</item>
+        <item>Holy Jesus</item>
+        <item>Hurlement loup</item>
+        <item>I like your cut g</item>
+        <item>Jean Castex</item>
+        <item>J\'en sais rien j\'ai pris n\'importe quoi</item>
+        <item>Je vais pranker Mamadou</item>
+        <item>Jujutsu Kaisen Ending</item>
+        <item>J\'vais le démarrer ct enc***</item>
+        <item>Les filles je suis tombé</item>
+        <item>Les Schtroumpfs</item>
+        <item>Ma play</item>
+        <item>Messire un sarrasin</item>
+        <item>Moi j\'aime le piment d\'espelette</item>
+        <item>Mon cochon préféré</item>
+        <item>Mr Worldwide</item>
+        <item>New York Unité Spéciale</item>
+        <item>No no square</item>
+        <item>Nword in coming</item>
+        <item>Oh mais c\'est carton rouge</item>
+        <item>OK boomer</item>
+        <item>Olivier tu vas niq**r ..</item>
+        <item>On appelle ca une douille</item>
+        <item>Pendant les vacances je ne fais rien</item>
+        <item>Rap de bourgeois</item>
+        <item>Ready Player One</item>
+        <item>Rien de plus normal</item>
+        <item>Russia bongo</item>
+        <item>Salt</item>
+        <item>Silence ou je fais éjac**er la salle</item>
+        <item>Surispliff</item>
+        <item>Ta gue*le juste</item>
+        <item>Terrible désillusion</item>
+        <item>Tk mange un hamburger</item>
+        <item>Toi tu m\'appelles monsieur</item>
+        <item>We\'ll be right back</item>
+        <item>Wsh bien ou quoi pain d\'épices</item>
+        <item>Yaaaaa</item>
+        <item>You take some chocolate..</item>
+    </string-array>
+
+    <string-array name="soundNamesTout">
+        <item>Crash Bandicoot</item>
+        <item>Dovahkiin</item>
+        <item>Mario</item>
+        <item>Minecraft</item>
+        <item>And you dont worry about your soul</item>
+        <item>Trevor décuve</item>
+        <item>Follow the damn train CJ</item>
+        <item>It\'s me Mario</item>
+        <item>Fortnite</item>
+        <item>Rust</item>
+        <item>War never changes</item>
+        <item>Dokkan Battle</item>
+        <item>GTA V</item>
+        <item>PUBG</item>
+        <item>Clash of Clans</item>
+        <item>Tetris</item>
+        <item>Va sucer un troll</item>
+        <item>Wii Theme</item>
+        <item>Musique du Bus (Fortnite)</item>
+        <item>Turk Dance sur Fortnite</item>
+        <item>Danse sur Fortnite</item>
+        <item>Leeroy Jenkins (WOW)</item>
+        <item>Illidan (WOW Légion)</item>
+        <item>Floss sur Fortnite</item>
+        <item>Electro Shuffle sur Fortnite</item>
+        <item>Oui (Starcraft 2)</item>
+        <item>Travail terminé</item>
+        <item>Coffre dans Zelda</item>
+        <item>Non</item>
+        <item>Squalala nous sommes partis</item>
+        <item>Wii Sport Theme</item>
+        <item>Fusrodah</item>
+        <item>Angry Birds</item>
+        <item>Oof</item>
+        <item>Fièvre Disco sur Fortnite</item>
+        <item>Wasted</item>
+        <item>Mission failed MGS</item>
+        <item>Bruh</item>
+        <item>Nein</item>
+        <item>Just do It</item>
+        <item>Arménie</item>
+        <item>Tribunal Charleroi</item>
+        <item>On s\'en bat les co*illes</item>
+        <item>Allemagne</item>
+        <item>Run</item>
+        <item>Je suis Passe Partout</item>
+        <item>La base virale VPS </item>
+        <item>Démarrage Windows XP</item>
+        <item>Quitter Windows XP </item>
+        <item>Bella Ciao</item>
+        <item>URSS</item>
+        <item>France</item>
+        <item>UK</item>
+        <item>John Cena</item>
+        <item>Menace détectée</item>
+        <item>Italie</item>
+        <item>USA</item>
+        <item>You\'ve got mail</item>
+        <item>Prout</item>
+        <item>Niq*e ta mère</item>
+        <item>Bing Bing Bang</item>
+        <item>Jeanne au secours</item>
+        <item>Poudre de Perlimpinpin</item>
+        <item>Mais qui elle est celle là</item>
+        <item>Pensez printemps</item>
+        <item>Je suis fils de berger</item>
+        <item>Mes chers compatriotes</item>
+        <item>Dans les campagnes</item>
+        <item>Oui oui</item>
+        <item>Je suis votre chef</item>
+        <item>Notre projet</item>
+        <item>Mis en examen</item>
+        <item>Cahuzac</item>
+        <item>Marine Le Pen a menti</item>
+        <item>Rouquin va</item>
+        <item>Il faut bien un débat au PS</item>
+        <item>Ta mère la p*te voila</item>
+        <item>Pensez Printemps (Macron)</item>
+        <item>Game of Thrones</item>
+        <item>The Big Bang Theory</item>
+        <item>Tintin</item>
+        <item>The Walking Dead</item>
+        <item>Vikings</item>
+        <item>Zorro</item>
+        <item>Scooby Doo</item>
+        <item>Île aux enfants</item>
+        <item>La petite maison dans la prairie</item>
+        <item>Tout pour le Muscle</item>
+        <item>Koh Lanta</item>
+        <item>Narcos</item>
+        <item>XFiles</item>
+        <item>Oui Oui</item>
+        <item>Âne Trotro</item>
+        <item>Tchoupi</item>
+        <item>Téletubbies</item>
+        <item>La Panthère Rose</item>
+        <item>Docteur Who</item>
+        <item>Agence Tout Risques</item>
+        <item>Pokemon</item>
+        <item>Inazuma Eleven</item>
+        <item>Simpsons</item>
+        <item>Star Wars</item>
+        <item>Dragon Ball Z</item>
+        <item>Dragon Ball Super</item>
+        <item>Prison Break</item>
+        <item>Power Rangers</item>
+        <item>Inspecteur Gadget</item>
+        <item>Les têtes brulées</item>
+        <item>The Voice</item>
+        <item>Les Mystérieuses Cités d\'Or</item>
+        <item>Tout le monde en moule b*te</item>
+        <item>Fernand Fernandel</item>
+        <item>Remi Susceptible</item>
+        <item>FAUX</item>
+        <item>Tu te calmes Denis</item>
+        <item>Je suis Papa</item>
+        <item>Tu veux du pain</item>
+        <item>Itaitao Itaitao</item>
+        <item>Qui c\'est qui a touché à Dorian</item>
+        <item>Salut les loosers</item>
+        <item>Guillaume le Thug</item>
+        <item>Champagne</item>
+        <item>William coach en séduction</item>
+        <item>Francois l\'embrouille</item>
+        <item>Monsieur et Madame Karambeu</item>
+        <item>Ma B*te</item>
+        <item>Coucou JeanJean</item>
+        <item>Quentin le Filsdeup</item>
+        <item>Joris le C*n</item>
+        <item>Patrice</item>
+        <item>1,2,3,6</item>
+        <item>Abonné</item>
+        <item>Les vainqueurs écrivent</item>
+        <item>Au revoir merci</item>
+        <item>Ish ish</item>
+        <item>Arrêter de faire ch*er Bernard</item>
+        <item>Wesh Alors</item>
+        <item>Nous vivons dans un monde de Pokémon</item>
+        <item>Arrêt du Coeur</item>
+        <item>J\'ai dis put*uh</item>
+        <item>Big Shaq</item>
+        <item>Dominique nique</item>
+        <item>Les petites fleurs</item>
+        <item>Smoke weed everyday</item>
+        <item>Olala Damso</item>
+        <item>Olala PNL</item>
+        <item>Gucci Gang</item>
+        <item>Pouloulou</item>
+        <item>Se faire sucer c\'est pas tromper</item>
+        <item>Deviens Génial</item>
+        <item>OVNI</item>
+        <item>Despacito</item>
+        <item>On écrit sur les murs</item>
+        <item>Tourner les serviettes</item>
+        <item>Vive les gros ni*hons</item>
+        <item>Color Gitano</item>
+        <item>Bazardée</item>
+        <item>Natacha</item>
+        <item>Andalouse</item>
+        <item>Simple Basique</item>
+        <item>Savez vous planter les choux (street)</item>
+        <item>Ameno</item>
+        <item>D.Rose</item>
+        <item>I play Pokemon GO everyday</item>
+        <item>J\'suis qu\'un thug</item>
+        <item>Tripalosky</item>
+        <item>See You Again</item>
+        <item>Jacky ta 4L</item>
+        <item>C\'est beau la pétanque</item>
+        <item>Pupupu*e</item>
+        <item tools:ignore="Typos">Bum bum tam tam</item>
+        <item>Musique triste</item>
+        <item>Bizarre</item>
+        <item>Hello it\'s me</item>
+        <item>Who can say</item>
+        <item>Quand il péte il ..</item>
+        <item>Longue Vie</item>
+        <item>Salade Tomate et sans Oignon</item>
+        <item tools:ignore="Typos">Ah ouais ouais ouais</item>
+        <item>Blanc sans le n</item>
+        <item>Epic sax guy</item>
+        <item>Ding Dong Song</item>
+        <item>Hello de Lionel Richie</item>
+        <item>Mamie je t\'aime</item>
+        <item>Dame tu cosita</item>
+        <item>SAD</item>
+        <item>Tchoin</item>
+        <item>Running in the 90s</item>
+        <item>Bandolero</item>
+        <item>AH</item>
+        <item>Le dessert</item>
+        <item>La Carte Kiwi</item>
+        <item>Taisez vous</item>
+        <item>Aie.. Coup dur pour Guillaume</item>
+        <item>C\'est la mer noire</item>
+        <item>Oui oui ah oui</item>
+        <item>Mais bor*el j\'ai le droit</item>
+        <item>Caaaafard</item>
+        <item>1+1=11</item>
+        <item>Jsuis pas venue ici pour souffrir</item>
+        <item>Les gens en ont plein le c*l des arabes</item>
+        <item>Les patrons de Leaderprice</item>
+        <item>C\'est contre nature</item>
+        <item>J\'lai entendu faire prout</item>
+        <item>Mais oui c\'est clair</item>
+        <item>Et là c\'est le drame</item>
+        <item>Un menu whopper pour commencer</item>
+        <item>Skinner</item>
+        <item>Olala c\'est la décadence</item>
+        <item>Mais il est musulman</item>
+        <item>Jai rendu service</item>
+        <item>Votre livre s\'appelle tourne la page</item>
+        <item>Rire de Hanouna</item>
+        <item>La congolexicomatisation</item>
+        <item>Momomotus</item>
+        <item>Autant de fils de pu*e</item>
+        <item>Mon sac est fait</item>
+        <item>Commence par me parler poliment</item>
+        <item>Un malade Bernard</item>
+        <item>Mais moi je veux faire l\'amour</item>
+        <item>Boum boum malabar</item>
+        <item>Tu pousses le bouchon </item>
+        <item>Très très sale</item>
+        <item>Bonjour bonjour</item>
+        <item>Nan c\'est pas possible</item>
+        <item>Ce sont des micoses va*inales</item>
+        <item>Des fuites urinaires</item>
+        <item>C\'est honteux</item>
+        <item>Oh oui Greg</item>
+        <item>Je suis Olivier de Carglass</item>
+        <item>Ma chérie</item>
+        <item>Hey Jamy</item>
+        <item>Slovénie</item>
+        <item>Je m\'en bats les co*illes frere</item>
+        <item>C\'était très intéressant</item>
+        <item>Freddy Freddo</item>
+        <item>La Boule Magique</item>
+        <item>Rire démoniaque(TPLM)</item>
+        <item>Say my Name</item>
+        <item>Tout le monde s\'en bra*le</item>
+        <item>Bazinga</item>
+        <item>Jouer Guerre Salsifi</item>
+        <item>Calmez vous</item>
+        <item>Fantastic</item>
+        <item>Allons y Alonso</item>
+        <item>Noooo please nooo</item>
+        <item>Exterminé</item>
+        <item>Ouais c\'est pas faux</item>
+        <item>Pas de bras pas de chocolat</item>
+        <item>Alors on attend pas Patrick</item>
+        <item>Ca vous ai jamais arrivé de tomber sur..</item>
+        <item>On est en Tanzanie</item>
+        <item>Philippe je sais où tu te caches</item>
+        <item>Je suis ton père</item>
+        <item>Merci la gueuse</item>
+        <item>Coucou (Harry Potter)</item>
+        <item>Avada Kedavra</item>
+        <item>Lumos Maxima</item>
+        <item>Interdit de pénétrer ..</item>
+        <item>Monsieur Potter notre nouvelle..</item>
+        <item>Je jure solennellement que mes..</item>
+        <item>Wingardium Leviosa</item>
+        <item>Tu es un sorcier Harry</item>
+        <item>Je vais faire à ta gu*ule..</item>
+        <item>Hissons nos couleurs</item>
+        <item>Salut à tous (Star Wars)</item>
+        <item>Say hello to my little friend</item>
+        <item>Le camping car de BATARD</item>
+        <item>Parle à ma main (Terminator)</item>
+        <item>Tu étais l\'élu </item>
+        <item>Ce que tu dis n\'a aucun sens</item>
+        <item>Mon précieux</item>
+        <item>Im Batman</item>
+        <item>Cours Forest</item>
+        <item>T\'es là ou t\'es pas là</item>
+        <item>Va te faire en*uler (Scarface)</item>
+        <item>J\'aime me beurrer la biscotte</item>
+        <item>T\'aimes bien les omelettes</item>
+        <item>Vous ne passerez pas</item>
+        <item>HAGRIID</item>
+        <item>J\'aime me battre</item>
+        <item>Hymne des Tuches à Monaco</item>
+        <item>Biloute</item>
+        <item>Stupide Hobbit Joufflu</item>
+        <item>Liberté Égalité N*M</item>
+        <item>Il t\'arrive de saigner</item>
+        <item>Fils de p*te ma lumière</item>
+        <item>Bonsoir je suis Bob Lennon</item>
+        <item>J\'en ai rien à fo*tre</item>
+        <item>Salut à tous les amis cest ..</item>
+        <item>Hé mais t\'es parano toi</item>
+        <item>Là t\'es en train de faire le ramadan</item>
+        <item>Salut à tous c\'est Lasalle </item>
+        <item>Coucou (Miss Jirachi)</item>
+        <item>Starfoulah</item>
+        <item>Biflette</item>
+        <item>Chavais chavais</item>
+        <item>Alors ils sont francais</item>
+        <item>Vos mères c\'est des dinosaures</item>
+        <item>C\'est normal en Russie</item>
+        <item>Vos grands mères les dragons..</item>
+        <item>As tu vu les quenouilles</item>
+        <item>Rhinoshield</item>
+        <item>Intro de Wankil Studio</item>
+        <item>Yo les trasheurs</item>
+        <item>Yo tout le monde c\'est Squezzie</item>
+        <item>Je détruis ton v*gin avec..</item>
+        <item>Ta gu*ule Maman</item>
+        <item>Il me piquait la zezette</item>
+        <item>Jouons tous ensemble à un petit jeu</item>
+        <item>Non arreter de me faire ca</item>
+        <item>Arrete de critiquer </item>
+        <item>Mais pourquoi tu manges sous l\'eau</item>
+        <item>Et toc l\'abricot</item>
+        <item>Ta gu*ule pu*ain</item>
+        <item>Poce blo</item>
+        <item>Intro de Gotaga (street) </item>
+        <item>Musique satanique</item>
+        <item>Je suis partiellement foufou </item>
+        <item>Bien évidemment</item>
+        <item>Wesh Wesh les amis</item>
+        <item tools:ignore="Typos">Là là là</item>
+        <item>J\'aime mettre mon pén*s dans..</item>
+        <item>Comportement d\'arabes</item>
+        <item>Chanson du Pyrobarbare</item>
+        <item>J\'aime les ours polaires</item>
+        <item>Paradis de Rubis</item>
+        <item>Oh mon fromage blanc</item>
+        <item>Vos grands mères les moustiques..</item>
+        <item>Oui</item>
+        <item>Damn les gens</item>
+        <item>J\'ai touché le cheque</item>
+        <item>Paulok et Kyu</item>
+        <item>On y va super</item>
+        <item>J\'ai le démon</item>
+        <item>Moi c\'est Bertrand</item>
+        <item>Xavier Pontte</item>
+        <item>Salut bonsoir c\'est Polo</item>
+        <item>Bonsoir</item>
+        <item>Ton père fabrique des guitares..</item>
+        <item>Chanson de la Joie</item>
+        <item>J\'ai envie de me suicider car..</item>
+        <item>Do you know da way</item>
+        <item>Little Red Shit</item>
+        <item>Oh ce qu\'il a pris</item>
+        <item>Bonjour à toutes..</item>
+        <item>Papier Bulle</item>
+        <item>Marseillaise TK78</item>
+        <item>Ouvre ta gu*ule</item>
+        <item>Casse toi à qui tu veux..</item>
+        <item>WTC Psycopathes</item>
+        <item>T\'es nul</item>
+        <item>Une carte google play</item>
+        <item>Heureusement qui y\'a encore du turbin</item>
+        <item>Hé Marine</item>
+        <item>Je fais l\'amour avec les rivières</item>
+        <item>Cette petite abeille porte ..</item>
+        <item>Je ne comprends pas</item>
+        <item>Lache moi Michel</item>
+        <item>Appeler les hendeks s\'il vous plait</item>
+        <item>Une hallucination collective</item>
+        <item>Qu\'est qui est jaune et qui attend ?</item>
+        <item>Draaaa</item>
+        <item>Zbeub Zbeub</item>
+        <item>Vos daronnes elles boivent du Sprite</item>
+        <item>Tequila Heineken</item>
+        <item>Corde à sauter héhé</item>
+        <item>Ah bah c\'est bien Nils</item>
+        <item>Tu te ch*es dans la culotte</item>
+        <item>Mais si j\'suis très net</item>
+        <item>Le sang de tes morts</item>
+        <item>Issou</item>
+        <item>Mon Pioupiou il est mort</item>
+        <item>Kalash Kalash</item>
+        <item>Damn Daniel</item>
+        <item>Mon mollet il est blindé là</item>
+        <item>OK c\'est JeanMi du 13</item>
+        <item>Tu es moche</item>
+        <item>They had us in the first half</item>
+        <item>Ca pousse</item>
+        <item>Grigny la Grande Borne</item>
+        <item>Tous mes amis ont une queue</item>
+        <item>Oh puta*n</item>
+        <item>Nardine mouk</item>
+        <item>Avec mon Deznoseur </item>
+        <item>Wow</item>
+        <item>Avec une queue de billard..</item>
+        <item>Oh ch*tte à poil</item>
+        <item>Ouiiiiiii</item>
+        <item>Bit*h I love you</item>
+        <item>Mdr Mdr</item>
+        <item>Rue des Potiers</item>
+        <item>Je vais te briser tes os</item>
+        <item>Coucou les musulmans</item>
+        <item>On s\'est castagne sur le palier</item>
+        <item>Jai ramassé un caillou..</item>
+        <item>M\'en bats les steaks que ..</item>
+        <item>Tu touches à ma sensibilité</item>
+        <item>Tu n\'es pas du tout qualifiée pour..</item>
+        <item>Arrête la drogue</item>
+        <item>T\'es un homme mort Karim</item>
+        <item>As tu déja vu mon c*l</item>
+        <item>Quand j\'suis content je vomis</item>
+        <item>Oh Supa Hot Fire</item>
+        <item>J\'aime les biscuits</item>
+        <item>NICE</item>
+        <item>Oui c\'est moi</item>
+        <item>Ouga Aga Pipi Caca</item>
+        <item>Demander pardon pourquoi.. </item>
+        <item>Isabelle communique</item>
+        <item>J\'aime bien les frites</item>
+        <item>C\'est rigolo hein</item>
+        <item>Je lui donne des coups de queue</item>
+        <item>Mais c*nnard</item>
+        <item>Je suis déchainé moi</item>
+        <item>And it\'s at this moment</item>
+        <item>Jus d\'orange</item>
+        <item>Couscous Saucisse</item>
+        <item>Fuck*ng Genius</item>
+        <item>J\'ai mis du miel</item>
+        <item>Nan c\'est pas vrai</item>
+        <item>Mon pain au raisin</item>
+        <item>Petit Poney</item>
+        <item>J\'ai des tas de fiancés</item>
+        <item>Un fou chante sous la douche</item>
+        <item>J\'ai ba*sé une chèvre</item>
+        <item>J\'ai un petit zizi</item>
+        <item>C\'est nul</item>
+        <item>To be continued ..</item>
+        <item>Omae wa mou shindeiru</item>
+        <item>Coucou</item>
+        <item>Alertes aux Gogoles</item>
+        <item>Oh punaise</item>
+        <item>Are you going to finish that croissant</item>
+        <item>It\'s over 9000</item>
+        <item>Lick my balls</item>
+        <item>La drogue c\'est mauvais m\'voyez</item>
+        <item>Acheve le</item>
+        <item>Ferme ta grande gue*le Flanders</item>
+        <item>I\'m Pickle Rick</item>
+        <item>Ca se prononce Nuquelaire</item>
+        <item>Kamehameha</item>
+        <item>Bonjour tout le monde</item>
+        <item>Oh mon dieu ils ont tués Kenny</item>
+        <item>Téléportation</item>
+        <item>Ronaldo</item>
+        <item>Drogba</item>
+        <item>Makelele</item>
+        <item>Oh l\'assassin</item>
+        <item>Spartiate quel est votre métier</item>
+        <item>Street Fighter 2</item>
+        <item>Suède</item>
+        <item>J\'ai pas touché</item>
+        <item>La PuiPuissance</item>
+        <item>Look at this dude</item>
+        <item>Loup Garou</item>
+        <item>Mais vous fumez monsieur</item>
+        <item>MESSAGE.. TG</item>
+        <item>Metamorphose Goldorak</item>
+        <item>Mille tonnerres de brest</item>
+        <item>My name is Jeff</item>
+        <item>Pas ca Zinedine</item>
+        <item>Placement de Produit</item>
+        <item>P*tain zebi</item>
+        <item>Si ta pas d\'amis va sur Twitter</item>
+        <item>Salut à tous c\'est Paulok</item>
+        <item>Thauvin Fils de Pu*e</item>
+        <item>Un jour elle sera mienne</item>
+        <item>Huit heures de cachou</item>
+        <item>ASMR</item>
+        <item>Zola avait dit j\'accuse</item>
+        <item>Le Club JDG</item>
+        <item>Code Quantum</item>
+        <item>Comment ne pas te louer</item>
+        <item>Coucou tu veux voir ma b*te</item>
+        <item>Cuir moustache</item>
+        <item>Musique DBS au piano</item>
+        <item>Dédicace à personne</item>
+        <item>Des frites des frites</item>
+        <item>Eh n*m</item>
+        <item>Evil Morty</item>
+        <item>Attaque des Titans</item>
+        <item>Avengers</item>
+        <item>Guillon jai ba*sé sa femme</item>
+        <item>HéHéHéHé</item>
+        <item>Heyyeyaaeyaa</item>
+        <item>Turquie</item>
+        <item>J\'adore le nutella</item>
+        <item>J\'ai dis non</item>
+        <item>J\'ai la quequette qui..</item>
+        <item>J\'aime le veau</item>
+        <item>Je vous emm*rde et je rentre ..</item>
+        <item>Tu degages sinon je t\'en colle une</item>
+        <item>La photo f*p</item>
+        <item>Woop Gang</item>
+        <item>Rasengan</item>
+        <item>Tous les kilos sont dans ..</item>
+        <item>Pour fêter ca.. Pizza</item>
+        <item>Super Smash Bros Brawl</item>
+        <item>Mort Vivant sur Fortnite</item>
+        <item>Mashallah le génie</item>
+        <item>Kings Dead Earrape</item>
+        <item>Kalash du Congo</item>
+        <item>J\'suis Pape Geek</item>
+        <item>Espece de ..</item>
+        <item>Fils de Pioute</item>
+        <item>Est que tu baises ?</item>
+        <item>Casse toi pauvre c*n</item>
+        <item>Carton Rouge</item>
+        <item>Brouillage</item>
+        <item>Bel Air sur Fortnite</item>
+        <item tools:ignore="Typos">Ba Dum Tss</item>
+        <item>Il va lui faire l\'amour sans..</item>
+        <item>Beyblade</item>
+        <item>Il a pas dit bonjour</item>
+        <item>OKLM de Booba</item>
+        <item>Je vais faire caca chez..</item>
+        <item>Cartouche</item>
+        <item>Le Chalet</item>
+        <item>Clap Bonjour</item>
+        <item>Alien de la Soupe aux Choux</item>
+        <item>Crucifié Crucifié</item>
+        <item>Dragon Ball Super 2</item>
+        <item>Deadpool</item>
+        <item>Denver le Dernier Dinosaure</item>
+        <item>Easy Peasy Lemon Squeezy</item>
+        <item>Hello Darkness my old Friend</item>
+        <item>Issou Night Club</item>
+        <item>J\'ai glissé Chef</item>
+        <item>Je suce tous les zboubs de Paname</item>
+        <item>Il s\'appelle Just Leblanc</item>
+        <item>Sword Art Online</item>
+        <item>Le joueur francais</item>
+        <item>Les Ratz</item>
+        <item>Mac Gyver</item>
+        <item>Malcolm</item>
+        <item>Ma Ya Hi</item>
+        <item>Seven Deadly Sins</item>
+        <item>Share The World</item>
+        <item tools:ignore="Typos">Taille taille taille</item>
+        <item>Ptdr t ki</item>
+        <item>Que la force de Peter Mc Calloway..</item>
+        <item>Rick et Morty</item>
+        <item>SCP 096</item>
+        <item>Surprise Mother F*cker</item>
+        <item>Bruit de Suspense</item>
+        <item>T\'es ssssale</item>
+        <item>Le Tobogland</item>
+        <item>Tu es grosse Mélissandre</item>
+        <item>Une b*te allez</item>
+        <item>Wouah mais qu\'est que c\'est</item>
+        <item>WTF Boom</item>
+        <item>Kuroko no Basket</item>
+        <item>Je tire une balle dans la tête</item>
+        <item>Je suis Rickornichon</item>
+        <item>Je connais des gros f*p</item>
+        <item>Intro Gotaga</item>
+        <item>Portugal</item>
+        <item>Hi Okay</item>
+        <item>Hey Niko it\'s Roman</item>
+        <item>Titanic (Flute)</item>
+        <item>Fairy Tail</item>
+        <item>Champion mon frère</item>
+        <item>Bitconnect</item>
+        <item>Ave Cesar</item>
+        <item>Yes we can</item>
+        <item>Yakari</item>
+        <item>Wubba Lubba</item>
+        <item>Vous êtes vraiment dégu*ulasse</item>
+        <item>This is Sparta</item>
+        <item>The Prophety is true</item>
+        <item>Theme L Death Note</item>
+        <item>GTA IV</item>
+        <item>South Park</item>
+        <item>Roule un boze</item>
+        <item>Ce n\'est plus une tuerie</item>
+        <item>Pedobear song</item>
+        <item>Et si je colle mes ..</item>
+        <item>One Punch Man</item>
+        <item>Oh no no no</item>
+        <item>Nyan Cat</item>
+        <item>My Time</item>
+        <item>La Septième Compagnie</item>
+        <item>Mozart le Charo</item>
+        <item>Mamadou avait mal aux dents</item>
+        <item>Mais vous savez ..</item>
+        <item>Law and Order</item>
+        <item>Operation Health</item>
+        <item>On en a gros</item>
+        <item>Oh Yeah MrCrab</item>
+        <item>Oggy et les Cafards</item>
+        <item>Mask Off</item>
+        <item>La S*lope</item>
+        <item>Je leur pisse au c*l</item>
+        <item>I need healing</item>
+        <item>I believe i can fly</item>
+        <item>Champions League</item>
+        <item>Harry Potter</item>
+        <item>Dragon Ball</item>
+        <item>Poupipoupi</item>
+        <item>Code Lyoko</item>
+        <item>C\'est pas Sorcier</item>
+        <item>Carglass Con*asse</item>
+        <item>Carabistouille</item>
+        <item>Breaking Bad</item>
+        <item>Bob lEponge</item>
+        <item>Im Blue</item>
+        <item>Alex F</item>
+        <item>Who wants to be King</item>
+        <item>Tu veux mon zizi</item>
+        <item>Trololo Song</item>
+        <item>Thor is here</item>
+        <item>Strangers Things</item>
+        <item>Schezwan Sauce</item>
+        <item>Polomat vs Tolisso</item>
+        <item>Pikachuu</item>
+        <item>Overwatch</item>
+        <item>Mini Rick</item>
+        <item>La Casa Del Papel</item>
+        <item>Il est dur comme un fessier..</item>
+        <item>Il était une fois la vie</item>
+        <item>Deja Vu</item>
+        <item>Final Flash</item>
+        <item>Aulos</item>
+        <item>Zelda</item>
+        <item tools:ignore="Typos">Pas très très gentil</item>
+        <item>Tokyo Ghoul</item>
+        <item>La chance</item>
+        <item>Je vais t\'étrangler</item>
+        <item>Je sens que ce matin va être une pure soirée</item>
+        <item>Jean Michel Aulas</item>
+        <item>Harlem Shake</item>
+        <item>Hallelujah</item>
+        <item>Gangnam Style</item>
+        <item>D.U.C je confirme..</item>
+        <item>Nous avons une demande d\'ami</item>
+        <item>Dab de Carlos</item>
+        <item>Coups et Blessures</item>
+        <item>C\'est l\'heure du duel</item>
+        <item>Celui</item>
+        <item>Bah ouais logique héhé</item>
+        <item>AA</item>
+        <item>T\'es qu\'un petit p*d</item>
+        <item>Sonnerie de Bojack Horseman</item>
+        <item>Salut c\'est moi Mr.Larbin</item>
+        <item>Salut cest Hannah</item>
+        <item>Télé-Réalité GOT</item>
+        <item>Oh Lord</item>
+        <item>Nous sommes de retour pour vous..</item>
+        <item>Sonnerie de Mr.Peanut Butter</item>
+        <item>Menace d\'un Hackeur</item>
+        <item>Mademoiselle Valérie</item>
+        <item>Mais ces voitures sont nulles</item>
+        <item>J\'ai que ca à dire</item>
+        <item>Ils vont vous ba*ser</item>
+        <item>Fermez vos p*tain de gu*ule</item>
+        <item>Cheh</item>
+        <item>Tu es bête ou quoi</item>
+        <item>Rire de Porto</item>
+        <item>Rend pas fou</item>
+        <item>Héhé boy</item>
+        <item>Foot 2 Rue</item>
+        <item>Domino Dominette</item>
+        <item>C\'est la danse de Rick</item>
+        <item>Alerte Générale</item>
+        <item>Adventure Time</item>
+        <item>Zegema Beach</item>
+        <item>Toi tu vis toi tu vis toi tu crèves</item>
+        <item>GTA San Andreas</item>
+        <item>Il est super ton spermatozoide Jamy</item>
+        <item>Hit - Minecraft</item>
+        <item>Sirene Pompier</item>
+        <item>Sirene Police</item>
+        <item>Retour vers le futur</item>
+        <item>QI de 143</item>
+        <item>On va vous faire schwifter</item>
+        <item>Jurassic Park</item>
+        <item>Je vous ai compris</item>
+        <item>Je suis en S</item>
+        <item>Ils ont fait pipi dans votre tête</item>
+        <item>AHHHH</item>
+        <item>All Star</item>
+        <item>Baba pourquoi tu fais ca</item>
+        <item>Bienvenue chez les Loud</item>
+        <item>Bon sang qu\'est qu\'on peut s\'ennuyer</item>
+        <item>Ca c\'etait gratuit</item>
+        <item>Come and get you love</item>
+        <item>Corneil et Bernie</item>
+        <item>Cours Asterixme</item>
+        <item>Dallas</item>
+        <item>Elle est où la carte ?</item>
+        <item>Esskeetit</item>
+        <item>Ferme ta gu*ule</item>
+        <item>Freestyle de l\'autodérision</item>
+        <item>Frolic</item>
+        <item>Générale Optique</item>
+        <item>Gomu Gomu No</item>
+        <item>Guile Theme SF2</item>
+        <item>Maroc</item>
+        <item>Il a fait sa blague de m*rde</item>
+        <item>Ils ont un tout petit pénis</item>
+        <item>J\'ai jamais touché à mes filles</item>
+        <item>Japon - JDG</item>
+        <item>J\'arrive</item>
+        <item>J\'me présente je m\'appelle Henri</item>
+        <item>Je plane comme l\'avion de Pablo</item>
+        <item>J\'men bats les co*illes</item>
+        <item>Intro de JDG</item>
+        <item>J\'vais faire un dab</item>
+        <item>La Chancla</item>
+        <item>La Team Rocket s\'envole vers d\'autres cieux</item>
+        <item>Meilleur Pote sur Fortnite</item>
+        <item>Miraculous</item>
+        <item>My Hero Academia</item>
+        <item>Tout est noir</item>
+        <item>Soul Eater</item>
+        <item>Theme Halo</item>
+        <item>Titanic</item>
+        <item>Tu vas bien ?</item>
+        <item>Une dictature c\'est..</item>
+        <item>Walker Texas Ranger</item>
+        <item>We are - One Piece AMV</item>
+        <item>What ?</item>
+        <item>Yatangaki</item>
+        <item>Yo le rap</item>
+        <item>Zawarudo</item>
+        <item>Audhubillah min al shaytan</item>
+        <item>Alerte Psycopathe</item>
+        <item>Bamboula</item>
+        <item>Bolosse va</item>
+        <item>Wesh Morray</item>
+        <item>Canapi Fatal</item>
+        <item>Catapulte tes morts</item>
+        <item>Ca va Manu ?</item>
+        <item>Ce soir branl*tte</item>
+        <item>C\'est facile de triquiter</item>
+        <item>The Last Second</item>
+        <item>Concombre</item>
+        <item>Cool guy</item>
+        <item>Daamn</item>
+        <item>De l\'or merci</item>
+        <item>Denied</item>
+        <item>Geai Moqueur de Hunger Games</item>
+        <item>Hunter x Hunter</item>
+        <item>J\'taurai vi*lé</item>
+        <item>Rire du Roi - Link Faces of Evil</item>
+        <item>Mais oui putain bien sur</item>
+        <item>Merci Monsieur le Professeur</item>
+        <item>Monsieur Blaise Matuidi</item>
+        <item>Mr Bean</item>
+        <item>Nico Nico Ni</item>
+        <item>Nom de Dieu le canapé</item>
+        <item>7 fois disque de diamant et toi ?</item>
+        <item>Sirene Nucléaire</item>
+        <item>Skadoo Skadae</item>
+        <item>Spider Cochon</item>
+        <item>Splendide</item>
+        <item>That a lot of damage</item>
+        <item>The 100</item>
+        <item>Ultimate Hanzo</item>
+        <item>Welcome to Brawlhalla</item>
+        <item>Your the last one complete the mission</item>
+        <item>Voici la météo de Gulli</item>
+        <item>Samuel Umtiti</item>
+        <item>Allez Gigi Allez Rourou</item>
+        <item>Benjamin Pavard</item>
+        <item>Chacaron Macaron</item>
+        <item>Cri de chèvre</item>
+        <item>Double Toz</item>
+        <item>EA Sports</item>
+        <item>Identité de genre et expression du..</item>
+        <item>Inshallah Inshallah Inshallah</item>
+        <item>Insulte de Don Self</item>
+        <item>Jamais je ne t\'oublierai</item>
+        <item>Je dirais pas que l\'équipe en face..</item>
+        <item>Je ne suis pas un homme</item>
+        <item>Je vais lui retirer son calecon</item>
+        <item>Je voulais juste briller</item>
+        <item>Lalalalallaaala</item>
+        <item>Megalovania</item>
+        <item>Magic in the Air</item>
+        <item>Mais c\'est de la m*rde</item>
+        <item>Mange le ton p*tain de pain</item>
+        <item>Ngolo Kante</item>
+        <item>Not in my house</item>
+        <item>Oh my god</item>
+        <item>On a gagné</item>
+        <item>OVNI Cover</item>
+        <item>On va casser du p*d</item>
+        <item>On va la pécho</item>
+        <item>Pour la Belgique</item>
+        <item>Roberto.. tu préfères .. ?</item>
+        <item>Si tu crois que cest en insultant</item>
+        <item>Smallville</item>
+        <item>Trivago</item>
+        <item>Waka Waka</item>
+        <item>We are the Champions</item>
+        <item>Erreur Windows XP</item>
+        <item>A few moment later</item>
+        <item>Arretez ca suffit</item>
+        <item>Assassination Classroom</item>
+        <item>Bravo vous etes sur Internet</item>
+        <item>Giroud n*m</item>
+        <item>F*ck You F*ck You</item>
+        <item>Garcon</item>
+        <item>Ghostbuster</item>
+        <item>C\'est la hess total</item>
+        <item>Algérie</item>
+        <item>Je ch*e à la gu*ule d\'Orelsan</item>
+        <item>Keke do you love me</item>
+        <item>Les Gendarmes</item>
+        <item>Oh Messi Ciao</item>
+        <item>One eternity later</item>
+        <item>On va niq*er ce soir</item>
+        <item>Pompe moi le dard</item>
+        <item>Primo Kyogre</item>
+        <item>Ridin</item>
+        <item>Second poteau Pavard</item>
+        <item>Spiderman</item>
+        <item>Take on me</item>
+        <item>Tu m\'as tant donné</item>
+        <item>Whisky Coca</item>
+        <item>Aux arbres citoyens</item>
+        <item>Aux champs élysées</item>
+        <item>GTA Vice City</item>
+        <item>Howard the Alien</item>
+        <item>Sénégal</item>
+        <item>Je s\'appelle Groot</item>
+        <item>Keyboard cat</item>
+        <item>La tribu de Dana</item>
+        <item>Les démons de Minuit</item>
+        <item>Exorciste</item>
+        <item>Mission Impossible</item>
+        <item>Nous nous reverrons</item>
+        <item>Nuit de folie</item>
+        <item>Ouais</item>
+        <item>Partenaire particulier</item>
+        <item>Pump up kicks</item>
+        <item>Salut mon pote</item>
+        <item>Shining</item>
+        <item>Den Den Mushi</item>
+        <item>Sortez vous les doigts du c*l</item>
+        <item>Sous le soleil des tropiques</item>
+        <item>Ultimate</item>
+        <item>Votre père était un sal*ud</item>
+        <item>Yare Yare Daze</item>
+        <item>Alarme de la Purge</item>
+        <item>A nu cheeky breeky..</item>
+        <item>Attention à la mousse</item>
+        <item>Bad Boys</item>
+        <item>Because I\'m Batman</item>
+        <item>Bojack Horseman</item>
+        <item>Bonsoir ca va bien ?</item>
+        <item>Brooklyn 99</item>
+        <item>C\'est fait</item>
+        <item>Euh..non</item>
+        <item>From NowHere</item>
+        <item>Ce mec c\'est un L</item>
+        <item>Belgique</item>
+        <item>Intro Lolywood</item>
+        <item>Netflix</item>
+        <item>Jaime le monde de Disney</item>
+        <item>La Bande à Picsou</item>
+        <item>Lisa la 2000</item>
+        <item>Mange mon pain Eren</item>
+        <item>Martin Matin</item>
+        <item>Ouais moi cest Serre-Fion</item>
+        <item>C\'est l\'histoire du Papa Ours</item>
+        <item>Petit Ours Brun</item>
+        <item>Que Dieu bénisse les nouveaux..</item>
+        <item>Ta mère elle suce des ours</item>
+        <item>Teen Wolf</item>
+        <item>They\'re taking the hobbit to Isengard</item>
+        <item>Touche un membre de ma clique</item>
+        <item>Wallah c\'est pas moi</item>
+        <item>Yu gonplei ste odon</item>
+        <item>Baby I\'m Yours</item>
+        <item>Au secours</item>
+        <item>Big Dreams</item>
+        <item>Bonsoir Paris</item>
+        <item>Chant de l\'Oignon</item>
+        <item>J\'gratte j\'gratte et la nuit..</item>
+        <item>Dire Docks - Super Mario 64</item>
+        <item>Emmenez moi au bout de la terre</item>
+        <item>Il est si bon le savane</item>
+        <item>Friends</item>
+        <item>Hello à tous c\'est Guep</item>
+        <item>Interview de Nabil Fekir</item>
+        <item>Train de Vie</item>
+        <item>La PS4 dans la ch*tte à ta mere</item>
+        <item>Totoro</item>
+        <item>Pulp Fiction</item>
+        <item>Attrapez les tous - Farod</item>
+        <item>Attrapez les tous - Simon du 33</item>
+        <item>Une fois j\'ai soulevé ta mère</item>
+        <item>Rire de Kawhi Leonard</item>
+        <item>Romaiiin</item>
+        <item>Smash de Midoriya</item>
+        <item>Aulos Reloaded</item>
+        <item>Ride</item>
+        <item>Ramenez la coupe à la maison</item>
+        <item>Je m\'appelle Pierre</item>
+        <item>Jesuuus</item>
+        <item>Olive et Tom</item>
+        <item>Il était une fois l\'homme</item>
+        <item>Bon bah à Zidane</item>
+        <item>T\'as les boules t\'as les glandes</item>
+        <item>Wazaaaa</item>
+        <item>Ragnar le Rouge</item>
+        <item>Ma mère m\'a dit un jour</item>
+        <item>Au revoir homme de la lune</item>
+        <item>Bill Gates ou ton youtube</item>
+        <item>C\'était la blague nulle du jour</item>
+        <item>Refrain du chant de l\'Oignon</item>
+        <item>Interville</item>
+        <item>L\'Arme Fatale</item>
+        <item>Hey Listen</item>
+        <item>Internet net</item>
+        <item>Jamais vu un tas de m*rde</item>
+        <item>Jvais bouffer ta kilotte</item>
+        <item>Jveux pas d\'un verre</item>
+        <item>Les produits laitiers remix</item>
+        <item>Ligue 1 Conforama</item>
+        <item>Mes copines</item>
+        <item>Full Metal Jacket</item>
+        <item>Oh misere de misere</item>
+        <item>Salut je m\'appelle Ahmed</item>
+        <item>T\'étais encore dans les..</item>
+        <item>Alerte de Metal Gear Solid</item>
+        <item>Benoit tourne toi</item>
+        <item>Cri de douleur</item>
+        <item>Thomas le Train</item>
+        <item>Guignol</item>
+        <item>I love this game</item>
+        <item>J\'adore le zboub</item>
+        <item>Je br*nle la lampe</item>
+        <item>La grosse roue</item>
+        <item>La p*tain d\'ta madre</item>
+        <item>Mais ferme ta gu*ule toi</item>
+        <item>Mais sincerement quoi</item>
+        <item>Ma mère.. pardon</item>
+        <item>Mangekyou Sharingan</item>
+        <item>Oh bosetti</item>
+        <item>On ira tous au paradis</item>
+        <item>Perfect</item>
+        <item>Jolie</item>
+        <item>Starfoulah</item>
+        <item>Ta gu*ule</item>
+        <item>Utini</item>
+        <item>Why are you running</item>
+        <item>La République c\'est moi</item>
+        <item>Brain Power</item>
+        <item>C\'est la pétée</item>
+        <item>C\'est reparti comme en 46</item>
+        <item>Gilet jauné</item>
+        <item>Human Nature</item>
+        <item>Espagne</item>
+        <item>J\'adore rire</item>
+        <item>L\'aventurier</item>
+        <item>1000°C</item>
+        <item>Mimi Cracra</item>
+        <item>Mine Mine Mine</item>
+        <item>Mon fils ma bataille</item>
+        <item>Oh une boule de neige</item>
+        <item>On attend la date l\'heure</item>
+        <item>Ouarzazate</item>
+        <item>Poupée de cire poupée de son</item>
+        <item>Pour tout ceux qui ont la crotte..</item>
+        <item>Soirée Raclette</item>
+        <item>Supercalifragilisticexpialidocious</item>
+        <item>Tu m\'as bien khalass</item>
+        <item>Valère Germain, j\'attends l\'heure le jour</item>
+        <item>Barbapapa</item>
+        <item>Ben 10</item>
+        <item>Casper</item>
+        <item>Doucement</item>
+        <item>Eckhart</item>
+        <item>Enfin bref</item>
+        <item>Garfield</item>
+        <item>Hamtaro</item>
+        <item>Just can\'t get enough</item>
+        <item>Khapta</item>
+        <item>Marsupilami</item>
+        <item>Il veut mes diamants</item>
+        <item>Nom de Zeus</item>
+        <item>Père Castor</item>
+        <item>Rocky</item>
+        <item>Sharky et Georges</item>
+        <item>Shuriken School</item>
+        <item>The Witcher 3</item>
+        <item tools:ignore="Typos">Tiens tiens tiens</item>
+        <item>Trahison disgrace</item>
+        <item>Wakanda</item>
+        <item>Au DD</item>
+        <item>Boule Noire de Motus</item>
+        <item>Can\'t touch this</item>
+        <item>Crab rave</item>
+        <item>Dans ma tete 42</item>
+        <item>Dis moi oui Marina</item>
+        <item tools:ignore="Typos">Et ca fait clic clic</item>
+        <item>Gravity Falls</item>
+        <item>Ils m\'ont dis t\'es ou</item>
+        <item>J\'ai une de ces envies de..</item>
+        <item>Tu veux qu\'on se la donne</item>
+        <item>Palalala</item>
+        <item>Ouais mais c\'est pas toi..</item>
+        <item>Qui veut gagner des millions</item>
+        <item>Rocky 3</item>
+        <item>Saint Seiya</item>
+        <item>Soviet Dance Hard Bass</item>
+        <item>The Promised Neverland</item>
+        <item>Tu mens</item>
+        <item>Tu vas voir qui je suis</item>
+        <item>Vous le payerez pour ca</item>
+        <item>Ahki</item>
+        <item>Allez va te faire fo*tre</item>
+        <item>And I.. Holy Sh*t</item>
+        <item>Bas les pattes tête de poulet</item>
+        <item>Bye bye</item>
+        <item>Camping Paradis</item>
+        <item>C\'est les emotions en fait</item>
+        <item>Dislike dislike</item>
+        <item>Et moi je suis.. Iron Man</item>
+        <item>Ivana 2.0</item>
+        <item>Josephine Ange Gardien</item>
+        <item>Juillet</item>
+        <item>Mais comment vous m\'avez trouvé</item>
+        <item>Mirador</item>
+        <item>Moi j\'suis quelqu\'un j\'adore..</item>
+        <item>Monsters Inc Earrape</item>
+        <item>Nkunku c\'est au dessus</item>
+        <item>Oh f*ck I can\'t believe..</item>
+        <item>Oh sh*t here we go again</item>
+        <item>Old Town Road</item>
+        <item>On dirait que c\'est des vrais frères</item>
+        <item>Palalalala des O\'Neil</item>
+        <item>Qui voila je</item>
+        <item>Run I\'ts Godzilla</item>
+        <item>Sulli Gemissement (Monsters Inc)</item>
+        <item>T\'ecoute ca toi</item>
+        <item>T\'es un mec bizarre toi</item>
+        <item>Tu vas où ? Reste là</item>
+        <item>Y a pas de panneaux</item>
+        <item>Yeah</item>
+        <item>Attention Philippe le parapet</item>
+        <item>Batiment</item>
+        <item>Clac Clac</item>
+        <item>Eh bonjour</item>
+        <item>Encore ca fait beaucoup là non</item>
+        <item>Halloween</item>
+        <item>Here comes the hotstepper</item>
+        <item>Im a fucking star</item>
+        <item>Insultes de Rene Malleville</item>
+        <item>Je peux pas</item>
+        <item>Jsuis fatigué ma gu*uleuh</item>
+        <item>Kikiki mamama</item>
+        <item>La grosse moula</item>
+        <item>Let\'s go</item>
+        <item>Mais voila mais c\'etait sur</item>
+        <item>Medicament</item>
+        <item>Pouah ca puire</item>
+        <item>T\'es pas drole tu fais meme pas rire</item>
+        <item>The Office</item>
+        <item>Tour de France</item>
+        <item>Un peu de haine</item>
+        <item>Va y mon petit</item>
+        <item>Voler n\'est pas bon</item>
+        <item>Watch out watch out</item>
+        <item>Est ce que le monde il est à l\'envers..</item>
+        <item>Baby Got Back</item>
+        <item>Et ca c\'est pas réglo</item>
+        <item>Hung Up</item>
+        <item>J\'ai des amis arabes</item>
+        <item>Ode to Joy</item>
+        <item>Rock This Party</item>
+        <item>Sweet Dreams</item>
+        <item>Toi c\'est quoi ton problème</item>
+        <item>Total Eclipse of the Heart</item>
+        <item>Tu crois que c\'est du respect</item>
+        <item>Y a le mec à Milla</item>
+        <item>Ah ouais ils sont bizarres eux</item>
+        <item>Big Smoke\'s order</item>
+        <item>Blanche</item>
+        <item>Toc toc</item>
+        <item>Cavale Kenny</item>
+        <item>Challenge accepted</item>
+        <item>Chien</item>
+        <item>Clic souris</item>
+        <item>Dauphin</item>
+        <item>Et si on faisait l\'amour tout nu</item>
+        <item>Get back in the kitchen</item>
+        <item>Gros deg*eulasse</item>
+        <item>Hamburger</item>
+        <item>He attrapez le</item>
+        <item>It\'s time to go</item>
+        <item>JCVD</item>
+        <item>Giorno Theme</item>
+        <item>J\'suis dans la boite</item>
+        <item>Klaxon</item>
+        <item>Laissez moi le Build Fight</item>
+        <item>La Macarena</item>
+        <item>Mais laisse moi dormir</item>
+        <item>Marie</item>
+        <item>MD</item>
+        <item>Moulaga</item>
+        <item>Ne reviens pas</item>
+        <item>Oh j\'ai le droit de vivre</item>
+        <item>Allez les gros</item>
+        <item>Amaterasu</item>
+        <item>Animal Crossing New Leaf</item>
+        <item>Animal Crossing New Horizons</item>
+        <item>Anissa</item>
+        <item>Astronomia (Coffin Dance)</item>
+        <item>Avant je lavais à l\'eau</item>
+        <item>Bannez moi ca</item>
+        <item>Boite mystère mode zombie</item>
+        <item>Ca mderange pas moi j\'aime bien</item>
+        <item>Ca me fait bander</item>
+        <item>Canard</item>
+        <item>C\'est moi wesh</item>
+        <item>Charal</item>
+        <item>Chat</item>
+        <item>Cochon</item>
+        <item>Evangelion</item>
+        <item>FBI open up</item>
+        <item>Frappe moi et je t\'empoisonne</item>
+        <item>Full Metal Alchemist</item>
+        <item>Gaucher Droitier Ousmane Dembele</item>
+        <item>Heatens</item>
+        <item>Il a pris une ligue 2</item>
+        <item>Je te bloque</item>
+        <item>Kage Bunshin no Jutsu</item>
+        <item>La ch*tte qu\'il a</item>
+        <item>La liste de Schindler</item>
+        <item>Montagne est trop fort</item>
+        <item>Naruto Sasuke</item>
+        <item>Nous sommes en guerre</item>
+        <item>Bretagne</item>
+        <item>On a envie d\'aller pleurer</item>
+        <item>Pirates des Caraibes</item>
+        <item>Quelle indignite</item>
+        <item>Rasen Shuriken</item>
+        <item>Regarde moi bien</item>
+        <item>Souris Verte (Naza)</item>
+        <item>Stonks</item>
+        <item>Subhanallah la puissance</item>
+        <item>T\'es p*d ?</item>
+        <item>Tu preferes le chocolat ou..</item>
+        <item>Uho</item>
+        <item>Anti moins de 10</item>
+        <item>Baby Be Mine</item>
+        <item>Billie Jean</item>
+        <item>Deconnecte</item>
+        <item>Demarrage Mario Kart</item>
+        <item>C\'est les cites de France narvalo</item>
+        <item>Ending One Punch Man</item>
+        <item>Fall Guys</item>
+        <item>How I Met Your Mother</item>
+        <item>Irlande</item>
+        <item>Je danse le mia</item>
+        <item>Je suis Pamela</item>
+        <item>Je suis Spider Man f*p</item>
+        <item>Lacoste TN</item>
+        <item>Mais va y p*n</item>
+        <item>Menteur pharisien</item>
+        <item>Midnight City</item>
+        <item>Moi je pense la question est vite répondue</item>
+        <item>Multiplex Canal Plus</item>
+        <item>NBA</item>
+        <item>Non j\'ai pas d\'amis</item>
+        <item>Oh m*rde oh c\'est c*n ca</item>
+        <item>Oh mince</item>
+        <item>Oh purée de pomme de terre</item>
+        <item>On se connait</item>
+        <item>On va aller lui casser les co*illes</item>
+        <item>PIMP</item>
+        <item>Porte qui grince</item>
+        <item>Poutine Walking</item>
+        <item>Pump it up</item>
+        <item>Rat</item>
+        <item>Rot</item>
+        <item tools:ignore="Typos">Sate sate sate</item>
+        <item>Si tu meurs c\'etait écrit</item>
+        <item>Sonnerie Totally Spies</item>
+        <item>Ta grand mère elle mange des gnoccis</item>
+        <item>Tunisie</item>
+        <item>Wrong Neighborhood</item>
+        <item>Zombie</item>
+        <item>BMW</item>
+        <item>Carglass</item>
+        <item>CIC</item>
+        <item>Comme j\'aime</item>
+        <item>Decathlon</item>
+        <item>Tomb Raider Legend</item>
+        <item>Groupama</item>
+        <item>Journal TF1</item>
+        <item>Lapeyre</item>
+        <item>Maaf</item>
+        <item>Maif</item>
+        <item>Mcdo</item>
+        <item>Peugeot</item>
+        <item>Point S</item>
+        <item>PS3</item>
+        <item>RTL</item>
+        <item>SFR</item>
+        <item>SNCF</item>
+        <item>TF1</item>
+        <item>Météo TF1</item>
+        <item>Xbox One</item>
+        <item>Tom Sawyer</item>
+        <item>Touche pas à ma bagnole</item>
+        <item>Tu es qui ?</item>
+        <item>Undertale</item>
+        <item>Un grand pouvoir implique..</item>
+        <item>Playmobil en avant les histoires</item>
+        <item>Véronique fait un infarctus</item>
+        <item tools:ignore="Typos">Voila bon ok bye bye</item>
+        <item>Who is that Pokemon</item>
+        <item>Yeet</item>
+        <item>All I want for christmas</item>
+        <item>Douce nuit</item>
+        <item>Jingle Bell Rock</item>
+        <item>Let It Snow</item>
+        <item>Noel c\'est comme un rythme de jazz</item>
+        <item>Noel Joyeux Noel</item>
+        <item>Petit Papa Noel</item>
+        <item>Vive le vent</item>
+        <item>We wish you a merry christmas</item>
+        <item>À la file indienne</item>
+        <item>Chanson de la pluie</item>
+        <item>Il en faut peu pour être heureux</item>
+        <item>Je m\'en vais</item>
+        <item>La vie d\'artiste</item>
+        <item>Libérée Délivrée</item>
+        <item>S.O.S Société</item>
+        <item>Sous l\'océan</item>
+        <item>Tout le monde veut devenir un cat</item>
+        <item>Yoshi</item>
+        <item>Zumba Café</item>
+        <item>Accelere accelere</item>
+        <item>Argentine</item>
+        <item>Ascenseur</item>
+        <item>Attention grenade</item>
+        <item>Au revoir</item>
+        <item>Australie</item>
+        <item>Avengers Infinity Wars</item>
+        <item>Ayo</item>
+        <item>Bisou biscoto</item>
+        <item>Blue Bird - Naruto</item>
+        <item>Bon anniversaire les ptits indiens</item>
+        <item>Brawl Stars</item>
+        <item>Brésil</item>
+        <item>Canada</item>
+        <item>C\'est bien Éléonore</item>
+        <item>C\'est non</item>
+        <item>C\'est qui le patron ?</item>
+        <item>Champagne</item>
+        <item>Chez Tati</item>
+        <item>Clash Royale</item>
+        <item>Clonage - Naruto</item>
+        <item>Coco</item>
+        <item>Colombie</item>
+        <item>Dehors</item>
+        <item>Demon Slayer</item>
+        <item>Djomb</item>
+        <item>Dora l\'exploratrice</item>
+        <item>Eating Minecraft</item>
+        <item>Ecosse</item>
+        <item>Egypte</item>
+        <item>Europa League</item>
+        <item>Fantomas</item>
+        <item>Faut pas respirer la compote</item>
+        <item>Finlande</item>
+        <item>Five Nights at Freddys</item>
+        <item>Food Wars</item>
+        <item>Ford Boyard</item>
+        <item>Fruit de la passion</item>
+        <item>Full Flemme</item>
+        <item>Galactik Football</item>
+        <item>Galette Saucisse</item>
+        <item>Gamecube</item>
+        <item>Game Over Yeah</item>
+        <item>Goodbye To A World</item>
+        <item>Good Morning Vietnam</item>
+        <item>Hongrie</item>
+        <item>Huit morts 6 blessés</item>
+        <item>J\'aime bien</item>
+        <item>Japon</item>
+        <item>Je reve où tu viens de poser ta peche sur mon bureau</item>
+        <item>Je suis spécial</item>
+        <item>Je te demande pardon</item>
+        <item>Kill Fortnite</item>
+        <item>Les Snorkies</item>
+        <item>Lucifer</item>
+        <item>Luigi clash Mario</item>
+        <item>Marina passe..</item>
+        <item>Mario Kart Double Dash</item>
+        <item tools:ignore="Typos">Messi messi messi</item>
+        <item>Mexique</item>
+        <item>Mode Zombie</item>
+        <item>Murloc</item>
+        <item>Musette</item>
+        <item>Ne t\'inquietes pas</item>
+        <item>Never gonna give you up</item>
+        <item>Norvège</item>
+        <item>Oh ca c\'est pas très gentil</item>
+        <item>Otarie</item>
+        <item>Oui</item>
+        <item>Pays de Galle</item>
+        <item>Peaky Blinders</item>
+        <item>Phoenix Wright</item>
+        <item>Ping League of Legends</item>
+        <item>Pourquoi je parle avec eux</item>
+        <item>Prend pas trop la confiance redescend</item>
+        <item>Quelle perte de temps quelle perte d\'énergie</item>
+        <item>RDC</item>
+        <item>Sega</item>
+        <item>Allez les verts</item>
+        <item>America F*ck Yeah</item>
+        <item>Boogie Wonderland</item>
+        <item>Ca va peter</item>
+        <item>Cheval</item>
+        <item>David goodenough</item>
+        <item>Emergency dans Among Us</item>
+        <item>Envole moi</item>
+        <item>Guingampais roi du tracteur</item>
+        <item>You picked the wrong house fool</item>
+        <item>Je veux les chaussures</item>
+        <item>Jsuis un ptn de geek</item>
+        <item>Kill dans Among Us</item>
+        <item>Les Bronzés font du Ski</item>
+        <item>Les Corons</item>
+        <item>Luigi\'s Mansion Dark Moon</item>
+        <item>Moi tu mparles pas d\'age</item>
+        <item>Oh my god wow</item>
+        <item>On sfait du mal</item>
+        <item>Pepite de chocolat</item>
+        <item>Playstation</item>
+        <item>Pologne</item>
+        <item>Self Control</item>
+        <item>Start dans Among Us</item>
+        <item>Super Mario 64</item>
+        <item>Super Max</item>
+        <item>Tous ensemble on chantera</item>
+        <item>Tu veux pas mille balles</item>
+        <item>Un deca pour donat</item>
+        <item>Wiggle</item>
+        <item>You\'ll never walk alone</item>
+        <item>Alarme incendie</item>
+        <item tools:ignore="Typos">Arrete arrete arrete</item>
+        <item>Bigard TPMP</item>
+        <item>Buttercup</item>
+        <item>Caramelldansen</item>
+        <item>C\'est de la vanne</item>
+        <item>C\'est pas que j\'en ai marre mais je suis un peu fatigué</item>
+        <item tools:ignore="Typos">C\'est vous le doc doc</item>
+        <item>Chipolata</item>
+        <item>Comme Gotaga</item>
+        <item>D\'accord génial</item>
+        <item>Dead by Daylight - Doctor Laugh</item>
+        <item>Elimination</item>
+        <item>Empire State of Mind</item>
+        <item>Fraulein</item>
+        <item>It\'s Wednesday my dude</item>
+        <item>J\'ai pas à me justifier</item>
+        <item>J\'ai une sacré bête</item>
+        <item>Je m\'appelle Valentin</item>
+        <item>Je suis dans les bois</item>
+        <item>Je suis dans une colère noire</item>
+        <item>La tactique du gendarme</item>
+        <item>Mais qu\'est que tu me baragouines</item>
+        <item>Miaouw</item>
+        <item>Mood</item>
+        <item>Musique de Clown</item>
+        <item>Objection</item>
+        <item>Oh lala l\'enchainement</item>
+        <item>Oh les batards</item>
+        <item>Oh no</item>
+        <item>Oh non mais c\'est criminel</item>
+        <item>Oh thats good</item>
+        <item>On s\'en bat les couilles</item>
+        <item>Sasageyo</item>
+        <item>Super Smash Bros Ultimate</item>
+        <item>Sur mon papier y\'a écrit que tu manges du couscous</item>
+        <item>Taxi</item>
+        <item>T\'es un délinquant</item>
+        <item>The Last of Us</item>
+        <item>Train de la hype</item>
+        <item>Un peu mon neveu</item>
+        <item>Wankil Studio svp</item>
+        <item>Wiggle remix</item>
+        <item>Yamete Kudasai</item>
+        <item>Yoshi Island</item>
+        <item>Bah oui connard</item>
+        <item>Cadeau de moi à moi</item>
+        <item>C\'est dégueulasse</item>
+        <item>C\'est pas comme ca qu\'on imagine la vie</item>
+        <item>Combien ?</item>
+        <item>Cri de Mario</item>
+        <item>Cri de Dingo</item>
+        <item>Cri de Wilhelm</item>
+        <item>Death Note</item>
+        <item>Elimination de Moundir</item>
+        <item>En fait non</item>
+        <item>En plein dans le sanglier</item>
+        <item>Game over Pac Man</item>
+        <item>Harder Daddy</item>
+        <item>Harry Potter</item>
+        <item>Holy Jesus</item>
+        <item>Hurlement loup</item>
+        <item>I like your cut g</item>
+        <item>Jean Castex</item>
+        <item>J\'en sais rien j\'ai pris n\'importe quoi</item>
+        <item>Je vais pranker Mamadou</item>
+        <item>Jujutsu Kaisen Ending</item>
+        <item>J\'vais le démarrer ct enc***</item>
+        <item>Les filles je suis tombé</item>
+        <item>Les Schtroumpfs</item>
+        <item>Ma play</item>
+        <item>Messire un sarrasin</item>
+        <item>Moi j\'aime le piment d\'espelette</item>
+        <item>Mon cochon préféré</item>
+        <item>Mr Worldwide</item>
+        <item>New York Unité Spéciale</item>
+        <item>No no square</item>
+        <item>Nword in coming</item>
+        <item>Oh mais c\'est carton rouge</item>
+        <item>OK boomer</item>
+        <item>Olivier tu vas niq**r ..</item>
+        <item>On appelle ca une douille</item>
+        <item>Pendant les vacances je ne fais rien</item>
+        <item>Rap de bourgeois</item>
+        <item>Ready Player One</item>
+        <item>Rien de plus normal</item>
+        <item>Russia bongo</item>
+        <item>Salt</item>
+        <item>Silence ou je fais éjac**er la salle</item>
+        <item>Surispliff</item>
+        <item>Ta gue*le juste</item>
+        <item>Terrible désillusion</item>
+        <item>Tk mange un hamburger</item>
+        <item>Toi tu m\'appelles monsieur</item>
+        <item>We\'ll be right back</item>
+        <item>Wsh bien ou quoi pain d\'épices</item>
+        <item>Yaaaaa</item>
+        <item>You take some chocolate..</item>
+    </string-array>
+
+</resources>

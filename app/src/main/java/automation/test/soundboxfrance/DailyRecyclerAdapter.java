@@ -1,6 +1,6 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
@@ -63,11 +63,24 @@ public class DailyRecyclerAdapter extends RecyclerView.Adapter<DailyRecyclerAdap
                     e.printStackTrace();
                 }
                 mediaPlayer.start();
+                object.setEcoutes(object.getEcoutes()+1);
+                HashMap<String, Object> hashMap = new HashMap<>();
+                hashMap.put("like",object.getLike());
+                hashMap.put("name",object.getItemName());
+                hashMap.put("son",object.getItemSon());
+                hashMap.put("ecoutes",object.getEcoutes());
 
+                DatabaseReference sound = FirebaseDatabase.getInstance().getReference().child("Sons");
+                sound.child(object.getKey()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                    }
+                });
             }
         });
 
         holder.imageViewitem.setImageResource(images[new Random().nextInt(images.length)]);
+        holder.likeTextView.setText(Integer.toString(object.getLike()));
 
         holder.likeViewItem.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -77,6 +90,7 @@ public class DailyRecyclerAdapter extends RecyclerView.Adapter<DailyRecyclerAdap
                 hashMap.put("like",object.getLike());
                 hashMap.put("name",object.getItemName());
                 hashMap.put("son",object.getItemSon());
+                hashMap.put("ecoutes",object.getEcoutes());
 
                 DatabaseReference sound = FirebaseDatabase.getInstance().getReference().child("Sons");
                 sound.child(object.getKey()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -100,12 +114,14 @@ public class DailyRecyclerAdapter extends RecyclerView.Adapter<DailyRecyclerAdap
         TextView itemTextView;
         ImageView imageViewitem;
         Button likeViewItem;
+        TextView likeTextView;
+
         public SoundboxViewHolder(View itemView) {
             super(itemView);
             itemTextView = itemView.findViewById(R.id.textViewItem);
             imageViewitem = itemView.findViewById(R.id.imageViewitem);
             likeViewItem = itemView.findViewById(R.id.ilikethissound);
-
+            likeTextView = itemView.findViewById(R.id.textLikeView);
         }
     }
 }

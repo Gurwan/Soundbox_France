@@ -1,0 +1,12 @@
+<!--
+  ~ /********************************************************
+  ~ Copyright (c) 2020. Okaria Studio
+  ~ ********************************************************/
+  -->
+
+<paths>
+    
+    <external-path
+        name="Soundbox France"
+        path="soundbox_france/"/>
+</paths>

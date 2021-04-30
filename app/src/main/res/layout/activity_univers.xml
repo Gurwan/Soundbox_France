@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ /********************************************************
-  ~ Copyright (c) 2020. Okaria Studio
+  ~ Copyright (c) 2021. Okaria Studio
   ~ ********************************************************/
   -->
 
@@ -20,7 +20,7 @@
         android:elevation="0dp"
         android:gravity="center">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             >
@@ -61,10 +61,10 @@
                 tools:ignore="ButtonStyle" />
 
             <Button
-                android:id="@+id/button_mail"
+                android:id="@+id/button_sort"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/ic_email_black_24dp"
+                android:background="@drawable/sort_alphabetique"
                 tools:ignore="ButtonStyle" />
 
             <Button
@@ -80,7 +80,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/ic_baseline_help_24"
                 tools:ignore="ButtonStyle" />
-        </LinearLayout>
+        </GridLayout>
 
 
 

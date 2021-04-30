@@ -1,17 +1,24 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
 package automation.test.soundboxfrance;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -24,6 +31,7 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
 
     private ArrayList<SoundObject> soundObjects;
     private final boolean longClickFav;
+    private InterstitialAd pubmin;
 
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects){
         this.soundObjects = soundObjects;
@@ -33,6 +41,20 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects, AppCompatActivity mainActivity){
         this.soundObjects = soundObjects;
         this.longClickFav = true;
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(mainActivity,"ca-app-pub-3066536602388745/7055607832", adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                pubmin = interstitialAd;
+                Log.i("SoundboxFrance", "onAdLoaded");
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                Log.i("SoundboxFrance", loadAdError.getMessage());
+                pubmin = null;
+            }
+        });
     }
 
     public SoundboxRecyclerAdapter(ArrayList<SoundObject> soundObjects, FavoriteActivity activity){
@@ -49,9 +71,6 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
 
     @Override
     public void onBindViewHolder(@NonNull SoundboxViewHolder holder, int position) {
-        if(pubmin != null) {
-            pubmin.loadAd(new AdRequest.Builder().build());
-        }
 
         final SoundObject object = soundObjects.get(position);
         final Integer soundID = object.getItemID();
@@ -60,8 +79,17 @@ public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecycl
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EventHandlerClass.startMediaPlayer(v, soundID);
-                
+                if(pubmin != null) {
+                    boolean val = new Random().nextInt(20)==0;
+                    if(val){
+                        pubmin.show((Activity) v.getContext());
+                        EventHandlerClass.startMediaPlayer(v, soundID);
+                    } else {
+                        EventHandlerClass.startMediaPlayer(v, soundID);
+                    }
+                } else {
+                    EventHandlerClass.startMediaPlayer(v, soundID);
+                }
             }
         });
 

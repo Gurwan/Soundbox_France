@@ -1,6 +1,6 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
@@ -21,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +35,7 @@ public class DailySoundboxActivity extends AppCompatActivity {
     RecyclerView DailyView;
     DailyRecyclerAdapter DailyAdapter = new DailyRecyclerAdapter(dailyList);
     RecyclerView.LayoutManager DailyLayoutManager;
+    int az = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +49,17 @@ public class DailySoundboxActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 dailyList.clear();
                 for(DataSnapshot snap : snapshot.getChildren()){
+                    SoundObject s;
                     String son = snap.child("son").getValue().toString();
                     String name = snap.child("name").getValue().toString();
                     Integer like = Integer.valueOf(snap.child("like").getValue().toString());
-                    SoundObject s = new SoundObject(name,son,snap.getKey(),like);
+                    if(snap.child("ecoutes").getValue()!=null){
+                        Integer ecoutes = Integer.valueOf(snap.child("ecoutes").getValue().toString());
+                        s = new SoundObject(name,son,snap.getKey(),like,ecoutes);
+                    } else {
+                        s = new SoundObject(name,son,snap.getKey(),like);
+                    }
+
                     dailyList.add(s);
                     DailyAdapter.notifyDataSetChanged();
                 }
@@ -80,6 +90,25 @@ public class DailySoundboxActivity extends AppCompatActivity {
             Toast.makeText(this, "Attention un like est définitif et ne peux pas être retiré. ", Toast.LENGTH_LONG).show();
             Toast.makeText(this, "Les sons s'actualisent tous les jours et les sons les plus likés seront intégrés dans la prochaine mise à jour. ", Toast.LENGTH_LONG).show();
             return true;
+        } else if(menuItem.getItemId() == R.id.action_sort){
+            if(az!=0){
+                Collections.sort(dailyList, new Comparator<SoundObject>() {
+                    @Override
+                    public int compare(SoundObject soundObject, SoundObject t1) {
+                        return soundObject.getItemName().compareTo(t1.getItemName());
+                    }
+                });
+                az = 0;
+            } else {
+                Collections.sort(dailyList, Collections.reverseOrder(new Comparator<SoundObject>() {
+                    @Override
+                    public int compare(SoundObject soundObject, SoundObject t1) {
+                        return soundObject.getItemName().compareTo(t1.getItemName());
+                    }
+                }));
+                az = 1;
+            }
+            DailyAdapter.notifyDataSetChanged();
         }
         return super.onOptionsItemSelected(menuItem);
     }

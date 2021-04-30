@@ -1,13 +1,15 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
 package automation.test.soundboxfrance.categories;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -24,11 +26,24 @@ public class JVActivity extends SuperActivity {
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setFlags(pleinEcran, pleinEcran);
         first(getSupportFragmentManager(),getLifecycle());
-        adapter.addFragment(new JeuxVideosFragment(this));
-        adapter.addFragment(new MusicGamingFragment(this));
+        final JeuxVideosFragment jeuxVideosFragment = new JeuxVideosFragment(this);
+        final MusicGamingFragment musicGamingFragment = new MusicGamingFragment(this);
+        adapter.addFragment(jeuxVideosFragment);
+        adapter.addFragment(musicGamingFragment);
         nameTab = new ArrayList<>();
         nameTab.add("Jeux Vidéos");
         nameTab.add("Musique");
         second();
+        Button buttonSort = findViewById(R.id.button_sort);
+        buttonSort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(jeuxVideosFragment.isResumed()){
+                    openSort(jeuxVideosFragment.SoundAdapter,jeuxVideosFragment.soundList,jeuxVideosFragment.getAz());
+                } else {
+                    openSort(musicGamingFragment.SoundAdapter,musicGamingFragment.soundList,musicGamingFragment.getAz());
+                }
+            }
+        });
     }
 }

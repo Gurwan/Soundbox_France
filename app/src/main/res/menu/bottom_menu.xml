@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /********************************************************
+  ~ Copyright (c) 2021. Okaria Studio
+  ~ ********************************************************/
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        />
+
+    <item
+        android:id="@+id/nav_fav"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="Coup de coeur"
+        />
+
+    <item
+        android:id="@+id/nav_param"
+        android:icon="@drawable/ic_baseline_help_24"
+        android:title="Help"
+        />
+
+</menu>

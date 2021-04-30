@@ -1,6 +1,6 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
@@ -16,6 +16,7 @@ public class SoundObject {
     private Integer itemImage;
     private Uri itemUri;
     private Integer like;
+    private Integer ecoutes;
 
     public SoundObject(){}
 
@@ -29,6 +30,14 @@ public class SoundObject {
         this.itemSon = son;
         this.key = key;
         this.like = like;
+    }
+
+    public SoundObject(String name,String son,String key,Integer like,Integer ecoutes){
+        this.itemName = name;
+        this.itemSon = son;
+        this.key = key;
+        this.like = like;
+        this.ecoutes = ecoutes;
     }
 
     public SoundObject(String itemName, Uri itemUri){
@@ -68,6 +77,10 @@ public class SoundObject {
         return itemUri;
     }
 
+    public Integer getEcoutes() {
+        return ecoutes;
+    }
+
     public void setLike(Integer like) {
         this.like = like;
     }
@@ -76,6 +89,10 @@ public class SoundObject {
     }
     public void setImage(Integer image) {
         this.itemImage = image;
+    }
+
+    public void setEcoutes(Integer ecoutes) {
+        this.ecoutes = ecoutes;
     }
 }
 
