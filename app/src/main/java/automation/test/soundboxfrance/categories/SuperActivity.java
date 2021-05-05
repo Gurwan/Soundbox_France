@@ -36,12 +36,15 @@ import automation.test.soundboxfrance.MainActivity;
 import automation.test.soundboxfrance.R;
 import automation.test.soundboxfrance.SoundObject;
 import automation.test.soundboxfrance.SoundboxRecyclerAdapter;
+import automation.test.soundboxfrance.YourSoundboxActivity;
 import automation.test.soundboxfrance.adapters.ViewPagerAdapter;
 
 class SuperActivity extends AppCompatActivity {
     protected final static String URLPROP = "http://play.google.com/store/apps/details?id=automation.test.soundboxfrance";
     protected final static String URLTW = "https://twitter.com/OkariaStudio";
     protected final static String URLPROPOSE = "https://docs.google.com/forms/d/e/1FAIpQLScSp4fVFHqFRI9zNGWaD_Lcn2PJACyLlVHeGr2ASq4rhg1kfg/viewform";
+    protected InterstitialAd pubfav;
+    protected InterstitialAd pubrecherche;
 
     protected TabLayout tabLayout;
     protected ViewPager2 viewPager;
@@ -52,7 +55,6 @@ class SuperActivity extends AppCompatActivity {
     public SuperActivity(){}
 
     protected void first(FragmentManager supportFragmentManager, Lifecycle lifecycle) {
-        appBarLayout = findViewById(R.id.appbar);
         tabLayout = findViewById(R.id.tablayoutmusic);
         viewPager = findViewById(R.id.viewpagermusic);
         this.adapter = new ViewPagerAdapter(supportFragmentManager,lifecycle);
@@ -72,7 +74,7 @@ class SuperActivity extends AppCompatActivity {
         buttonFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openFav();
+                openA(2);
             }
         });
 
@@ -80,31 +82,7 @@ class SuperActivity extends AppCompatActivity {
         buttonRecherche.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openRecherche();
-            }
-        });
-
-        Button buttonNoteLappli = findViewById(R.id.button_note);
-        buttonNoteLappli.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openNoteLappli();
-            }
-        });
-
-        Button buttonTwitter = findViewById(R.id.button_twitter);
-        buttonTwitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openTwitter();
-            }
-        });
-
-        Button buttonPropose = findViewById(R.id.button_propose);
-        buttonPropose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openPropose();
+                openA(3);
             }
         });
 
@@ -112,7 +90,15 @@ class SuperActivity extends AppCompatActivity {
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openHome();
+                openA(1);
+            }
+        });
+
+        Button buttonYourSoundbox = findViewById(R.id.button_yoursoundbox);
+        buttonYourSoundbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(4);
             }
         });
 
@@ -120,33 +106,12 @@ class SuperActivity extends AppCompatActivity {
         buttonHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openHelp();
+                openA(6);
             }
         });
-    }
-
-    public void openFav() {
-        Intent intent = new Intent(this, FavoriteActivity.class);
-        startActivity(intent);
-    }
-
-    public void openRecherche() {
-        Intent intent = new Intent(this, ActivityToutRecherche.class);
-        startActivity(intent);
-    }
-
-    public void openNoteLappli() {
-        Intent prop = new Intent(Intent.ACTION_VIEW);
-        prop.setData(Uri.parse(URLPROP));
-        startActivity(prop);
 
     }
 
-    public void openTwitter() {
-        Intent tw = new Intent(Intent.ACTION_VIEW);
-        tw.setData(Uri.parse(URLTW));
-        startActivity(tw);
-    }
 
     public void openSort(SoundboxRecyclerAdapter adapter, ArrayList<SoundObject> soundList,int az) {
         if(az!=0){
@@ -167,23 +132,37 @@ class SuperActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
-    public void openPropose() {
-        Intent gm = new Intent(Intent.ACTION_VIEW);
-        gm.setData(Uri.parse(URLPROPOSE));
-        startActivity(gm);
+    public void openA(int a){
+        Intent intent = null;
+        switch(a){
+            case 1:
+                intent = new Intent(this, MainActivity.class);
+                break;
+            case 2:
+                intent = new Intent(this, FavoriteActivity.class);
+                break;
+            case 3:
+                intent = new Intent(this, ActivityToutRecherche.class);
+                break;
+            case 4:
+                intent = new Intent(this, YourSoundboxActivity.class);
+                break;
+            case 5:
+                int c = 1+1;
+                break;
+            case 6:
+                Toast.makeText(this, "Plusieurs catégories ayant le même thême sont regroupées ici.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "En cliquant longtemps sur un son vous pouvez :", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "- Mettre un son en 'Coup de coeur'", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "- Partager un son avec vos amis", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "- Définir un son en sonnerie,réveil,alarme..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vous devez accepter l'accès aux paramètres pour pouvoir définir un son et le partager (la demande d'accès se fait après l'installation).", Toast.LENGTH_LONG).show();
+                break;
+        }
+
+        if(intent != null){
+            startActivity(intent);
+        }
     }
 
-    public void openHelp() {
-        Toast.makeText(this, "Plusieurs catégories ayant le même thême sont regroupées ici.", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "En cliquant longtemps sur un son vous pouvez :", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "- Mettre un son en 'Coup de coeur'", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "- Partager un son avec vos amis", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "- Définir un son en sonnerie,réveil,alarme..", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "Vous devez accepter l'accès aux paramètres pour pouvoir définir un son et le partager (la demande d'accès se fait après l'installation).", Toast.LENGTH_LONG).show();
-    }
-
-    public void openHome() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
 }

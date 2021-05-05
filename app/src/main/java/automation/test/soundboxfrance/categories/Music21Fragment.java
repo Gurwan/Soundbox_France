@@ -16,17 +16,17 @@ import java.util.Arrays;
 import androidx.annotation.NonNull;
 import automation.test.soundboxfrance.R;
 
-public class RapFragment extends SuperFragment {
+public class Music21Fragment extends SuperFragment {
 
-    public RapFragment(MusiqueRapAutres mainActivity) {
+    public Music21Fragment(MusicFragment mainActivity) {
         super(mainActivity);
     }
 
-    public RapFragment(){}
+    public Music21Fragment(){}
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        super.all(inflater,container,"MRAP");
+        super.all(inflater,container,"M21");
         return view;
     }
 }

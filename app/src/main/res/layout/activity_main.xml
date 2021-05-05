@@ -60,7 +60,7 @@
                     android:id="@+id/internetButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#ff5d9e"
+                    app:cardBackgroundColor="#F06292"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -79,8 +79,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Internet"
+                            android:text="@string/memes"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -93,7 +92,7 @@
                     android:id="@+id/youtubeButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#8f71ff"
+                    app:cardBackgroundColor="#BA68C8"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -112,10 +111,17 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Youtube"
+                            android:text="@string/youtube"
                             android:textColor="#fff"
-                            android:textSize="@dimen/_20ssp"
+                            android:textSize="@dimen/_18ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:text="@string/twitch"
+                            android:textSize="@dimen/_18ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -126,7 +132,7 @@
                     android:id="@+id/filmButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#3fefef"
+                    app:cardBackgroundColor="#E57373"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -145,8 +151,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Films"
+                            android:text="@string/films"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -169,7 +174,7 @@
                     android:id="@+id/jvButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#00bdbd"
+                    app:cardBackgroundColor="#64B5F6"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -188,8 +193,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Gaming"
+                            android:text="@string/gaming"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -202,7 +206,7 @@
                     android:id="@+id/musictrenteButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#d45959"
+                    app:cardBackgroundColor="#4FC3F7"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -221,19 +225,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Musique"
+                            android:text="@string/musique"
                             android:textColor="#fff"
                             android:textSize="@dimen/_18ssp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="20ème siècle"
-                            android:textColor="#fff"
-                            android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -244,7 +238,7 @@
                     android:id="@+id/tvButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#ffb01f"
+                    app:cardBackgroundColor="#9575CD"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -263,8 +257,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="TV"
+                            android:text="@string/tv"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -287,7 +280,7 @@
                     android:id="@+id/musicRapButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#240000"
+                    app:cardBackgroundColor="#81C784"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -306,19 +299,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Musique"
+                            android:text="@string/musique"
                             android:textColor="#fff"
                             android:textSize="@dimen/_18ssp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="21ème siècle"
-                            android:textColor="#fff"
-                            android:textSize="@dimen/_12ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -329,7 +312,7 @@
                     android:id="@+id/generiqueButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#002400"
+                    app:cardBackgroundColor="#4DD0E1"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -348,8 +331,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Opening"
+                            android:text="@string/opening"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -362,7 +344,7 @@
                     android:id="@+id/themeButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#9e1fff"
+                    app:cardBackgroundColor="#4DB6AC"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -381,8 +363,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Theme"
+                            android:text="@string/theme"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -405,7 +386,7 @@
                     android:id="@+id/sporthumourpolitiqueButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#00a3a3"
+                    app:cardBackgroundColor="#FF8A65"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -424,8 +405,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Autres"
+                            android:text="@string/autres"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -438,7 +418,7 @@
                     android:id="@+id/nouveautesButton"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#adadad"
+                    app:cardBackgroundColor="#FFB74D"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -457,8 +437,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="News"
+                            android:text="@string/news"
                             android:textColor="#fff"
                             android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
@@ -508,18 +487,17 @@
                 tools:ignore="ButtonStyle" />
 
             <Button
-                android:id="@+id/button_help"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/ic_baseline_help_24"
-                tools:ignore="ButtonStyle" />
-
-
-            <Button
                 android:id="@+id/button_yoursoundbox"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/ic_baseline_help_24"
+                android:background="@drawable/ic_baseline_person_24"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_setting"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_settings_24"
                 tools:ignore="ButtonStyle" />
         </GridLayout>
 

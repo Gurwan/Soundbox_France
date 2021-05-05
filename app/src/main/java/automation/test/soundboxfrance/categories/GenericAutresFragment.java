@@ -26,11 +26,7 @@ public class GenericAutresFragment extends SuperFragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        super.before(inflater,container);
-        super.nameList = Arrays.asList(getResources().getStringArray(R.array.soundNamesGeneriquesAutres));
-        super.soundID = new Integer[]{R.raw.tplm,R.raw.kohlanta,R.raw.thevoicegenerique,R.raw.cestpassorcier,R.raw.generiqueinterville,R.raw.quiveutgagnerdesmillions,R.raw.fordboyard};
-        super.soundImage = new Integer[]{R.drawable.toutpourlemuscle,R.drawable.kohlanta,R.drawable.thevoice,R.drawable.cestpassorcier,R.drawable.interville,R.drawable.quiveutgagnerdesmillions,R.drawable.fordboyard};
-        super.after();
+        super.all(inflater,container,"G_AUTRES");
         return view;
     }
 }

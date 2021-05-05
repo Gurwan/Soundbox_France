@@ -16,6 +16,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -102,6 +103,10 @@ public class EventHandlerClass {
                     }
 
                     if (menuItem.getItemId() == R.id.action_ringtone) {
+                        if(!Settings.System.canWrite(view.getContext().getApplicationContext())){
+                            Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS, Uri.parse("package:" + view.getContext().getPackageName()));
+                            view.getContext().startActivity(intent);
+                        }
                         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext(), R.style.Theme_MaterialComponents_Light_Dialog_Alert);
                         builder.setTitle("Sauvegarder comme...");
                         builder.setItems(new CharSequence[]{"Sonnerie", "Notification", "Alarme"}, new DialogInterface.OnClickListener() {

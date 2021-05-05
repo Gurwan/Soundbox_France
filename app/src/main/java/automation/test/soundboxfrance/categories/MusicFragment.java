@@ -19,6 +19,7 @@ import automation.test.soundboxfrance.R;
 
 public class MusicFragment extends SuperActivity {
 
+
     public MusicFragment(){}
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,32 +28,22 @@ public class MusicFragment extends SuperActivity {
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setFlags(pleinEcran, pleinEcran);
         first(getSupportFragmentManager(),getLifecycle());
-        final Music3070Fragment music3070Fragment = new Music3070Fragment(this);
-        final Music80Fragment music80Fragment = new Music80Fragment(this);
-        final Music90Fragment music90Fragment = new Music90Fragment(this);
-        final Music2000Fragment music2000Fragment = new Music2000Fragment(this);
-        adapter.addFragment(music3070Fragment);
-        adapter.addFragment(music80Fragment);
-        adapter.addFragment(music90Fragment);
-        adapter.addFragment(music2000Fragment);
+        final Music20Fragment music20Fragment = new Music20Fragment(this);
+        final Music21Fragment music21Fragment = new Music21Fragment(this);
+        adapter.addFragment(music20Fragment);
+        adapter.addFragment(music21Fragment);
         nameTab = new ArrayList<>();
-        nameTab.add("30-70");
-        nameTab.add("80");
-        nameTab.add("90");
-        nameTab.add("2000");
+        nameTab.add("20ème siècle");
+        nameTab.add("21ème siècle");
         second();
         Button buttonSort = findViewById(R.id.button_sort);
         buttonSort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(music3070Fragment.isResumed()){
-                    openSort(music3070Fragment.SoundAdapter,music3070Fragment.soundList,music3070Fragment.getAz());
-                } else if(music80Fragment.isResumed()){
-                    openSort(music80Fragment.SoundAdapter,music80Fragment.soundList,music80Fragment.getAz());
-                } else if(music90Fragment.isResumed()){
-                    openSort(music90Fragment.SoundAdapter,music90Fragment.soundList,music90Fragment.getAz());
+                if(music20Fragment.isResumed()){
+                    openSort(music20Fragment.SoundAdapter,music20Fragment.soundList,music20Fragment.getAz());
                 } else {
-                    openSort(music2000Fragment.SoundAdapter,music2000Fragment.soundList,music2000Fragment.getAz());
+                    openSort(music21Fragment.SoundAdapter,music21Fragment.soundList,music21Fragment.getAz());
                 }
             }
         });

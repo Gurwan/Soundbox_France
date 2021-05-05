@@ -13,7 +13,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -38,6 +40,41 @@ public class YourSoundboxActivity extends AppCompatActivity {
         setContentView(R.layout.activity_your_soundbox);
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN ; getWindow().setFlags(pleinEcran,pleinEcran);
 
+        Button buttonHome = findViewById(R.id.button_home);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(1);
+            }
+        });
+
+        Button buttonFav = findViewById(R.id.button_fav);
+        buttonFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(2);
+            }
+        });
+
+        Button buttonSearch = findViewById(R.id.button_search);
+        buttonSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(3);
+            }
+        });
+
+        /*
+        Button buttonSettings = findViewById(R.id.button_setting);
+       buttonSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(4);
+            }
+        });
+
+        */
+
         addDataToArrayList();
         customView = findViewById(R.id.customRecyclerView);
         customLayoutManager = new GridLayoutManager(this, 3);
@@ -49,6 +86,28 @@ public class YourSoundboxActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.add_sound_menu,menu);
         return true;
+    }
+
+    private void openA(int i) {
+        Intent intent = null;
+        switch(i){
+            case 1:
+                intent = new Intent(this, MainActivity.class);
+                break;
+            case 2:
+                intent = new Intent(this, FavoriteActivity.class);
+                break;
+            case 3:
+                intent = new Intent(this, ActivityToutRecherche.class);
+                break;
+        }
+        startActivity(intent);
+        if(i<=3){
+            overridePendingTransition(R.anim.slide_left, R.anim.slide_right_2);
+        } else {
+            overridePendingTransition(R.anim.slide_right, R.anim.slide_left_2);
+        }
+
     }
 
     public boolean onOptionsItemSelected(MenuItem menuItem){

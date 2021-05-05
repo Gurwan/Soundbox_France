@@ -60,7 +60,7 @@
                     android:id="@+id/internetButton"
                     android:layout_width="@dimen/_80sdp"
                  android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#ff5d9e"
+                    app:cardBackgroundColor="#F06292"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -79,10 +79,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Internet"
+                            android:text="@string/memes"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_18ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -92,8 +91,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/youtubeButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#8f71ff"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#BA68C8"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -112,10 +111,17 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Youtube"
+                            android:text="@string/youtube"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_18ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:text="@string/twitch"
+                            android:textSize="@dimen/_18ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -125,8 +131,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/filmButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#3fefef"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#E57373"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -145,10 +151,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Films"
+                            android:text="@string/films"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_18ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -168,8 +173,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/jvButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#00bdbd"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#64B5F6"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -189,9 +194,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Gaming"
+                            android:text="@string/gaming"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -201,8 +206,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/musictrenteButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#d45959"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#4FC3F7"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -221,19 +226,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Musique"
+                            android:text="@string/musique"
                             android:textColor="#fff"
-                            android:textSize="22dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="20ème siècle"
-                            android:textColor="#fff"
-                            android:textSize="15dp"
+                            android:textSize="@dimen/_18ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -243,8 +238,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/tvButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#ffb01f"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#9575CD"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -264,9 +259,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="TV"
+                            android:text="@string/tv"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -286,8 +281,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/musicRapButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#240000"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#81C784"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -306,19 +301,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Musique"
+                            android:text="@string/musique"
                             android:textColor="#fff"
-                            android:textSize="22dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="21ème siècle"
-                            android:textColor="#fff"
-                            android:textSize="15dp"
+                            android:textSize="@dimen/_18ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -328,8 +313,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/generiqueButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#002400"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#4DD0E1"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
 
@@ -350,9 +335,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Opening"
+                            android:text="@string/opening"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -362,8 +347,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/themeButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#9e1fff"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#4DB6AC"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -383,9 +368,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Theme"
+                            android:text="@string/theme"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -405,8 +390,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/sporthumourpolitiqueButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#00a3a3"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#FF8A65"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -422,15 +407,14 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Autres"
+                            android:text="@string/autres"
                             android:textColor="#fff"
-                            android:textSize="22sp"
+                            android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
-
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -438,8 +422,8 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/nouveautesButton"
                     android:layout_width="@dimen/_80sdp"
-                 android:layout_height="@dimen/_80sdp"
-                    app:cardBackgroundColor="#adadad"
+                    android:layout_height="@dimen/_80sdp"
+                    app:cardBackgroundColor="#FFB74D"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -458,10 +442,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="News"
+                            android:text="@string/news"
                             android:textColor="#fff"
-                            android:textSize="22dp"
+                            android:textSize="@dimen/_20ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>

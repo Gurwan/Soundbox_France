@@ -25,13 +25,9 @@ public class MusiqueRapAutres extends SuperActivity {
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setFlags(pleinEcran, pleinEcran);
         first(getSupportFragmentManager(),getLifecycle());
-        final Music2010Fragment music2010Fragment = new Music2010Fragment(this);
         final RapFragment rapFragment = new RapFragment(this);
-        final AmateursFragment amateursFragment = new AmateursFragment(this);
         final MusicAutreFragment musicAutreFragment = new MusicAutreFragment(this);
-        adapter.addFragment(music2010Fragment);
         adapter.addFragment(rapFragment);
-        adapter.addFragment(amateursFragment);
         adapter.addFragment(musicAutreFragment);
         nameTab = new ArrayList<>();
         nameTab.add("2010");
@@ -43,12 +39,8 @@ public class MusiqueRapAutres extends SuperActivity {
         buttonSort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(music2010Fragment.isResumed()){
-                    openSort(music2010Fragment.SoundAdapter,music2010Fragment.soundList,music2010Fragment.getAz());
-                } else if(rapFragment.isResumed()){
+                if(rapFragment.isResumed()){
                     openSort(rapFragment.SoundAdapter,rapFragment.soundList,rapFragment.getAz());
-                } else if(amateursFragment.isResumed()){
-                    openSort(amateursFragment.SoundAdapter,amateursFragment.soundList,amateursFragment.getAz());
                 } else {
                     openSort(musicAutreFragment.SoundAdapter,musicAutreFragment.soundList,musicAutreFragment.getAz());
                 }

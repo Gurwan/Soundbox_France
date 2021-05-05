@@ -50,7 +50,8 @@ import automation.test.soundboxfrance.categories.YoutubeActivity;
 public class MainActivity extends AppCompatActivity {
     String urlprop = "http://play.google.com/store/apps/details?id=automation.test.soundboxfrance";
     String urlpropose = "https://docs.google.com/forms/d/e/1FAIpQLScSp4fVFHqFRI9zNGWaD_Lcn2PJACyLlVHeGr2ASq4rhg1kfg/viewform";
-
+    private InterstitialAd pubfav;
+    private DatabaseHandler databaseHandler;
     boolean doubleBackPressed = false;
 
     @Override
@@ -63,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         int pleinEcran = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setFlags(pleinEcran, pleinEcran);
+
+        databaseHandler = new DatabaseHandler(this);
+        databaseHandler.fillMainTable(this);
+        //databaseHandler.clearAllMain(this);
 
         Button buttonFav = findViewById(R.id.button_fav);
         buttonFav.setOnClickListener(new View.OnClickListener() {
@@ -190,15 +195,13 @@ public class MainActivity extends AppCompatActivity {
         if((getApplicationContext().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)){
             requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"},80);
         }
-
-        if(!Settings.System.canWrite(getApplicationContext())){
-            Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS, Uri.parse("package:" + getPackageName()));
-            startActivity(intent);
-        }
-
     }
 
     public void openA(int a){
+        if(pubfav!=null) {
+            pubfav.show(MainActivity.this);
+        }
+
         Intent intent = null;
         switch(a){
                 case 1:

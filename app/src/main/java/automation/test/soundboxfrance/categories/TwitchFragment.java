@@ -16,17 +16,17 @@ import java.util.Arrays;
 import androidx.annotation.NonNull;
 import automation.test.soundboxfrance.R;
 
-public class RapFragment extends SuperFragment {
+public class TwitchFragment extends SuperFragment {
 
-    public RapFragment(MusiqueRapAutres mainActivity) {
+    public TwitchFragment(YoutubeActivity mainActivity) {
         super(mainActivity);
     }
 
-    public RapFragment(){}
+    public TwitchFragment(){}
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        super.all(inflater,container,"MRAP");
+        super.all(inflater,container,"TWITCH");
         return view;
     }
 }

@@ -9,14 +9,21 @@ package automation.test.soundboxfrance;
 import android.net.Uri;
 
 public class SoundObject {
+    //nom
     private String itemName;
+    //lien pour son externe
     private String itemSon;
+    //catégorie
+    private Category itemCategory;
     private String key;
+    //son interne
     private Integer itemID;
+    //image
     private Integer itemImage;
     private Uri itemUri;
     private Integer like;
     private Integer ecoutes;
+    private Integer isNews;
 
     public SoundObject(){}
 
@@ -51,6 +58,21 @@ public class SoundObject {
         this.itemImage = itemImage;
     }
 
+    public SoundObject(String itemName, Integer itemID, Integer itemImage,Category itemCategory){
+        this.itemName = itemName;
+        this.itemID = itemID;
+        this.itemImage = itemImage;
+        this.itemCategory = itemCategory;
+    }
+
+    public SoundObject(String itemName, Integer itemID, Integer itemImage,Category itemCategory,Integer isNews){
+        this.itemName = itemName;
+        this.itemID = itemID;
+        this.itemImage = itemImage;
+        this.itemCategory = itemCategory;
+        this.isNews = isNews;
+    }
+
     public SoundObject(String itemName){
         this.itemName = itemName;
     }
@@ -77,8 +99,16 @@ public class SoundObject {
         return itemUri;
     }
 
+    public Category getItemCategory() {
+        return itemCategory;
+    }
+
     public Integer getEcoutes() {
         return ecoutes;
+    }
+
+    public Integer getIsNews() {
+        return isNews;
     }
 
     public void setLike(Integer like) {
