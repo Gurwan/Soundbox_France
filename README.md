@@ -11,7 +11,7 @@
 
 <hr> </hr>
 
-<p> Soundbox France is a partly open source mobile application with the source code for the operation of the application available on this page. The development of Soundbox France began in 2017 and was made available directly to users on the Google Play Store. The application has so far reached the stage of 350,000 unique installations and to celebrate that I have decided to make some of the source code open access. Soundbox France was developed when I was in high school and in DUT Informatique and has never been a professional project but a project for learning. Soundbox France is definitely a French application. </p>
+<p> Soundbox France is a partly open source mobile application with the source code for the operation of the application available on this page. The development of Soundbox France began in 2017 and was made available directly to users on the Google Play Store. The application has so far reached the stage of 375,000 unique installations and to celebrate that I have decided to make some of the source code open access. Soundbox France was developed when I was in high school and in DUT Informatique and has never been a professional project but a project for learning. Soundbox France is definitely a French application. </p>
 
 <hr> </hr>
 
@@ -21,7 +21,7 @@
 
 <ul>
   <li>
-    <strong> 1300 sounds </strong> can be found on the soundbox. These sounds are divided into several categories like "Memes", "Movies", "Video Games", "TV", "Generics" ...
+    <strong> 1400 sounds </strong> can be found on the soundbox. These sounds are divided into several categories like "Memes", "Movies", "Video Games", "TV", "Opening" ...
   </li>
   
   <li> 
