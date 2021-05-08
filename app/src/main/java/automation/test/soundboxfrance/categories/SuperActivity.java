@@ -7,16 +7,11 @@
 package automation.test.soundboxfrance.categories;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -30,13 +25,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.widget.ViewPager2;
-import automation.test.soundboxfrance.ActivityToutRecherche;
-import automation.test.soundboxfrance.FavoriteActivity;
-import automation.test.soundboxfrance.MainActivity;
+
+import automation.test.soundboxfrance.activity.ActivityPlaylist;
+import automation.test.soundboxfrance.activity.ActivityToutRecherche;
+import automation.test.soundboxfrance.activity.FavoriteActivity;
+import automation.test.soundboxfrance.activity.IntoPlaylistActivity;
+import automation.test.soundboxfrance.activity.MainActivity;
 import automation.test.soundboxfrance.R;
-import automation.test.soundboxfrance.SoundObject;
+import automation.test.soundboxfrance.model.SoundObject;
 import automation.test.soundboxfrance.SoundboxRecyclerAdapter;
-import automation.test.soundboxfrance.YourSoundboxActivity;
+import automation.test.soundboxfrance.activity.YourSoundboxActivity;
 import automation.test.soundboxfrance.adapters.ViewPagerAdapter;
 
 class SuperActivity extends AppCompatActivity {
@@ -110,6 +108,14 @@ class SuperActivity extends AppCompatActivity {
             }
         });
 
+        Button playlistButton = findViewById(R.id.button_playlist);
+        playlistButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(7);
+            }
+        });
+
     }
 
 
@@ -158,11 +164,15 @@ class SuperActivity extends AppCompatActivity {
                 Toast.makeText(this, "- Définir un son en sonnerie,réveil,alarme..", Toast.LENGTH_SHORT).show();
                 Toast.makeText(this, "Vous devez accepter l'accès aux paramètres pour pouvoir définir un son et le partager (la demande d'accès se fait après l'installation).", Toast.LENGTH_LONG).show();
                 break;
+            case 7:
+                intent = new Intent(this, ActivityPlaylist.class);
+                break;
         }
 
         if(intent != null){
             startActivity(intent);
         }
     }
+
 
 }

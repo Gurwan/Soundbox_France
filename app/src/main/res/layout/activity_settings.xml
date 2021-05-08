@@ -7,26 +7,67 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/fondhalloween"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingsActivity">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="0dp"
+    <Button
+        android:id="@+id/twitter_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/fondhalloween"
+        android:text="@string/suivre_sur_twitter"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/space4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/mail_button" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/customRecyclerView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/proposer_son_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/proposer_un_son"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/laisser_un_avis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.core.widget.NestedScrollView >
+    <Button
+        android:id="@+id/laisser_un_avis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/laisser_un_avis"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/mail_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proposer_son_button" />
+
+    <Button
+        android:id="@+id/mail_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/envoyer_un_mail"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/twitter_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laisser_un_avis" />
+
+    <Space
+        android:id="@+id/space4"
+        android:layout_width="42dp"
+        android:layout_height="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twitter_button" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
@@ -65,8 +106,7 @@
                 android:id="@+id/button_playlist"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/ic_baseline_playlist_play_24"
-                />
+                android:background="@drawable/ic_baseline_playlist_play_24" />
 
             <Button
                 android:id="@+id/button_setting"
@@ -76,5 +116,6 @@
         </GridLayout>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

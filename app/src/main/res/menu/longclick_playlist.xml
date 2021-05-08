@@ -24,7 +24,7 @@
 
     <item
         android:id="@+id/action_playlist"
-        android:title="@string/action_playlist"
+        android:title="@string/action_playlist_playlist"
         android:orderInCategory="4"/>
 
 

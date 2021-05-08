@@ -33,6 +33,16 @@
     <string name="theme">Theme</string>
     <string name="news">News</string>
     <string name="autres">Autres</string>
+    <string name="nomplaylist">nomPlaylist</string>
+    <string name="add">Add</string>
+    <string name="hintplaylist">Entrer le nom de la playlist</string>
+    <string name="buttonCreatePlaylist">Créer la playlist</string>
+    <string name="action_playlist">Ajouter à la playlist</string>
+    <string name="action_playlist_playlist">Supprimer de la playlist</string>
+    <string name="suivre_sur_twitter">Suivre sur Twitter</string>
+    <string name="proposer_un_son">Proposer un son</string>
+    <string name="laisser_un_avis">Laisser un avis</string>
+    <string name="envoyer_un_mail">Envoyer un mail</string>
 
     <string-array name="soundNamesTout">
         <item>Crash Bandicoot</item>

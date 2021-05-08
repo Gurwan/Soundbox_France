@@ -4,7 +4,7 @@
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -28,6 +28,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import automation.test.soundboxfrance.adapters.DailyRecyclerAdapter;
+import automation.test.soundboxfrance.EventHandlerClass;
+import automation.test.soundboxfrance.R;
+import automation.test.soundboxfrance.model.SoundObject;
 
 public class DailySoundboxActivity extends AppCompatActivity {
 

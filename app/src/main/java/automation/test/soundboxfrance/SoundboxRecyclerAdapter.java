@@ -27,6 +27,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import automation.test.soundboxfrance.activity.FavoriteActivity;
+import automation.test.soundboxfrance.model.SoundObject;
+
 public class SoundboxRecyclerAdapter extends RecyclerView.Adapter<SoundboxRecyclerAdapter.SoundboxViewHolder>{
 
     private ArrayList<SoundObject> soundObjects;

@@ -1,10 +1,10 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.activity;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -23,6 +23,12 @@ import java.util.ArrayList;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import automation.test.soundboxfrance.adapters.CustomRecyclerAdapter;
+import automation.test.soundboxfrance.DatabaseHandler;
+import automation.test.soundboxfrance.EventHandlerClass;
+import automation.test.soundboxfrance.R;
+import automation.test.soundboxfrance.model.SoundObject;
 
 public class YourSoundboxActivity extends AppCompatActivity {
 
@@ -64,7 +70,6 @@ public class YourSoundboxActivity extends AppCompatActivity {
             }
         });
 
-        /*
         Button buttonSettings = findViewById(R.id.button_setting);
        buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +78,13 @@ public class YourSoundboxActivity extends AppCompatActivity {
             }
         });
 
-        */
+        Button playlistButton = findViewById(R.id.button_playlist);
+        playlistButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(5);
+            }
+        });
 
         addDataToArrayList();
         customView = findViewById(R.id.customRecyclerView);
@@ -99,6 +110,12 @@ public class YourSoundboxActivity extends AppCompatActivity {
                 break;
             case 3:
                 intent = new Intent(this, ActivityToutRecherche.class);
+                break;
+            case 4:
+                intent = new Intent(this,SettingsActivity.class);
+                break;
+            case 5:
+                intent = new Intent(this,ActivityPlaylist.class);
                 break;
         }
         startActivity(intent);

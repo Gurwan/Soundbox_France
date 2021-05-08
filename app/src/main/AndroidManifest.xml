@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ /********************************************************
-  ~ Copyright (c) 2020. Okaria Studio
-  ~ ********************************************************/
-  -->
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="automation.test.soundboxfrance"
@@ -31,66 +25,76 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,UnusedAttribute">
-        <activity android:name=".DailySoundboxActivity"
+        <activity android:name=".activity.SettingsActivity"
+            android:label="Paramètres" />
+        <activity
+            android:name=".activity.PlaylistCreateActivity"
+            android:label="Créer une playlist" />
+        <activity
+            android:name=".activity.IntoPlaylistActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".activity.ActivityPlaylist"
+            android:label="Playlists" />
+        <activity
+            android:name=".activity.DailySoundboxActivity"
             android:label="Daily Soundbox"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".YourSoundboxActivity"
+            android:name=".activity.YourSoundboxActivity"
             android:label="Ta Soundbox"
-            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AddNewSoundActivity"
+            android:name=".activity.AddNewSoundActivity"
             android:label="Ajoute un son"
-            android:parentActivityName=".YourSoundboxActivity"
+            android:parentActivityName=".activity.YourSoundboxActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".categories.MusiqueRapAutres"
             android:label="Musiques 2"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.TVActivity"
             android:label="TV"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.SportPoliHumActivity"
             android:label="Sport Politique Humour"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.GeneriquesActivity"
             android:label="Generiques"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.ThemeActivity"
             android:label="Theme"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.JVActivity"
             android:label="Jeux Vidéos"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.FilmsTVActivity"
             android:label="FilmsTV"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.NewsFragment"
             android:label="Nouveautés"
-            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
 
         <meta-data
@@ -98,8 +102,8 @@
             android:value="ca-app-pub-3066536602388745~1856514605" />
 
         <activity
-            android:name=".SplashActivity"
-            android:parentActivityName=".MainActivity"
+            android:name=".activity.SplashActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -109,9 +113,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="Univers"
-            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -141,31 +144,29 @@
             android:resource="@mipmap/ic_launcher" />
 
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".activity.FavoriteActivity"
             android:label="Coup de Coeur"
-            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityToutRecherche"
+            android:name=".activity.ActivityToutRecherche"
             android:label="Recherche un son"
-            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".categories.MemeActivity"
             android:label="Memes"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.MusicFragment"
             android:label="Musiques"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".categories.YoutubeActivity"
             android:label="Youtube"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" />
     </application>

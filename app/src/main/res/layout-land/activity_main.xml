@@ -10,7 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activity.MainActivity"
     android:id="@+id/activity_main"
     android:background="@drawable/fondhalloween">
 
@@ -472,6 +472,13 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/ic_baseline_person_24"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/button_playlist"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_playlist_play_24"
                 tools:ignore="ButtonStyle" />
 
             <Button

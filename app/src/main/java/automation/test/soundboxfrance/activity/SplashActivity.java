@@ -1,10 +1,10 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

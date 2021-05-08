@@ -5,11 +5,12 @@
   -->
 
 <resources>
-
+    <attr name="backgroundEditText" format="reference"/>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:popupMenuStyle">@style/PopupMenu</item>
         <item name="android:textAppearanceSmallPopupMenu">@style/PopupMenuTextSmall</item>
+        <item name="backgroundEditText">@drawable/edit_text_design</item>
         <item name="android:textAppearanceLargePopupMenu">@style/PopupMenuTextLarge</item>
 
     </style>

@@ -9,32 +9,29 @@ package automation.test.soundboxfrance.categories;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import automation.test.soundboxfrance.ActivityToutRecherche;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+import automation.test.soundboxfrance.activity.ActivityToutRecherche;
 import automation.test.soundboxfrance.DatabaseHandler;
 import automation.test.soundboxfrance.EventHandlerClass;
-import automation.test.soundboxfrance.FavoriteActivity;
-import automation.test.soundboxfrance.MainActivity;
+import automation.test.soundboxfrance.activity.FavoriteActivity;
+import automation.test.soundboxfrance.activity.MainActivity;
 import automation.test.soundboxfrance.R;
-import automation.test.soundboxfrance.SoundObject;
+import automation.test.soundboxfrance.model.SoundObject;
 import automation.test.soundboxfrance.SoundboxRecyclerAdapter;
-import automation.test.soundboxfrance.YourSoundboxActivity;
+import automation.test.soundboxfrance.activity.YourSoundboxActivity;
 
 public class NewsFragment extends AppCompatActivity {
 
@@ -107,8 +104,11 @@ public class NewsFragment extends AppCompatActivity {
         while(cursor.moveToNext()){
             String name = cursor.getString(cursor.getColumnIndex("mainName"));
             Integer sound = cursor.getInt(cursor.getColumnIndex("mainSound"));
-            Integer image = cursor.getInt(cursor.getColumnIndex("mainImage"));
-            this.soundListNouveautes.add(new SoundObject(name,sound,image));
+            String img = cursor.getString(cursor.getColumnIndex("mainImage"));
+            int imageR = getResources().getIdentifier(img,"drawable", getPackageName());
+            SoundObject soundObject = new SoundObject(name,sound,imageR);
+            soundObject.setNameImage(img);
+            this.soundListNouveautes.add(soundObject);
         }
         this.SoundAdapter.notifyDataSetChanged();
         cursor.close();

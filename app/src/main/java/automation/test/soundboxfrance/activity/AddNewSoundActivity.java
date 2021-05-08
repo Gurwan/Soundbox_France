@@ -1,10 +1,10 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,6 +19,10 @@ import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import automation.test.soundboxfrance.DatabaseHandler;
+import automation.test.soundboxfrance.R;
+import automation.test.soundboxfrance.model.SoundObject;
 
 public class AddNewSoundActivity extends AppCompatActivity {
 

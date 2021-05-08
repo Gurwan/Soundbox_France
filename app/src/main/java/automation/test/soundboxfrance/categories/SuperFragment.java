@@ -19,10 +19,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import automation.test.soundboxfrance.Category;
 import automation.test.soundboxfrance.DatabaseHandler;
 import automation.test.soundboxfrance.R;
-import automation.test.soundboxfrance.SoundObject;
+import automation.test.soundboxfrance.model.SoundObject;
 import automation.test.soundboxfrance.SoundboxRecyclerAdapter;
 
 class SuperFragment extends Fragment {
@@ -50,8 +49,11 @@ class SuperFragment extends Fragment {
         while(cursor.moveToNext()){
             String name = cursor.getString(cursor.getColumnIndex("mainName"));
             Integer sound = cursor.getInt(cursor.getColumnIndex("mainSound"));
-            Integer image = cursor.getInt(cursor.getColumnIndex("mainImage"));
-            this.soundList.add(new SoundObject(name,sound,image));
+            String img = cursor.getString(cursor.getColumnIndex("mainImage"));
+            int imageR = getResources().getIdentifier(img,"drawable", getActivity().getPackageName());
+            SoundObject soundObject = new SoundObject(name,sound,imageR);
+            soundObject.setNameImage(img);
+            this.soundList.add(soundObject);
         }
         this.SoundAdapter.notifyDataSetChanged();
         cursor.close();

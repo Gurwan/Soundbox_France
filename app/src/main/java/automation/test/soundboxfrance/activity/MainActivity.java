@@ -1,40 +1,33 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.activity;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import automation.test.soundboxfrance.DatabaseHandler;
+import automation.test.soundboxfrance.R;
 import automation.test.soundboxfrance.categories.FilmsTVActivity;
 import automation.test.soundboxfrance.categories.GeneriquesActivity;
 import automation.test.soundboxfrance.categories.JVActivity;
@@ -192,6 +185,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button playlistButton = findViewById(R.id.button_playlist);
+        playlistButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(15);
+            }
+        });
+
+        Button settingsButton = findViewById(R.id.button_setting);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(16);
+            }
+        });
+
         if((getApplicationContext().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)){
             requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"},80);
         }
@@ -247,12 +256,10 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(this, FavoriteActivity.class);
                     break;
                 case 15:
-                    intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(urlpropose));
+                    intent = new Intent(this, ActivityPlaylist.class);
                     break;
                 case 16:
-                    intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(urlprop));
+                    intent = new Intent(this,SettingsActivity.class);
                     break;
             }
             startActivity(intent);

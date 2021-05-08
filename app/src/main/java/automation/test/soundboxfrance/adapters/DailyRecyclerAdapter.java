@@ -4,7 +4,7 @@
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.adapters;
 
 import android.annotation.SuppressLint;
 import android.media.AudioManager;
@@ -28,6 +28,9 @@ import java.util.Random;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import automation.test.soundboxfrance.R;
+import automation.test.soundboxfrance.model.SoundObject;
 
 public class DailyRecyclerAdapter extends RecyclerView.Adapter<DailyRecyclerAdapter.SoundboxViewHolder>{
 

@@ -1,10 +1,10 @@
 /*
  * *******************************************************
- * Copyright (c) 2020. Okaria Studio
+ * Copyright (c) 2021. Okaria Studio
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.adapters;
 
 import android.annotation.SuppressLint;
 import android.media.AudioAttributes;
@@ -22,6 +22,11 @@ import java.util.Random;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import automation.test.soundboxfrance.EventHandlerClass;
+import automation.test.soundboxfrance.R;
+import automation.test.soundboxfrance.activity.YourSoundboxActivity;
+import automation.test.soundboxfrance.model.SoundObject;
 
 public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAdapter.SoundboxViewHolder>{
 

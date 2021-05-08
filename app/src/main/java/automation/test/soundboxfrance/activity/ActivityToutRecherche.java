@@ -4,7 +4,7 @@
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.activity;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -18,7 +18,6 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -26,6 +25,12 @@ import java.util.List;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import automation.test.soundboxfrance.DatabaseHandler;
+import automation.test.soundboxfrance.EventHandlerClass;
+import automation.test.soundboxfrance.R;
+import automation.test.soundboxfrance.SoundboxRecyclerAdapter;
+import automation.test.soundboxfrance.model.SoundObject;
 
 public class ActivityToutRecherche extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
@@ -67,7 +72,6 @@ public class ActivityToutRecherche extends AppCompatActivity implements SearchVi
             }
         });
 
-        /*
         Button buttonSettings = findViewById(R.id.button_setting);
        buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,16 +80,25 @@ public class ActivityToutRecherche extends AppCompatActivity implements SearchVi
             }
         });
 
-        */
+        Button playlistButton = findViewById(R.id.button_playlist);
+        playlistButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(5);
+            }
+        });
 
         DatabaseHandler databaseHandler = new DatabaseHandler(this);
         Cursor cursor = databaseHandler.getSoundCollection();
         while(cursor.moveToNext()){
             String name = cursor.getString(cursor.getColumnIndex("mainName"));
             Integer sound = cursor.getInt(cursor.getColumnIndex("mainSound"));
-            Integer image = cursor.getInt(cursor.getColumnIndex("mainImage"));
+            String img = cursor.getString(cursor.getColumnIndex("mainImage"));
+            int imageR = getResources().getIdentifier(img,"drawable", getPackageName());
+            SoundObject soundObject = new SoundObject(name,sound,imageR);
+            soundObject.setNameImage(img);
             this.nameList.add(name);
-            this.soundListToutRecherche.add(new SoundObject(name,sound,image));
+            this.soundListToutRecherche.add(soundObject);
         }
         this.soundAdapter.notifyDataSetChanged();
         cursor.close();
@@ -107,6 +120,12 @@ public class ActivityToutRecherche extends AppCompatActivity implements SearchVi
                 break;
             case 3:
                 intent = new Intent(this, YourSoundboxActivity.class);
+                break;
+            case 4:
+                intent = new Intent(this,SettingsActivity.class);
+                break;
+            case 5:
+                intent = new Intent(this,ActivityPlaylist.class);
                 break;
         }
         startActivity(intent);

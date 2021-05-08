@@ -4,7 +4,7 @@
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.model;
 
 import android.net.Uri;
 
@@ -24,6 +24,7 @@ public class SoundObject {
     private Integer like;
     private Integer ecoutes;
     private Integer isNews;
+    private String nameImage;
 
     public SoundObject(){}
 
@@ -69,6 +70,15 @@ public class SoundObject {
         this.itemName = itemName;
         this.itemID = itemID;
         this.itemImage = itemImage;
+        this.itemCategory = itemCategory;
+        this.isNews = isNews;
+    }
+
+
+    public SoundObject(String itemName, Integer itemID, String nameImage,Category itemCategory,Integer isNews){
+        this.itemName = itemName;
+        this.itemID = itemID;
+        this.nameImage = nameImage;
         this.itemCategory = itemCategory;
         this.isNews = isNews;
     }
@@ -123,6 +133,14 @@ public class SoundObject {
 
     public void setEcoutes(Integer ecoutes) {
         this.ecoutes = ecoutes;
+    }
+
+    public String getNameImage() {
+        return nameImage;
+    }
+
+    public void setNameImage(String nameImage) {
+        this.nameImage = nameImage;
     }
 }
 

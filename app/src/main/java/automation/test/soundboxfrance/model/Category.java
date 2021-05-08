@@ -4,7 +4,7 @@
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.model;
 
 public enum Category {
     INTERNET_FR,

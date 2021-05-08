@@ -11,6 +11,7 @@ import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -21,15 +22,22 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.FileProvider;
+
+import automation.test.soundboxfrance.activity.FavoriteActivity;
+import automation.test.soundboxfrance.activity.IntoPlaylistActivity;
+import automation.test.soundboxfrance.model.Playlist;
+import automation.test.soundboxfrance.model.SoundObject;
 
 
 public class EventHandlerClass {
@@ -66,6 +74,8 @@ public class EventHandlerClass {
 
         if (view.getContext() instanceof FavoriteActivity){
             popup.getMenuInflater().inflate(R.menu.favo_longclick, popup.getMenu());
+        } else if (view.getContext() instanceof IntoPlaylistActivity){
+            popup.getMenuInflater().inflate(R.menu.longclick_playlist, popup.getMenu());
         } else {
             popup.getMenuInflater().inflate(R.menu.longclick, popup.getMenu());
         }
@@ -128,13 +138,40 @@ public class EventHandlerClass {
                         builder.create();
                         builder.show();
                     }
-                }
-
-                if (menuItem.getItemId() == R.id.action_favorite) {
+                } else if (menuItem.getItemId() == R.id.action_favorite) {
                     if (view.getContext() instanceof FavoriteActivity)
                         databaseHandler.removeFavorite(view.getContext(), soundObject);
                     else
                         databaseHandler.addFavorite(soundObject);
+                } else if (menuItem.getItemId() == R.id.action_playlist){
+                    if (view.getContext() instanceof IntoPlaylistActivity){
+                        databaseHandler.deleteOfPlaylist(soundObject,view.getContext());
+                    } else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext(), R.style.Theme_MaterialComponents_Light_Dialog_Alert);
+                        builder.setTitle("Ajouter à...");
+                        ArrayList<String> playlistsArrayList = new ArrayList<>();
+                        ArrayList<Playlist> playlistsList = new ArrayList<>();
+                        Cursor cursor = databaseHandler.getPlaylistCollection();
+                        while(cursor.moveToNext()){
+                            int id = cursor.getInt(cursor.getColumnIndex("_id"));
+                            String name = cursor.getString(cursor.getColumnIndex("playlistName"));
+                            Playlist p = new Playlist(name,id);
+                            playlistsList.add(p);
+                            playlistsArrayList.add(name);
+                        }
+
+                        CharSequence[] playlists = playlistsArrayList.toArray(new CharSequence[playlistsArrayList.size()]);
+
+                        builder.setItems(playlists, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                databaseHandler.addToPlaylist(soundObject,playlistsList.get(which).getId());
+                            }
+                        });
+                        builder.create();
+                        builder.show();
+                    }
+
                 }
                 return true;
             }

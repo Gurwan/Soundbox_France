@@ -4,12 +4,10 @@
  * ******************************************************
  */
 
-package automation.test.soundboxfrance;
+package automation.test.soundboxfrance.activity;
 
-import android.app.ActivityManager;
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,31 +17,19 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import automation.test.soundboxfrance.categories.FilmsTVActivity;
-import automation.test.soundboxfrance.categories.GeneriquesActivity;
-import automation.test.soundboxfrance.categories.JVActivity;
-import automation.test.soundboxfrance.categories.MemeActivity;
-import automation.test.soundboxfrance.categories.MusicFragment;
-import automation.test.soundboxfrance.categories.MusiqueRapAutres;
-import automation.test.soundboxfrance.categories.NewsFragment;
-import automation.test.soundboxfrance.categories.SportPoliHumActivity;
-import automation.test.soundboxfrance.categories.TVActivity;
-import automation.test.soundboxfrance.categories.ThemeActivity;
-import automation.test.soundboxfrance.categories.YoutubeActivity;
+import automation.test.soundboxfrance.DatabaseHandler;
+import automation.test.soundboxfrance.EventHandlerClass;
+import automation.test.soundboxfrance.R;
+import automation.test.soundboxfrance.SoundboxRecyclerAdapter;
+import automation.test.soundboxfrance.model.SoundObject;
 
 public class FavoriteActivity extends AppCompatActivity {
     private static final String LOG_TAG = "FAVORITEACTIVITY";
@@ -85,14 +71,21 @@ public class FavoriteActivity extends AppCompatActivity {
         });
 
         Button buttonSettings = findViewById(R.id.button_setting);
-       /* buttonSettings.setOnClickListener(new View.OnClickListener() {
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openA(4);
             }
         });
 
-        */
+
+        Button playlistButton = findViewById(R.id.button_playlist);
+        playlistButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openA(5);
+            }
+        });
 
 
 
@@ -114,6 +107,12 @@ public class FavoriteActivity extends AppCompatActivity {
                 break;
             case 3:
                 intent = new Intent(this, YourSoundboxActivity.class);
+                break;
+            case 4:
+                intent = new Intent(this,SettingsActivity.class);
+                break;
+            case 5:
+                intent = new Intent(this,ActivityPlaylist.class);
                 break;
         }
         startActivity(intent);
@@ -181,8 +180,9 @@ public class FavoriteActivity extends AppCompatActivity {
             while (cursor.moveToNext() ){
                 String name = cursor.getString(cursor.getColumnIndex("favoName"));
                 Integer id = cursor.getInt(cursor.getColumnIndex("favoId"));
-                Integer img = cursor.getInt(cursor.getColumnIndex("favoImage"));
-                favoriteList.add(new SoundObject(name, id, img));
+                String img = cursor.getString(cursor.getColumnIndex("favoImage"));
+                int imageR = getResources().getIdentifier(img,"drawable", getPackageName());
+                favoriteList.add(new SoundObject(name, id, imageR));
                 FavoriteAdapter.notifyDataSetChanged();
             }
             cursor.close();
